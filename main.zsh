@@ -130,7 +130,7 @@ _fz-cmd-core() {
 	if [[ "$preview_script" != /* ]]; then
 		preview_script="$(cd "$FZ_CMD_DIR" && pwd)/utils/build_preview.py"
 	fi
-	
+
 	# Preview command: echo the line and pipe to python
 	# Using double-escaped quotes for the fzf preview context
 	local preview_cmd
@@ -165,8 +165,8 @@ _fz-cmd-core() {
 	fi
 
 	# SECURITY: Validate that we extracted a command, not something dangerous
-	# Ensure the command doesn't contain newlines or other control characters that could cause execution
-	if echo "$cmd" | grep -q $'\n'; then
+	# Ensure the command doesn't contain embedded newlines that could cause execution
+	if [[ "$cmd" == *$'\n'* ]]; then
 		echo "Error: Command contains newlines (potential security issue)" >&2
 		return 1
 	fi
