@@ -104,9 +104,19 @@ def main():
     # Optional: read recent commands from second argument
     recent_commands = None
     if len(sys.argv) > 2:
-        with open(sys.argv[2], "r", encoding="utf-8") as f:
-            recent_data = json.load(f)
-            recent_commands = [c.get("command", "") for c in recent_data.get("commands", [])]
+        try:
+            with open(sys.argv[2], "r", encoding="utf-8") as f:
+                recent_data = json.load(f)
+                raw_commands = recent_data.get("commands", [])
+                # Handle both formats: list of strings or list of dicts
+                if raw_commands:
+                    if isinstance(raw_commands[0], str):
+                        recent_commands = raw_commands
+                    elif isinstance(raw_commands[0], dict):
+                        recent_commands = [c.get("command", "") for c in raw_commands]
+        except (json.JSONDecodeError, IOError, KeyError, IndexError, TypeError):
+            # If anything goes wrong with recent file, just skip sorting by recent
+            recent_commands = None
     
     formatted = format_commands(commands, recent_commands)
     

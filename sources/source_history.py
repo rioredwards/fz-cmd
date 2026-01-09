@@ -7,10 +7,11 @@ Filters noise commands and deduplicates.
 """
 
 import json
+import os
+import re
 import sys
-import subprocess
 from pathlib import Path
-from typing import List, Dict, Any, Set
+from typing import List, Dict, Any, Set, Optional
 from collections import OrderedDict
 
 # Commands to filter out (noise)
@@ -22,41 +23,124 @@ NOISE_COMMANDS = {
 
 def get_history_entries(max_entries: int = 500) -> List[str]:
     """
-    Get shell history entries using zsh history command.
+    Get shell history entries by reading the history file directly.
+    
+    Handles multiline commands properly by joining continuation lines.
     
     Args:
         max_entries: Maximum number of entries to retrieve
         
     Returns:
-        List of history command strings
+        List of history command strings (most recent first)
     """
+    # Find history file
+    histfile = os.environ.get("HISTFILE", os.path.expanduser("~/.zsh_history"))
+    
+    if not os.path.exists(histfile):
+        return []
+    
     try:
-        # Use zsh history command
-        result = subprocess.run(
-            ["zsh", "-c", f"history {max_entries}"],
-            capture_output=True,
-            text=True,
-            timeout=5
-        )
+        # Read history file with error handling for encoding issues
+        with open(histfile, "rb") as f:
+            content = f.read()
         
-        if result.returncode != 0:
-            return []
+        # Try UTF-8 first, fall back to latin-1
+        try:
+            text = content.decode("utf-8")
+        except UnicodeDecodeError:
+            text = content.decode("latin-1", errors="replace")
         
-        lines = result.stdout.strip().split("\n")
+        lines = text.split("\n")
         commands = []
         
-        for line in lines:
-            # Remove line numbers and timestamps
-            # Format: "  123  command" or "123  command"
-            parts = line.strip().split(None, 1)
-            if len(parts) >= 2:
-                cmd = parts[1].strip()
-                if cmd:
-                    commands.append(cmd)
+        # Extended history format: ": timestamp:0;command"
+        # Multiline commands have the timestamp on first line, then continuation lines
+        extended_pattern = re.compile(r"^: (\d+):(\d+);(.*)$")
         
-        return commands
-    except (subprocess.TimeoutExpired, FileNotFoundError, subprocess.SubprocessError):
+        current_cmd = None
+        
+        for line in lines:
+            # Don't strip - we need to detect continuation properly
+            if not line:
+                continue
+            
+            # Check for extended history format (start of new command)
+            match = extended_pattern.match(line)
+            if match:
+                # Save previous command if any
+                if current_cmd is not None:
+                    cleaned = _clean_command(current_cmd)
+                    if cleaned:
+                        commands.append(cleaned)
+                # Start new command
+                current_cmd = match.group(3)
+            elif current_cmd is not None:
+                # This is a continuation line of a multiline command
+                # Join with the previous line
+                current_cmd += "\n" + line
+            else:
+                # Plain format (no extended history) or orphan line
+                if not line.startswith(":"):
+                    cleaned = _clean_command(line)
+                    if cleaned:
+                        commands.append(cleaned)
+        
+        # Don't forget the last command
+        if current_cmd is not None:
+            cleaned = _clean_command(current_cmd)
+            if cleaned:
+                commands.append(cleaned)
+        
+        # Return most recent entries (last N from file)
+        return commands[-max_entries:]
+        
+    except (OSError, IOError):
         return []
+
+
+def _clean_command(cmd: str) -> Optional[str]:
+    """
+    Clean and validate a command string.
+    
+    - Joins multiline commands with semicolons for single-line display
+    - Filters out fragments and noise
+    
+    Args:
+        cmd: Raw command string (may contain newlines)
+        
+    Returns:
+        Cleaned command string, or None if invalid/noise
+    """
+    if not cmd:
+        return None
+    
+    # Join multiline commands with semicolons for display
+    # But preserve the original if it's a meaningful multiline command
+    lines = [l.strip() for l in cmd.strip().split("\n") if l.strip()]
+    
+    if not lines:
+        return None
+    
+    # If it's a single line that's just a backslash or fragment, skip it
+    if len(lines) == 1:
+        line = lines[0]
+        # Skip bare backslashes, single characters, or obvious fragments
+        if line in ("\\", "") or (len(line) <= 2 and not line.isalnum()):
+            return None
+        # Skip lines that are just flags without a command
+        if line.startswith("--") and " " not in line:
+            return None
+        return line
+    
+    # For multiline commands, join with semicolons
+    # This creates a valid single-line representation
+    joined = "; ".join(lines)
+    
+    # But if it's too long or unwieldy, just use the first meaningful line
+    if len(joined) > 200:
+        return lines[0]
+    
+    return joined
 
 
 def filter_noise(commands: List[str]) -> List[str]:

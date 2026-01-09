@@ -100,14 +100,15 @@ _fz-cmd-core() {
 	# TEMP_DEBUG: Print the limited file
 	# echo "[🔥 TEMP_DEBUG] $(cat "$merged_file")" >&2
 
-	# Format for fzf
+	# Format for fzf (without recent sorting for now - simpler and more reliable)
 	local formatted_file
 	formatted_file=$(mktemp)
 
-	python3 "$UTILS_DIR/format_for_fzf.py" "$merged_file" >"$formatted_file"
+	python3 "$UTILS_DIR/format_for_fzf.py" "$merged_file" >"$formatted_file" 2>&1
 
-	if [ $? -ne 0 ]; then
+	if [ $? -ne 0 ] || [ ! -s "$formatted_file" ]; then
 		echo "Error: Failed to format commands" >&2
+		cat "$formatted_file" >&2 # Show what went wrong
 		rm -f "$merged_file" "$formatted_file"
 		return 1
 	fi
