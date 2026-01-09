@@ -1,0 +1,34 @@
+{
+  "commands": [
+    {
+      "command": "man",
+      "description": "Alias: run-help",
+      "tags": [
+        "alias",
+        "run-help"
+      ],
+      "examples": [
+        "man"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "run-help"
+      }
+    },
+    {
+      "command": "whence",
+      "description": "Alias: which-command",
+      "tags": [
+        "alias",
+        "which-command"
+      ],
+      "examples": [
+        "whence"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "which-command"
+      }
+    }
+  ]
+}
