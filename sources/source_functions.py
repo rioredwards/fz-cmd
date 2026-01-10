@@ -21,11 +21,12 @@ def get_functions() -> List[str]:
     """
     try:
         # Get function names using zsh's functions associative array
+        # Use -i for interactive mode to load user's .zshrc
         result = subprocess.run(
-            ["zsh", "-c", "print -l ${(k)functions}"],
+            ["zsh", "-i", "-c", "print -l ${(k)functions}"],
             capture_output=True,
             text=True,
-            timeout=5
+            timeout=10
         )
         
         if result.returncode != 0:

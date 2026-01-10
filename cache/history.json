@@ -1,56 +1,6 @@
 {
   "commands": [
     {
-      "command": "omz reload",
-      "description": "History: omz reload",
-      "tags": [],
-      "examples": [
-        "omz reload"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "# List branches with last commit info",
-      "description": "History: # List branches with last commit info",
-      "tags": [],
-      "examples": [
-        "# List branches with last commit info"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git for-each-ref --sort=-committerdate \\\\; --format='%(refname:short) %(committerdate:relative) %(subject)' \\\\; refs/heads/",
-      "description": "History: git for-each-ref --sort=-committerdate \\\\; --forma",
-      "tags": [],
-      "examples": [
-        "git for-each-ref --sort=-committerdate \\\\; --format='%(refname:short) %(committerdate:relative) %(subject)' \\\\; refs/heads/"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git for-each-ref",
-      "description": "History: git for-each-ref",
-      "tags": [],
-      "examples": [
-        "git for-each-ref"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-cmd",
-      "description": "History: fz-cmd",
-      "tags": [],
-      "examples": [
-        "fz-cmd"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
       "command": "gaa && gcmsg \"umm...\"",
       "description": "History: gaa && gcmsg \"umm...\"",
       "tags": [],
@@ -151,6 +101,16 @@
       "metadata": {}
     },
     {
+      "command": "fz-cmd",
+      "description": "History: fz-cmd",
+      "tags": [],
+      "examples": [
+        "fz-cmd"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
       "command": "fz-chrome",
       "description": "History: fz-chrome",
       "tags": [],
@@ -186,6 +146,16 @@
       "tags": [],
       "examples": [
         "man ls | col -bx | pbcopy"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "omz reload",
+      "description": "History: omz reload",
+      "tags": [],
+      "examples": [
+        "omz reload"
       ],
       "source": "history",
       "metadata": {}
@@ -2136,6 +2106,16 @@
       "tags": [],
       "examples": [
         "scripts/refresh_cache.sh"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gaa && gcmsg \"apply the new theme\"fz-cmd",
+      "description": "History: gaa && gcmsg \"apply the new theme\"fz-cmd",
+      "tags": [],
+      "examples": [
+        "gaa && gcmsg \"apply the new theme\"fz-cmd"
       ],
       "source": "history",
       "metadata": {}

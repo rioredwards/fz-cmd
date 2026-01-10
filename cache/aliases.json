@@ -1,6 +1,3771 @@
 {
   "commands": [
     {
+      "command": "cd -",
+      "description": "Alias: -",
+      "tags": [
+        "alias",
+        "-"
+      ],
+      "examples": [
+        "cd -"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "-"
+      }
+    },
+    {
+      "command": "../..",
+      "description": "Alias: ...",
+      "tags": [
+        "alias",
+        "..."
+      ],
+      "examples": [
+        "../.."
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "..."
+      }
+    },
+    {
+      "command": "../../..",
+      "description": "Alias: ....",
+      "tags": [
+        "alias",
+        "...."
+      ],
+      "examples": [
+        "../../.."
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "...."
+      }
+    },
+    {
+      "command": "../../../..",
+      "description": "Alias: .....",
+      "tags": [
+        "alias",
+        "....."
+      ],
+      "examples": [
+        "../../../.."
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "....."
+      }
+    },
+    {
+      "command": "../../../../..",
+      "description": "Alias: ......",
+      "tags": [
+        "alias",
+        "......"
+      ],
+      "examples": [
+        "../../../../.."
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "......"
+      }
+    },
+    {
+      "command": "cd -1",
+      "description": "Alias: 1",
+      "tags": [
+        "alias",
+        "1"
+      ],
+      "examples": [
+        "cd -1"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "1"
+      }
+    },
+    {
+      "command": "cd -2",
+      "description": "Alias: 2",
+      "tags": [
+        "alias",
+        "2"
+      ],
+      "examples": [
+        "cd -2"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "2"
+      }
+    },
+    {
+      "command": "cd -3",
+      "description": "Alias: 3",
+      "tags": [
+        "alias",
+        "3"
+      ],
+      "examples": [
+        "cd -3"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "3"
+      }
+    },
+    {
+      "command": "cd -4",
+      "description": "Alias: 4",
+      "tags": [
+        "alias",
+        "4"
+      ],
+      "examples": [
+        "cd -4"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "4"
+      }
+    },
+    {
+      "command": "cd -5",
+      "description": "Alias: 5",
+      "tags": [
+        "alias",
+        "5"
+      ],
+      "examples": [
+        "cd -5"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "5"
+      }
+    },
+    {
+      "command": "cd -6",
+      "description": "Alias: 6",
+      "tags": [
+        "alias",
+        "6"
+      ],
+      "examples": [
+        "cd -6"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "6"
+      }
+    },
+    {
+      "command": "cd -7",
+      "description": "Alias: 7",
+      "tags": [
+        "alias",
+        "7"
+      ],
+      "examples": [
+        "cd -7"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "7"
+      }
+    },
+    {
+      "command": "cd -8",
+      "description": "Alias: 8",
+      "tags": [
+        "alias",
+        "8"
+      ],
+      "examples": [
+        "cd -8"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "8"
+      }
+    },
+    {
+      "command": "cd -9",
+      "description": "Alias: 9",
+      "tags": [
+        "alias",
+        "9"
+      ],
+      "examples": [
+        "cd -9"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "9"
+      }
+    },
+    {
+      "command": "| pbcopy",
+      "description": "Alias: C",
+      "tags": [
+        "alias",
+        "C"
+      ],
+      "examples": [
+        "| pbcopy"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "C"
+      }
+    },
+    {
+      "command": "sudo ",
+      "description": "Alias: _",
+      "tags": [
+        "alias",
+        "_"
+      ],
+      "examples": [
+        "sudo "
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "_"
+      }
+    },
+    {
+      "command": "cd ~/Documents/Coding/Experiential/Talerra",
+      "description": "Alias: cd-talerra",
+      "tags": [
+        "alias",
+        "cd-talerra"
+      ],
+      "examples": [
+        "cd ~/Documents/Coding/Experiential/Talerra"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "cd-talerra"
+      }
+    },
+    {
+      "command": "pwd | pbcopy",
+      "description": "Alias: copypath",
+      "tags": [
+        "alias",
+        "copypath"
+      ],
+      "examples": [
+        "pwd | pbcopy"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "copypath"
+      }
+    },
+    {
+      "command": "$'\\n    print -Pu2 \"%F{yellow}[oh-my-zsh] \\'%F{red}current_branch%F{yellow}\\' is deprecated, using \\'%F{green}git_current_branch%F{yellow}\\' instead.%f\"\\n    git_current_branch'",
+      "description": "Alias: current_branch",
+      "tags": [
+        "alias",
+        "current_branch"
+      ],
+      "examples": [
+        "$'\\n    print -Pu2 \"%F{yellow}[oh-my-zsh] \\'%F{red}current_branch%F{yellow}\\' is deprecated, using \\'%F{green}git_current_branch%F{yellow}\\' instead.%f\"\\n    git_current_branch'"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "current_branch"
+      }
+    },
+    {
+      "command": "grep -E",
+      "description": "Alias: egrep",
+      "tags": [
+        "alias",
+        "egrep"
+      ],
+      "examples": [
+        "grep -E"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "egrep"
+      }
+    },
+    {
+      "command": "grep -F",
+      "description": "Alias: fgrep",
+      "tags": [
+        "alias",
+        "fgrep"
+      ],
+      "examples": [
+        "grep -F"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fgrep"
+      }
+    },
+    {
+      "command": "| fzf",
+      "description": "Alias: fz-als",
+      "tags": [
+        "alias",
+        "fz-als"
+      ],
+      "examples": [
+        "| fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-als"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/apps.fzf",
+      "description": "Alias: fz-apps",
+      "tags": [
+        "alias",
+        "fz-apps"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/apps.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-apps"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/chrome.fzf",
+      "description": "Alias: fz-chrome",
+      "tags": [
+        "alias",
+        "fz-chrome"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/chrome.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-chrome"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/figlet.fzf",
+      "description": "Alias: fz-figlet",
+      "tags": [
+        "alias",
+        "fz-figlet"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/figlet.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-figlet"
+      }
+    },
+    {
+      "command": "git branch | fzf --preview \"git show --color=always {-1}\" --bind \"enter:become(git checkout {-1})\"",
+      "description": "Alias: fz-gcb",
+      "tags": [
+        "alias",
+        "fz-gcb"
+      ],
+      "examples": [
+        "git branch | fzf --preview \"git show --color=always {-1}\" --bind \"enter:become(git checkout {-1})\""
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-gcb"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/gist.fzf",
+      "description": "Alias: fz-gist",
+      "tags": [
+        "alias",
+        "fz-gist"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/gist.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-gist"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/jira.fzf",
+      "description": "Alias: fz-jira",
+      "tags": [
+        "alias",
+        "fz-jira"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/jira.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-jira"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/kube.fzf",
+      "description": "Alias: fz-kube",
+      "tags": [
+        "alias",
+        "fz-kube"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/kube.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-kube"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/mise.fzf",
+      "description": "Alias: fz-mise",
+      "tags": [
+        "alias",
+        "fz-mise"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/mise.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-mise"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/pr.fzf",
+      "description": "Alias: fz-pr",
+      "tags": [
+        "alias",
+        "fz-pr"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/pr.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-pr"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/pr-by.fzf",
+      "description": "Alias: fz-pr-by",
+      "tags": [
+        "alias",
+        "fz-pr-by"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/pr-by.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-pr-by"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/rg.fzf",
+      "description": "Alias: fz-rg",
+      "tags": [
+        "alias",
+        "fz-rg"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/rg.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-rg"
+      }
+    },
+    {
+      "command": "/Users/rioredwards/scripts/everything.fzf/ssh.fzf",
+      "description": "Alias: fz-ssh",
+      "tags": [
+        "alias",
+        "fz-ssh"
+      ],
+      "examples": [
+        "/Users/rioredwards/scripts/everything.fzf/ssh.fzf"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "fz-ssh"
+      }
+    },
+    {
+      "command": "git",
+      "description": "Alias: g",
+      "tags": [
+        "alias",
+        "g"
+      ],
+      "examples": [
+        "git"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "g"
+      }
+    },
+    {
+      "command": "git add",
+      "description": "Alias: ga",
+      "tags": [
+        "alias",
+        "ga"
+      ],
+      "examples": [
+        "git add"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "ga"
+      }
+    },
+    {
+      "command": "git add --all",
+      "description": "Alias: gaa",
+      "tags": [
+        "alias",
+        "gaa"
+      ],
+      "examples": [
+        "git add --all"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gaa"
+      }
+    },
+    {
+      "command": "git add -A && git commit --amend --no-edit",
+      "description": "Alias: gaaa",
+      "tags": [
+        "alias",
+        "gaaa"
+      ],
+      "examples": [
+        "git add -A && git commit --amend --no-edit"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gaaa"
+      }
+    },
+    {
+      "command": "git add -A && git commit -m",
+      "description": "Alias: gaac",
+      "tags": [
+        "alias",
+        "gaac"
+      ],
+      "examples": [
+        "git add -A && git commit -m"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gaac"
+      }
+    },
+    {
+      "command": "git am",
+      "description": "Alias: gam",
+      "tags": [
+        "alias",
+        "gam"
+      ],
+      "examples": [
+        "git am"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gam"
+      }
+    },
+    {
+      "command": "git am --abort",
+      "description": "Alias: gama",
+      "tags": [
+        "alias",
+        "gama"
+      ],
+      "examples": [
+        "git am --abort"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gama"
+      }
+    },
+    {
+      "command": "git am --continue",
+      "description": "Alias: gamc",
+      "tags": [
+        "alias",
+        "gamc"
+      ],
+      "examples": [
+        "git am --continue"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gamc"
+      }
+    },
+    {
+      "command": "git am --skip",
+      "description": "Alias: gams",
+      "tags": [
+        "alias",
+        "gams"
+      ],
+      "examples": [
+        "git am --skip"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gams"
+      }
+    },
+    {
+      "command": "git am --show-current-patch",
+      "description": "Alias: gamscp",
+      "tags": [
+        "alias",
+        "gamscp"
+      ],
+      "examples": [
+        "git am --show-current-patch"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gamscp"
+      }
+    },
+    {
+      "command": "git apply",
+      "description": "Alias: gap",
+      "tags": [
+        "alias",
+        "gap"
+      ],
+      "examples": [
+        "git apply"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gap"
+      }
+    },
+    {
+      "command": "git add --patch",
+      "description": "Alias: gapa",
+      "tags": [
+        "alias",
+        "gapa"
+      ],
+      "examples": [
+        "git add --patch"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gapa"
+      }
+    },
+    {
+      "command": "git apply --3way",
+      "description": "Alias: gapt",
+      "tags": [
+        "alias",
+        "gapt"
+      ],
+      "examples": [
+        "git apply --3way"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gapt"
+      }
+    },
+    {
+      "command": "git add --update",
+      "description": "Alias: gau",
+      "tags": [
+        "alias",
+        "gau"
+      ],
+      "examples": [
+        "git add --update"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gau"
+      }
+    },
+    {
+      "command": "git add --verbose",
+      "description": "Alias: gav",
+      "tags": [
+        "alias",
+        "gav"
+      ],
+      "examples": [
+        "git add --verbose"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gav"
+      }
+    },
+    {
+      "command": "git branch",
+      "description": "Alias: gb",
+      "tags": [
+        "alias",
+        "gb"
+      ],
+      "examples": [
+        "git branch"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gb"
+      }
+    },
+    {
+      "command": "git branch --delete --force",
+      "description": "Alias: gbD",
+      "tags": [
+        "alias",
+        "gbD"
+      ],
+      "examples": [
+        "git branch --delete --force"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbD"
+      }
+    },
+    {
+      "command": "git branch --all",
+      "description": "Alias: gba",
+      "tags": [
+        "alias",
+        "gba"
+      ],
+      "examples": [
+        "git branch --all"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gba"
+      }
+    },
+    {
+      "command": "git branch --delete",
+      "description": "Alias: gbd",
+      "tags": [
+        "alias",
+        "gbd"
+      ],
+      "examples": [
+        "git branch --delete"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbd"
+      }
+    },
+    {
+      "command": "LANG=C git branch -vv | grep \": gone\\]\"",
+      "description": "Alias: gbg",
+      "tags": [
+        "alias",
+        "gbg"
+      ],
+      "examples": [
+        "LANG=C git branch -vv | grep \": gone\\]\""
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbg"
+      }
+    },
+    {
+      "command": "LANG=C git branch --no-color -vv | grep \": gone\\]\" | cut -c 3- | awk '\\''{print $1}'\\'' | xargs git branch -D",
+      "description": "Alias: gbgD",
+      "tags": [
+        "alias",
+        "gbgD"
+      ],
+      "examples": [
+        "LANG=C git branch --no-color -vv | grep \": gone\\]\" | cut -c 3- | awk '\\''{print $1}'\\'' | xargs git branch -D"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbgD"
+      }
+    },
+    {
+      "command": "LANG=C git branch --no-color -vv | grep \": gone\\]\" | cut -c 3- | awk '\\''{print $1}'\\'' | xargs git branch -d",
+      "description": "Alias: gbgd",
+      "tags": [
+        "alias",
+        "gbgd"
+      ],
+      "examples": [
+        "LANG=C git branch --no-color -vv | grep \": gone\\]\" | cut -c 3- | awk '\\''{print $1}'\\'' | xargs git branch -d"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbgd"
+      }
+    },
+    {
+      "command": "git blame -w",
+      "description": "Alias: gbl",
+      "tags": [
+        "alias",
+        "gbl"
+      ],
+      "examples": [
+        "git blame -w"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbl"
+      }
+    },
+    {
+      "command": "git branch --move",
+      "description": "Alias: gbm",
+      "tags": [
+        "alias",
+        "gbm"
+      ],
+      "examples": [
+        "git branch --move"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbm"
+      }
+    },
+    {
+      "command": "git branch --no-merged",
+      "description": "Alias: gbnm",
+      "tags": [
+        "alias",
+        "gbnm"
+      ],
+      "examples": [
+        "git branch --no-merged"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbnm"
+      }
+    },
+    {
+      "command": "git branch --remote",
+      "description": "Alias: gbr",
+      "tags": [
+        "alias",
+        "gbr"
+      ],
+      "examples": [
+        "git branch --remote"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbr"
+      }
+    },
+    {
+      "command": "git bisect",
+      "description": "Alias: gbs",
+      "tags": [
+        "alias",
+        "gbs"
+      ],
+      "examples": [
+        "git bisect"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbs"
+      }
+    },
+    {
+      "command": "git bisect bad",
+      "description": "Alias: gbsb",
+      "tags": [
+        "alias",
+        "gbsb"
+      ],
+      "examples": [
+        "git bisect bad"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbsb"
+      }
+    },
+    {
+      "command": "git bisect good",
+      "description": "Alias: gbsg",
+      "tags": [
+        "alias",
+        "gbsg"
+      ],
+      "examples": [
+        "git bisect good"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbsg"
+      }
+    },
+    {
+      "command": "git bisect new",
+      "description": "Alias: gbsn",
+      "tags": [
+        "alias",
+        "gbsn"
+      ],
+      "examples": [
+        "git bisect new"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbsn"
+      }
+    },
+    {
+      "command": "git bisect old",
+      "description": "Alias: gbso",
+      "tags": [
+        "alias",
+        "gbso"
+      ],
+      "examples": [
+        "git bisect old"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbso"
+      }
+    },
+    {
+      "command": "git bisect reset",
+      "description": "Alias: gbsr",
+      "tags": [
+        "alias",
+        "gbsr"
+      ],
+      "examples": [
+        "git bisect reset"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbsr"
+      }
+    },
+    {
+      "command": "git bisect start",
+      "description": "Alias: gbss",
+      "tags": [
+        "alias",
+        "gbss"
+      ],
+      "examples": [
+        "git bisect start"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gbss"
+      }
+    },
+    {
+      "command": "git commit --verbose",
+      "description": "Alias: gc",
+      "tags": [
+        "alias",
+        "gc"
+      ],
+      "examples": [
+        "git commit --verbose"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gc"
+      }
+    },
+    {
+      "command": "git commit --verbose --amend",
+      "description": "Alias: gc!",
+      "tags": [
+        "alias",
+        "gc!"
+      ],
+      "examples": [
+        "git commit --verbose --amend"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gc!"
+      }
+    },
+    {
+      "command": "git checkout -B",
+      "description": "Alias: gcB",
+      "tags": [
+        "alias",
+        "gcB"
+      ],
+      "examples": [
+        "git checkout -B"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcB"
+      }
+    },
+    {
+      "command": "git commit --verbose --all",
+      "description": "Alias: gca",
+      "tags": [
+        "alias",
+        "gca"
+      ],
+      "examples": [
+        "git commit --verbose --all"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gca"
+      }
+    },
+    {
+      "command": "git commit --verbose --all --amend",
+      "description": "Alias: gca!",
+      "tags": [
+        "alias",
+        "gca!"
+      ],
+      "examples": [
+        "git commit --verbose --all --amend"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gca!"
+      }
+    },
+    {
+      "command": "git commit --all --message",
+      "description": "Alias: gcam",
+      "tags": [
+        "alias",
+        "gcam"
+      ],
+      "examples": [
+        "git commit --all --message"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcam"
+      }
+    },
+    {
+      "command": "git commit --verbose --all --no-edit --amend",
+      "description": "Alias: gcan!",
+      "tags": [
+        "alias",
+        "gcan!"
+      ],
+      "examples": [
+        "git commit --verbose --all --no-edit --amend"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcan!"
+      }
+    },
+    {
+      "command": "git commit --verbose --all --date=now --no-edit --amend",
+      "description": "Alias: gcann!",
+      "tags": [
+        "alias",
+        "gcann!"
+      ],
+      "examples": [
+        "git commit --verbose --all --date=now --no-edit --amend"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcann!"
+      }
+    },
+    {
+      "command": "git commit --verbose --all --signoff --no-edit --amend",
+      "description": "Alias: gcans!",
+      "tags": [
+        "alias",
+        "gcans!"
+      ],
+      "examples": [
+        "git commit --verbose --all --signoff --no-edit --amend"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcans!"
+      }
+    },
+    {
+      "command": "git commit --all --signoff",
+      "description": "Alias: gcas",
+      "tags": [
+        "alias",
+        "gcas"
+      ],
+      "examples": [
+        "git commit --all --signoff"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcas"
+      }
+    },
+    {
+      "command": "git commit --all --signoff --message",
+      "description": "Alias: gcasm",
+      "tags": [
+        "alias",
+        "gcasm"
+      ],
+      "examples": [
+        "git commit --all --signoff --message"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcasm"
+      }
+    },
+    {
+      "command": "git checkout -b",
+      "description": "Alias: gcb",
+      "tags": [
+        "alias",
+        "gcb"
+      ],
+      "examples": [
+        "git checkout -b"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcb"
+      }
+    },
+    {
+      "command": "git checkout $(git_develop_branch)",
+      "description": "Alias: gcd",
+      "tags": [
+        "alias",
+        "gcd"
+      ],
+      "examples": [
+        "git checkout $(git_develop_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcd"
+      }
+    },
+    {
+      "command": "git config --list",
+      "description": "Alias: gcf",
+      "tags": [
+        "alias",
+        "gcf"
+      ],
+      "examples": [
+        "git config --list"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcf"
+      }
+    },
+    {
+      "command": "git commit --fixup",
+      "description": "Alias: gcfu",
+      "tags": [
+        "alias",
+        "gcfu"
+      ],
+      "examples": [
+        "git commit --fixup"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcfu"
+      }
+    },
+    {
+      "command": "git clone --recurse-submodules",
+      "description": "Alias: gcl",
+      "tags": [
+        "alias",
+        "gcl"
+      ],
+      "examples": [
+        "git clone --recurse-submodules"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcl"
+      }
+    },
+    {
+      "command": "git clean --interactive -d",
+      "description": "Alias: gclean",
+      "tags": [
+        "alias",
+        "gclean"
+      ],
+      "examples": [
+        "git clean --interactive -d"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gclean"
+      }
+    },
+    {
+      "command": "git clone --recursive --shallow-submodules --filter=blob:none --also-filter-submodules",
+      "description": "Alias: gclf",
+      "tags": [
+        "alias",
+        "gclf"
+      ],
+      "examples": [
+        "git clone --recursive --shallow-submodules --filter=blob:none --also-filter-submodules"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gclf"
+      }
+    },
+    {
+      "command": "git checkout $(git_main_branch)",
+      "description": "Alias: gcm",
+      "tags": [
+        "alias",
+        "gcm"
+      ],
+      "examples": [
+        "git checkout $(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcm"
+      }
+    },
+    {
+      "command": "git commit --message",
+      "description": "Alias: gcmsg",
+      "tags": [
+        "alias",
+        "gcmsg"
+      ],
+      "examples": [
+        "git commit --message"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcmsg"
+      }
+    },
+    {
+      "command": "git commit --verbose --no-edit",
+      "description": "Alias: gcn",
+      "tags": [
+        "alias",
+        "gcn"
+      ],
+      "examples": [
+        "git commit --verbose --no-edit"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcn"
+      }
+    },
+    {
+      "command": "git commit --verbose --no-edit --amend",
+      "description": "Alias: gcn!",
+      "tags": [
+        "alias",
+        "gcn!"
+      ],
+      "examples": [
+        "git commit --verbose --no-edit --amend"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcn!"
+      }
+    },
+    {
+      "command": "git checkout",
+      "description": "Alias: gco",
+      "tags": [
+        "alias",
+        "gco"
+      ],
+      "examples": [
+        "git checkout"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gco"
+      }
+    },
+    {
+      "command": "git checkout --recurse-submodules",
+      "description": "Alias: gcor",
+      "tags": [
+        "alias",
+        "gcor"
+      ],
+      "examples": [
+        "git checkout --recurse-submodules"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcor"
+      }
+    },
+    {
+      "command": "git shortlog --summary --numbered",
+      "description": "Alias: gcount",
+      "tags": [
+        "alias",
+        "gcount"
+      ],
+      "examples": [
+        "git shortlog --summary --numbered"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcount"
+      }
+    },
+    {
+      "command": "git cherry-pick",
+      "description": "Alias: gcp",
+      "tags": [
+        "alias",
+        "gcp"
+      ],
+      "examples": [
+        "git cherry-pick"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcp"
+      }
+    },
+    {
+      "command": "git cherry-pick --abort",
+      "description": "Alias: gcpa",
+      "tags": [
+        "alias",
+        "gcpa"
+      ],
+      "examples": [
+        "git cherry-pick --abort"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcpa"
+      }
+    },
+    {
+      "command": "git cherry-pick --continue",
+      "description": "Alias: gcpc",
+      "tags": [
+        "alias",
+        "gcpc"
+      ],
+      "examples": [
+        "git cherry-pick --continue"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcpc"
+      }
+    },
+    {
+      "command": "git commit --gpg-sign",
+      "description": "Alias: gcs",
+      "tags": [
+        "alias",
+        "gcs"
+      ],
+      "examples": [
+        "git commit --gpg-sign"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcs"
+      }
+    },
+    {
+      "command": "git commit --signoff --message",
+      "description": "Alias: gcsm",
+      "tags": [
+        "alias",
+        "gcsm"
+      ],
+      "examples": [
+        "git commit --signoff --message"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcsm"
+      }
+    },
+    {
+      "command": "git commit --gpg-sign --signoff",
+      "description": "Alias: gcss",
+      "tags": [
+        "alias",
+        "gcss"
+      ],
+      "examples": [
+        "git commit --gpg-sign --signoff"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcss"
+      }
+    },
+    {
+      "command": "git commit --gpg-sign --signoff --message",
+      "description": "Alias: gcssm",
+      "tags": [
+        "alias",
+        "gcssm"
+      ],
+      "examples": [
+        "git commit --gpg-sign --signoff --message"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gcssm"
+      }
+    },
+    {
+      "command": "git diff",
+      "description": "Alias: gd",
+      "tags": [
+        "alias",
+        "gd"
+      ],
+      "examples": [
+        "git diff"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gd"
+      }
+    },
+    {
+      "command": "git diff --cached",
+      "description": "Alias: gdca",
+      "tags": [
+        "alias",
+        "gdca"
+      ],
+      "examples": [
+        "git diff --cached"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gdca"
+      }
+    },
+    {
+      "command": "git describe --tags $(git rev-list --tags --max-count=1)",
+      "description": "Alias: gdct",
+      "tags": [
+        "alias",
+        "gdct"
+      ],
+      "examples": [
+        "git describe --tags $(git rev-list --tags --max-count=1)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gdct"
+      }
+    },
+    {
+      "command": "git diff --cached --word-diff",
+      "description": "Alias: gdcw",
+      "tags": [
+        "alias",
+        "gdcw"
+      ],
+      "examples": [
+        "git diff --cached --word-diff"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gdcw"
+      }
+    },
+    {
+      "command": "git diff --staged",
+      "description": "Alias: gds",
+      "tags": [
+        "alias",
+        "gds"
+      ],
+      "examples": [
+        "git diff --staged"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gds"
+      }
+    },
+    {
+      "command": "git diff-tree --no-commit-id --name-only -r",
+      "description": "Alias: gdt",
+      "tags": [
+        "alias",
+        "gdt"
+      ],
+      "examples": [
+        "git diff-tree --no-commit-id --name-only -r"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gdt"
+      }
+    },
+    {
+      "command": "git diff @{upstream}",
+      "description": "Alias: gdup",
+      "tags": [
+        "alias",
+        "gdup"
+      ],
+      "examples": [
+        "git diff @{upstream}"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gdup"
+      }
+    },
+    {
+      "command": "git diff --word-diff",
+      "description": "Alias: gdw",
+      "tags": [
+        "alias",
+        "gdw"
+      ],
+      "examples": [
+        "git diff --word-diff"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gdw"
+      }
+    },
+    {
+      "command": "git fetch",
+      "description": "Alias: gf",
+      "tags": [
+        "alias",
+        "gf"
+      ],
+      "examples": [
+        "git fetch"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gf"
+      }
+    },
+    {
+      "command": "git fetch --all --tags --prune --jobs=10",
+      "description": "Alias: gfa",
+      "tags": [
+        "alias",
+        "gfa"
+      ],
+      "examples": [
+        "git fetch --all --tags --prune --jobs=10"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gfa"
+      }
+    },
+    {
+      "command": "git ls-files | grep",
+      "description": "Alias: gfg",
+      "tags": [
+        "alias",
+        "gfg"
+      ],
+      "examples": [
+        "git ls-files | grep"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gfg"
+      }
+    },
+    {
+      "command": "git fetch origin",
+      "description": "Alias: gfo",
+      "tags": [
+        "alias",
+        "gfo"
+      ],
+      "examples": [
+        "git fetch origin"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gfo"
+      }
+    },
+    {
+      "command": "git gui citool",
+      "description": "Alias: gg",
+      "tags": [
+        "alias",
+        "gg"
+      ],
+      "examples": [
+        "git gui citool"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gg"
+      }
+    },
+    {
+      "command": "git gui citool --amend",
+      "description": "Alias: gga",
+      "tags": [
+        "alias",
+        "gga"
+      ],
+      "examples": [
+        "git gui citool --amend"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gga"
+      }
+    },
+    {
+      "command": "git pull origin \"$(git_current_branch)\"",
+      "description": "Alias: ggpull",
+      "tags": [
+        "alias",
+        "ggpull"
+      ],
+      "examples": [
+        "git pull origin \"$(git_current_branch)\""
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "ggpull"
+      }
+    },
+    {
+      "command": "ggu",
+      "description": "Alias: ggpur",
+      "tags": [
+        "alias",
+        "ggpur"
+      ],
+      "examples": [
+        "ggu"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "ggpur"
+      }
+    },
+    {
+      "command": "git push origin \"$(git_current_branch)\"",
+      "description": "Alias: ggpush",
+      "tags": [
+        "alias",
+        "ggpush"
+      ],
+      "examples": [
+        "git push origin \"$(git_current_branch)\""
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "ggpush"
+      }
+    },
+    {
+      "command": "git branch --set-upstream-to=origin/$(git_current_branch)",
+      "description": "Alias: ggsup",
+      "tags": [
+        "alias",
+        "ggsup"
+      ],
+      "examples": [
+        "git branch --set-upstream-to=origin/$(git_current_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "ggsup"
+      }
+    },
+    {
+      "command": "git help",
+      "description": "Alias: ghh",
+      "tags": [
+        "alias",
+        "ghh"
+      ],
+      "examples": [
+        "git help"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "ghh"
+      }
+    },
+    {
+      "command": "git update-index --assume-unchanged",
+      "description": "Alias: gignore",
+      "tags": [
+        "alias",
+        "gignore"
+      ],
+      "examples": [
+        "git update-index --assume-unchanged"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gignore"
+      }
+    },
+    {
+      "command": "git ls-files -v | grep \"^[[:lower:]]\"",
+      "description": "Alias: gignored",
+      "tags": [
+        "alias",
+        "gignored"
+      ],
+      "examples": [
+        "git ls-files -v | grep \"^[[:lower:]]\""
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gignored"
+      }
+    },
+    {
+      "command": "git-quicklog.sh",
+      "description": "Alias: git-quicklog",
+      "tags": [
+        "alias",
+        "git-quicklog"
+      ],
+      "examples": [
+        "git-quicklog.sh"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "git-quicklog"
+      }
+    },
+    {
+      "command": "git svn dcommit && git push github $(git_main_branch):svntrunk",
+      "description": "Alias: git-svn-dcommit-push",
+      "tags": [
+        "alias",
+        "git-svn-dcommit-push"
+      ],
+      "examples": [
+        "git svn dcommit && git push github $(git_main_branch):svntrunk"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "git-svn-dcommit-push"
+      }
+    },
+    {
+      "command": "\\gitk --all --branches &!",
+      "description": "Alias: gk",
+      "tags": [
+        "alias",
+        "gk"
+      ],
+      "examples": [
+        "\\gitk --all --branches &!"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gk"
+      }
+    },
+    {
+      "command": "\\gitk --all $(git log --walk-reflogs --pretty=%h) &!",
+      "description": "Alias: gke",
+      "tags": [
+        "alias",
+        "gke"
+      ],
+      "examples": [
+        "\\gitk --all $(git log --walk-reflogs --pretty=%h) &!"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gke"
+      }
+    },
+    {
+      "command": "git pull",
+      "description": "Alias: gl",
+      "tags": [
+        "alias",
+        "gl"
+      ],
+      "examples": [
+        "git pull"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gl"
+      }
+    },
+    {
+      "command": "git log --stat",
+      "description": "Alias: glg",
+      "tags": [
+        "alias",
+        "glg"
+      ],
+      "examples": [
+        "git log --stat"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glg"
+      }
+    },
+    {
+      "command": "git log --graph",
+      "description": "Alias: glgg",
+      "tags": [
+        "alias",
+        "glgg"
+      ],
+      "examples": [
+        "git log --graph"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glgg"
+      }
+    },
+    {
+      "command": "git log --graph --decorate --all",
+      "description": "Alias: glgga",
+      "tags": [
+        "alias",
+        "glgga"
+      ],
+      "examples": [
+        "git log --graph --decorate --all"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glgga"
+      }
+    },
+    {
+      "command": "git log --graph --max-count=10",
+      "description": "Alias: glgm",
+      "tags": [
+        "alias",
+        "glgm"
+      ],
+      "examples": [
+        "git log --graph --max-count=10"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glgm"
+      }
+    },
+    {
+      "command": "git log --stat --patch",
+      "description": "Alias: glgp",
+      "tags": [
+        "alias",
+        "glgp"
+      ],
+      "examples": [
+        "git log --stat --patch"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glgp"
+      }
+    },
+    {
+      "command": "git log --oneline --decorate",
+      "description": "Alias: glo",
+      "tags": [
+        "alias",
+        "glo"
+      ],
+      "examples": [
+        "git log --oneline --decorate"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glo"
+      }
+    },
+    {
+      "command": "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset\"",
+      "description": "Alias: glod",
+      "tags": [
+        "alias",
+        "glod"
+      ],
+      "examples": [
+        "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset\""
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glod"
+      }
+    },
+    {
+      "command": "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset\" --date=short",
+      "description": "Alias: glods",
+      "tags": [
+        "alias",
+        "glods"
+      ],
+      "examples": [
+        "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset\" --date=short"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glods"
+      }
+    },
+    {
+      "command": "git log --oneline --decorate --graph",
+      "description": "Alias: glog",
+      "tags": [
+        "alias",
+        "glog"
+      ],
+      "examples": [
+        "git log --oneline --decorate --graph"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glog"
+      }
+    },
+    {
+      "command": "git log --oneline --decorate --graph --all",
+      "description": "Alias: gloga",
+      "tags": [
+        "alias",
+        "gloga"
+      ],
+      "examples": [
+        "git log --oneline --decorate --graph --all"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gloga"
+      }
+    },
+    {
+      "command": "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\"",
+      "description": "Alias: glol",
+      "tags": [
+        "alias",
+        "glol"
+      ],
+      "examples": [
+        "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\""
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glol"
+      }
+    },
+    {
+      "command": "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\" --all",
+      "description": "Alias: glola",
+      "tags": [
+        "alias",
+        "glola"
+      ],
+      "examples": [
+        "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\" --all"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glola"
+      }
+    },
+    {
+      "command": "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\" --stat",
+      "description": "Alias: glols",
+      "tags": [
+        "alias",
+        "glols"
+      ],
+      "examples": [
+        "git log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\" --stat"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glols"
+      }
+    },
+    {
+      "command": "_git_log_prettily",
+      "description": "Alias: glp",
+      "tags": [
+        "alias",
+        "glp"
+      ],
+      "examples": [
+        "_git_log_prettily"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glp"
+      }
+    },
+    {
+      "command": "git pull upstream $(git_current_branch)",
+      "description": "Alias: gluc",
+      "tags": [
+        "alias",
+        "gluc"
+      ],
+      "examples": [
+        "git pull upstream $(git_current_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gluc"
+      }
+    },
+    {
+      "command": "git pull upstream $(git_main_branch)",
+      "description": "Alias: glum",
+      "tags": [
+        "alias",
+        "glum"
+      ],
+      "examples": [
+        "git pull upstream $(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "glum"
+      }
+    },
+    {
+      "command": "git merge",
+      "description": "Alias: gm",
+      "tags": [
+        "alias",
+        "gm"
+      ],
+      "examples": [
+        "git merge"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gm"
+      }
+    },
+    {
+      "command": "git merge --abort",
+      "description": "Alias: gma",
+      "tags": [
+        "alias",
+        "gma"
+      ],
+      "examples": [
+        "git merge --abort"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gma"
+      }
+    },
+    {
+      "command": "git merge --continue",
+      "description": "Alias: gmc",
+      "tags": [
+        "alias",
+        "gmc"
+      ],
+      "examples": [
+        "git merge --continue"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gmc"
+      }
+    },
+    {
+      "command": "git merge --ff-only",
+      "description": "Alias: gmff",
+      "tags": [
+        "alias",
+        "gmff"
+      ],
+      "examples": [
+        "git merge --ff-only"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gmff"
+      }
+    },
+    {
+      "command": "git merge origin/$(git_main_branch)",
+      "description": "Alias: gmom",
+      "tags": [
+        "alias",
+        "gmom"
+      ],
+      "examples": [
+        "git merge origin/$(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gmom"
+      }
+    },
+    {
+      "command": "git merge --squash",
+      "description": "Alias: gms",
+      "tags": [
+        "alias",
+        "gms"
+      ],
+      "examples": [
+        "git merge --squash"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gms"
+      }
+    },
+    {
+      "command": "git mergetool --no-prompt",
+      "description": "Alias: gmtl",
+      "tags": [
+        "alias",
+        "gmtl"
+      ],
+      "examples": [
+        "git mergetool --no-prompt"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gmtl"
+      }
+    },
+    {
+      "command": "git mergetool --no-prompt --tool=vimdiff",
+      "description": "Alias: gmtlvim",
+      "tags": [
+        "alias",
+        "gmtlvim"
+      ],
+      "examples": [
+        "git mergetool --no-prompt --tool=vimdiff"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gmtlvim"
+      }
+    },
+    {
+      "command": "git merge upstream/$(git_main_branch)",
+      "description": "Alias: gmum",
+      "tags": [
+        "alias",
+        "gmum"
+      ],
+      "examples": [
+        "git merge upstream/$(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gmum"
+      }
+    },
+    {
+      "command": "git push",
+      "description": "Alias: gp",
+      "tags": [
+        "alias",
+        "gp"
+      ],
+      "examples": [
+        "git push"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gp"
+      }
+    },
+    {
+      "command": "git push --dry-run",
+      "description": "Alias: gpd",
+      "tags": [
+        "alias",
+        "gpd"
+      ],
+      "examples": [
+        "git push --dry-run"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpd"
+      }
+    },
+    {
+      "command": "git push --force-with-lease --force-if-includes",
+      "description": "Alias: gpf",
+      "tags": [
+        "alias",
+        "gpf"
+      ],
+      "examples": [
+        "git push --force-with-lease --force-if-includes"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpf"
+      }
+    },
+    {
+      "command": "git push --force",
+      "description": "Alias: gpf!",
+      "tags": [
+        "alias",
+        "gpf!"
+      ],
+      "examples": [
+        "git push --force"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpf!"
+      }
+    },
+    {
+      "command": "git push origin --all && git push origin --tags",
+      "description": "Alias: gpoat",
+      "tags": [
+        "alias",
+        "gpoat"
+      ],
+      "examples": [
+        "git push origin --all && git push origin --tags"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpoat"
+      }
+    },
+    {
+      "command": "git push origin --delete",
+      "description": "Alias: gpod",
+      "tags": [
+        "alias",
+        "gpod"
+      ],
+      "examples": [
+        "git push origin --delete"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpod"
+      }
+    },
+    {
+      "command": "git pull --rebase",
+      "description": "Alias: gpr",
+      "tags": [
+        "alias",
+        "gpr"
+      ],
+      "examples": [
+        "git pull --rebase"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpr"
+      }
+    },
+    {
+      "command": "git pull --rebase --autostash",
+      "description": "Alias: gpra",
+      "tags": [
+        "alias",
+        "gpra"
+      ],
+      "examples": [
+        "git pull --rebase --autostash"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpra"
+      }
+    },
+    {
+      "command": "git pull --rebase --autostash -v",
+      "description": "Alias: gprav",
+      "tags": [
+        "alias",
+        "gprav"
+      ],
+      "examples": [
+        "git pull --rebase --autostash -v"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gprav"
+      }
+    },
+    {
+      "command": "git reset --hard && git clean --force -dfx",
+      "description": "Alias: gpristine",
+      "tags": [
+        "alias",
+        "gpristine"
+      ],
+      "examples": [
+        "git reset --hard && git clean --force -dfx"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpristine"
+      }
+    },
+    {
+      "command": "git pull --rebase origin $(git_main_branch)",
+      "description": "Alias: gprom",
+      "tags": [
+        "alias",
+        "gprom"
+      ],
+      "examples": [
+        "git pull --rebase origin $(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gprom"
+      }
+    },
+    {
+      "command": "git pull --rebase=interactive origin $(git_main_branch)",
+      "description": "Alias: gpromi",
+      "tags": [
+        "alias",
+        "gpromi"
+      ],
+      "examples": [
+        "git pull --rebase=interactive origin $(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpromi"
+      }
+    },
+    {
+      "command": "git pull --rebase upstream $(git_main_branch)",
+      "description": "Alias: gprum",
+      "tags": [
+        "alias",
+        "gprum"
+      ],
+      "examples": [
+        "git pull --rebase upstream $(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gprum"
+      }
+    },
+    {
+      "command": "git pull --rebase=interactive upstream $(git_main_branch)",
+      "description": "Alias: gprumi",
+      "tags": [
+        "alias",
+        "gprumi"
+      ],
+      "examples": [
+        "git pull --rebase=interactive upstream $(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gprumi"
+      }
+    },
+    {
+      "command": "git pull --rebase -v",
+      "description": "Alias: gprv",
+      "tags": [
+        "alias",
+        "gprv"
+      ],
+      "examples": [
+        "git pull --rebase -v"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gprv"
+      }
+    },
+    {
+      "command": "git push --set-upstream origin $(git_current_branch)",
+      "description": "Alias: gpsup",
+      "tags": [
+        "alias",
+        "gpsup"
+      ],
+      "examples": [
+        "git push --set-upstream origin $(git_current_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpsup"
+      }
+    },
+    {
+      "command": "git push --set-upstream origin $(git_current_branch) --force-with-lease --force-if-includes",
+      "description": "Alias: gpsupf",
+      "tags": [
+        "alias",
+        "gpsupf"
+      ],
+      "examples": [
+        "git push --set-upstream origin $(git_current_branch) --force-with-lease --force-if-includes"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpsupf"
+      }
+    },
+    {
+      "command": "git push upstream",
+      "description": "Alias: gpu",
+      "tags": [
+        "alias",
+        "gpu"
+      ],
+      "examples": [
+        "git push upstream"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpu"
+      }
+    },
+    {
+      "command": "git push --verbose",
+      "description": "Alias: gpv",
+      "tags": [
+        "alias",
+        "gpv"
+      ],
+      "examples": [
+        "git push --verbose"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gpv"
+      }
+    },
+    {
+      "command": "git remote",
+      "description": "Alias: gr",
+      "tags": [
+        "alias",
+        "gr"
+      ],
+      "examples": [
+        "git remote"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gr"
+      }
+    },
+    {
+      "command": "git remote add",
+      "description": "Alias: gra",
+      "tags": [
+        "alias",
+        "gra"
+      ],
+      "examples": [
+        "git remote add"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gra"
+      }
+    },
+    {
+      "command": "git rebase",
+      "description": "Alias: grb",
+      "tags": [
+        "alias",
+        "grb"
+      ],
+      "examples": [
+        "git rebase"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grb"
+      }
+    },
+    {
+      "command": "git rebase --abort",
+      "description": "Alias: grba",
+      "tags": [
+        "alias",
+        "grba"
+      ],
+      "examples": [
+        "git rebase --abort"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grba"
+      }
+    },
+    {
+      "command": "git rebase --continue",
+      "description": "Alias: grbc",
+      "tags": [
+        "alias",
+        "grbc"
+      ],
+      "examples": [
+        "git rebase --continue"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grbc"
+      }
+    },
+    {
+      "command": "git rebase $(git_develop_branch)",
+      "description": "Alias: grbd",
+      "tags": [
+        "alias",
+        "grbd"
+      ],
+      "examples": [
+        "git rebase $(git_develop_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grbd"
+      }
+    },
+    {
+      "command": "git rebase --interactive",
+      "description": "Alias: grbi",
+      "tags": [
+        "alias",
+        "grbi"
+      ],
+      "examples": [
+        "git rebase --interactive"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grbi"
+      }
+    },
+    {
+      "command": "git rebase $(git_main_branch)",
+      "description": "Alias: grbm",
+      "tags": [
+        "alias",
+        "grbm"
+      ],
+      "examples": [
+        "git rebase $(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grbm"
+      }
+    },
+    {
+      "command": "git rebase --onto",
+      "description": "Alias: grbo",
+      "tags": [
+        "alias",
+        "grbo"
+      ],
+      "examples": [
+        "git rebase --onto"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grbo"
+      }
+    },
+    {
+      "command": "git rebase origin/$(git_main_branch)",
+      "description": "Alias: grbom",
+      "tags": [
+        "alias",
+        "grbom"
+      ],
+      "examples": [
+        "git rebase origin/$(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grbom"
+      }
+    },
+    {
+      "command": "git rebase --skip",
+      "description": "Alias: grbs",
+      "tags": [
+        "alias",
+        "grbs"
+      ],
+      "examples": [
+        "git rebase --skip"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grbs"
+      }
+    },
+    {
+      "command": "git rebase upstream/$(git_main_branch)",
+      "description": "Alias: grbum",
+      "tags": [
+        "alias",
+        "grbum"
+      ],
+      "examples": [
+        "git rebase upstream/$(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grbum"
+      }
+    },
+    {
+      "command": "grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}",
+      "description": "Alias: grep",
+      "tags": [
+        "alias",
+        "grep"
+      ],
+      "examples": [
+        "grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,venv}"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grep"
+      }
+    },
+    {
+      "command": "git revert",
+      "description": "Alias: grev",
+      "tags": [
+        "alias",
+        "grev"
+      ],
+      "examples": [
+        "git revert"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grev"
+      }
+    },
+    {
+      "command": "git revert --abort",
+      "description": "Alias: greva",
+      "tags": [
+        "alias",
+        "greva"
+      ],
+      "examples": [
+        "git revert --abort"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "greva"
+      }
+    },
+    {
+      "command": "git revert --continue",
+      "description": "Alias: grevc",
+      "tags": [
+        "alias",
+        "grevc"
+      ],
+      "examples": [
+        "git revert --continue"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grevc"
+      }
+    },
+    {
+      "command": "git reflog",
+      "description": "Alias: grf",
+      "tags": [
+        "alias",
+        "grf"
+      ],
+      "examples": [
+        "git reflog"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grf"
+      }
+    },
+    {
+      "command": "git reset",
+      "description": "Alias: grh",
+      "tags": [
+        "alias",
+        "grh"
+      ],
+      "examples": [
+        "git reset"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grh"
+      }
+    },
+    {
+      "command": "git reset --hard",
+      "description": "Alias: grhh",
+      "tags": [
+        "alias",
+        "grhh"
+      ],
+      "examples": [
+        "git reset --hard"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grhh"
+      }
+    },
+    {
+      "command": "git reset --keep",
+      "description": "Alias: grhk",
+      "tags": [
+        "alias",
+        "grhk"
+      ],
+      "examples": [
+        "git reset --keep"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grhk"
+      }
+    },
+    {
+      "command": "git reset --soft",
+      "description": "Alias: grhs",
+      "tags": [
+        "alias",
+        "grhs"
+      ],
+      "examples": [
+        "git reset --soft"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grhs"
+      }
+    },
+    {
+      "command": "git rm",
+      "description": "Alias: grm",
+      "tags": [
+        "alias",
+        "grm"
+      ],
+      "examples": [
+        "git rm"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grm"
+      }
+    },
+    {
+      "command": "git rm --cached",
+      "description": "Alias: grmc",
+      "tags": [
+        "alias",
+        "grmc"
+      ],
+      "examples": [
+        "git rm --cached"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grmc"
+      }
+    },
+    {
+      "command": "git remote rename",
+      "description": "Alias: grmv",
+      "tags": [
+        "alias",
+        "grmv"
+      ],
+      "examples": [
+        "git remote rename"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grmv"
+      }
+    },
+    {
+      "command": "git reset origin/$(git_current_branch) --hard",
+      "description": "Alias: groh",
+      "tags": [
+        "alias",
+        "groh"
+      ],
+      "examples": [
+        "git reset origin/$(git_current_branch) --hard"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "groh"
+      }
+    },
+    {
+      "command": "git remote remove",
+      "description": "Alias: grrm",
+      "tags": [
+        "alias",
+        "grrm"
+      ],
+      "examples": [
+        "git remote remove"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grrm"
+      }
+    },
+    {
+      "command": "git restore",
+      "description": "Alias: grs",
+      "tags": [
+        "alias",
+        "grs"
+      ],
+      "examples": [
+        "git restore"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grs"
+      }
+    },
+    {
+      "command": "git remote set-url",
+      "description": "Alias: grset",
+      "tags": [
+        "alias",
+        "grset"
+      ],
+      "examples": [
+        "git remote set-url"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grset"
+      }
+    },
+    {
+      "command": "git restore --source",
+      "description": "Alias: grss",
+      "tags": [
+        "alias",
+        "grss"
+      ],
+      "examples": [
+        "git restore --source"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grss"
+      }
+    },
+    {
+      "command": "git restore --staged",
+      "description": "Alias: grst",
+      "tags": [
+        "alias",
+        "grst"
+      ],
+      "examples": [
+        "git restore --staged"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grst"
+      }
+    },
+    {
+      "command": "cd \"$(git rev-parse --show-toplevel || echo .)\"",
+      "description": "Alias: grt",
+      "tags": [
+        "alias",
+        "grt"
+      ],
+      "examples": [
+        "cd \"$(git rev-parse --show-toplevel || echo .)\""
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grt"
+      }
+    },
+    {
+      "command": "git reset --",
+      "description": "Alias: gru",
+      "tags": [
+        "alias",
+        "gru"
+      ],
+      "examples": [
+        "git reset --"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gru"
+      }
+    },
+    {
+      "command": "git remote update",
+      "description": "Alias: grup",
+      "tags": [
+        "alias",
+        "grup"
+      ],
+      "examples": [
+        "git remote update"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grup"
+      }
+    },
+    {
+      "command": "git remote --verbose",
+      "description": "Alias: grv",
+      "tags": [
+        "alias",
+        "grv"
+      ],
+      "examples": [
+        "git remote --verbose"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "grv"
+      }
+    },
+    {
+      "command": "git status --short --branch",
+      "description": "Alias: gsb",
+      "tags": [
+        "alias",
+        "gsb"
+      ],
+      "examples": [
+        "git status --short --branch"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsb"
+      }
+    },
+    {
+      "command": "git svn dcommit",
+      "description": "Alias: gsd",
+      "tags": [
+        "alias",
+        "gsd"
+      ],
+      "examples": [
+        "git svn dcommit"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsd"
+      }
+    },
+    {
+      "command": "git show",
+      "description": "Alias: gsh",
+      "tags": [
+        "alias",
+        "gsh"
+      ],
+      "examples": [
+        "git show"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsh"
+      }
+    },
+    {
+      "command": "git submodule init",
+      "description": "Alias: gsi",
+      "tags": [
+        "alias",
+        "gsi"
+      ],
+      "examples": [
+        "git submodule init"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsi"
+      }
+    },
+    {
+      "command": "git show --pretty=short --show-signature",
+      "description": "Alias: gsps",
+      "tags": [
+        "alias",
+        "gsps"
+      ],
+      "examples": [
+        "git show --pretty=short --show-signature"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsps"
+      }
+    },
+    {
+      "command": "git svn rebase",
+      "description": "Alias: gsr",
+      "tags": [
+        "alias",
+        "gsr"
+      ],
+      "examples": [
+        "git svn rebase"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsr"
+      }
+    },
+    {
+      "command": "git status --short",
+      "description": "Alias: gss",
+      "tags": [
+        "alias",
+        "gss"
+      ],
+      "examples": [
+        "git status --short"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gss"
+      }
+    },
+    {
+      "command": "git status",
+      "description": "Alias: gst",
+      "tags": [
+        "alias",
+        "gst"
+      ],
+      "examples": [
+        "git status"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gst"
+      }
+    },
+    {
+      "command": "git stash push",
+      "description": "Alias: gsta",
+      "tags": [
+        "alias",
+        "gsta"
+      ],
+      "examples": [
+        "git stash push"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsta"
+      }
+    },
+    {
+      "command": "git stash apply",
+      "description": "Alias: gstaa",
+      "tags": [
+        "alias",
+        "gstaa"
+      ],
+      "examples": [
+        "git stash apply"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gstaa"
+      }
+    },
+    {
+      "command": "git stash --all",
+      "description": "Alias: gstall",
+      "tags": [
+        "alias",
+        "gstall"
+      ],
+      "examples": [
+        "git stash --all"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gstall"
+      }
+    },
+    {
+      "command": "git stash clear",
+      "description": "Alias: gstc",
+      "tags": [
+        "alias",
+        "gstc"
+      ],
+      "examples": [
+        "git stash clear"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gstc"
+      }
+    },
+    {
+      "command": "git stash drop",
+      "description": "Alias: gstd",
+      "tags": [
+        "alias",
+        "gstd"
+      ],
+      "examples": [
+        "git stash drop"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gstd"
+      }
+    },
+    {
+      "command": "git stash list",
+      "description": "Alias: gstl",
+      "tags": [
+        "alias",
+        "gstl"
+      ],
+      "examples": [
+        "git stash list"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gstl"
+      }
+    },
+    {
+      "command": "git stash pop",
+      "description": "Alias: gstp",
+      "tags": [
+        "alias",
+        "gstp"
+      ],
+      "examples": [
+        "git stash pop"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gstp"
+      }
+    },
+    {
+      "command": "git stash show --patch",
+      "description": "Alias: gsts",
+      "tags": [
+        "alias",
+        "gsts"
+      ],
+      "examples": [
+        "git stash show --patch"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsts"
+      }
+    },
+    {
+      "command": "gsta --include-untracked",
+      "description": "Alias: gstu",
+      "tags": [
+        "alias",
+        "gstu"
+      ],
+      "examples": [
+        "gsta --include-untracked"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gstu"
+      }
+    },
+    {
+      "command": "git submodule update",
+      "description": "Alias: gsu",
+      "tags": [
+        "alias",
+        "gsu"
+      ],
+      "examples": [
+        "git submodule update"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsu"
+      }
+    },
+    {
+      "command": "git switch",
+      "description": "Alias: gsw",
+      "tags": [
+        "alias",
+        "gsw"
+      ],
+      "examples": [
+        "git switch"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gsw"
+      }
+    },
+    {
+      "command": "git switch --create",
+      "description": "Alias: gswc",
+      "tags": [
+        "alias",
+        "gswc"
+      ],
+      "examples": [
+        "git switch --create"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gswc"
+      }
+    },
+    {
+      "command": "git switch $(git_develop_branch)",
+      "description": "Alias: gswd",
+      "tags": [
+        "alias",
+        "gswd"
+      ],
+      "examples": [
+        "git switch $(git_develop_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gswd"
+      }
+    },
+    {
+      "command": "git switch $(git_main_branch)",
+      "description": "Alias: gswm",
+      "tags": [
+        "alias",
+        "gswm"
+      ],
+      "examples": [
+        "git switch $(git_main_branch)"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gswm"
+      }
+    },
+    {
+      "command": "git tag --annotate",
+      "description": "Alias: gta",
+      "tags": [
+        "alias",
+        "gta"
+      ],
+      "examples": [
+        "git tag --annotate"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gta"
+      }
+    },
+    {
+      "command": "gtl(){ git tag --sort=-v:refname -n --list \"${1}*\" }; noglob gtl",
+      "description": "Alias: gtl",
+      "tags": [
+        "alias",
+        "gtl"
+      ],
+      "examples": [
+        "gtl(){ git tag --sort=-v:refname -n --list \"${1}*\" }; noglob gtl"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gtl"
+      }
+    },
+    {
+      "command": "git tag --sign",
+      "description": "Alias: gts",
+      "tags": [
+        "alias",
+        "gts"
+      ],
+      "examples": [
+        "git tag --sign"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gts"
+      }
+    },
+    {
+      "command": "git tag | sort -V",
+      "description": "Alias: gtv",
+      "tags": [
+        "alias",
+        "gtv"
+      ],
+      "examples": [
+        "git tag | sort -V"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gtv"
+      }
+    },
+    {
+      "command": "git update-index --no-assume-unchanged",
+      "description": "Alias: gunignore",
+      "tags": [
+        "alias",
+        "gunignore"
+      ],
+      "examples": [
+        "git update-index --no-assume-unchanged"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gunignore"
+      }
+    },
+    {
+      "command": "git rev-list --max-count=1 --format=\"%s\" HEAD | grep -q \"\\--wip--\" && git reset HEAD~1",
+      "description": "Alias: gunwip",
+      "tags": [
+        "alias",
+        "gunwip"
+      ],
+      "examples": [
+        "git rev-list --max-count=1 --format=\"%s\" HEAD | grep -q \"\\--wip--\" && git reset HEAD~1"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gunwip"
+      }
+    },
+    {
+      "command": "git log --patch --abbrev-commit --pretty=medium --raw",
+      "description": "Alias: gwch",
+      "tags": [
+        "alias",
+        "gwch"
+      ],
+      "examples": [
+        "git log --patch --abbrev-commit --pretty=medium --raw"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gwch"
+      }
+    },
+    {
+      "command": "git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign --message \"--wip-- [skip ci]\"",
+      "description": "Alias: gwip",
+      "tags": [
+        "alias",
+        "gwip"
+      ],
+      "examples": [
+        "git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign --message \"--wip-- [skip ci]\""
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gwip"
+      }
+    },
+    {
+      "command": "git reset --hard && git clean --force -df",
+      "description": "Alias: gwipe",
+      "tags": [
+        "alias",
+        "gwipe"
+      ],
+      "examples": [
+        "git reset --hard && git clean --force -df"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gwipe"
+      }
+    },
+    {
+      "command": "git worktree",
+      "description": "Alias: gwt",
+      "tags": [
+        "alias",
+        "gwt"
+      ],
+      "examples": [
+        "git worktree"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gwt"
+      }
+    },
+    {
+      "command": "git worktree add",
+      "description": "Alias: gwta",
+      "tags": [
+        "alias",
+        "gwta"
+      ],
+      "examples": [
+        "git worktree add"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gwta"
+      }
+    },
+    {
+      "command": "git worktree list",
+      "description": "Alias: gwtls",
+      "tags": [
+        "alias",
+        "gwtls"
+      ],
+      "examples": [
+        "git worktree list"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gwtls"
+      }
+    },
+    {
+      "command": "git worktree move",
+      "description": "Alias: gwtmv",
+      "tags": [
+        "alias",
+        "gwtmv"
+      ],
+      "examples": [
+        "git worktree move"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gwtmv"
+      }
+    },
+    {
+      "command": "git worktree remove",
+      "description": "Alias: gwtrm",
+      "tags": [
+        "alias",
+        "gwtrm"
+      ],
+      "examples": [
+        "git worktree remove"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "gwtrm"
+      }
+    },
+    {
+      "command": "omz_history",
+      "description": "Alias: history",
+      "tags": [
+        "alias",
+        "history"
+      ],
+      "examples": [
+        "omz_history"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "history"
+      }
+    },
+    {
+      "command": "ls -lah",
+      "description": "Alias: l",
+      "tags": [
+        "alias",
+        "l"
+      ],
+      "examples": [
+        "ls -lah"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "l"
+      }
+    },
+    {
+      "command": "ls -lAh",
+      "description": "Alias: la",
+      "tags": [
+        "alias",
+        "la"
+      ],
+      "examples": [
+        "ls -lAh"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "la"
+      }
+    },
+    {
+      "command": "ls -lh",
+      "description": "Alias: ll",
+      "tags": [
+        "alias",
+        "ll"
+      ],
+      "examples": [
+        "ls -lh"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "ll"
+      }
+    },
+    {
+      "command": "ls -G",
+      "description": "Alias: ls",
+      "tags": [
+        "alias",
+        "ls"
+      ],
+      "examples": [
+        "ls -G"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "ls"
+      }
+    },
+    {
+      "command": "ls -lah",
+      "description": "Alias: lsa",
+      "tags": [
+        "alias",
+        "lsa"
+      ],
+      "examples": [
+        "ls -lah"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "lsa"
+      }
+    },
+    {
+      "command": "mkdir -p",
+      "description": "Alias: md",
+      "tags": [
+        "alias",
+        "md"
+      ],
+      "examples": [
+        "mkdir -p"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "md"
+      }
+    },
+    {
+      "command": "pnpm",
+      "description": "Alias: pn",
+      "tags": [
+        "alias",
+        "pn"
+      ],
+      "examples": [
+        "pnpm"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "pn"
+      }
+    },
+    {
+      "command": "py",
+      "description": "Alias: python",
+      "tags": [
+        "alias",
+        "python"
+      ],
+      "examples": [
+        "py"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "python"
+      }
+    },
+    {
+      "command": "py",
+      "description": "Alias: python3",
+      "tags": [
+        "alias",
+        "python3"
+      ],
+      "examples": [
+        "py"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "python3"
+      }
+    },
+    {
+      "command": "rmdir",
+      "description": "Alias: rd",
+      "tags": [
+        "alias",
+        "rd"
+      ],
+      "examples": [
+        "rmdir"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "rd"
+      }
+    },
+    {
+      "command": "readme-update.sh",
+      "description": "Alias: readme-update",
+      "tags": [
+        "alias",
+        "readme-update"
+      ],
+      "examples": [
+        "readme-update.sh"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "readme-update"
+      }
+    },
+    {
       "command": "man",
       "description": "Alias: run-help",
       "tags": [
@@ -13,6 +3778,111 @@
       "source": "alias",
       "metadata": {
         "alias_name": "run-help"
+      }
+    },
+    {
+      "command": "nx serve api",
+      "description": "Alias: talerra-run-api",
+      "tags": [
+        "alias",
+        "talerra-run-api"
+      ],
+      "examples": [
+        "nx serve api"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "talerra-run-api"
+      }
+    },
+    {
+      "command": "nx serve client -- --ios",
+      "description": "Alias: talerra-run-client",
+      "tags": [
+        "alias",
+        "talerra-run-client"
+      ],
+      "examples": [
+        "nx serve client -- --ios"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "talerra-run-client"
+      }
+    },
+    {
+      "command": "docker compose up",
+      "description": "Alias: talerra-run-db",
+      "tags": [
+        "alias",
+        "talerra-run-db"
+      ],
+      "examples": [
+        "docker compose up"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "talerra-run-db"
+      }
+    },
+    {
+      "command": "echo test",
+      "description": "Alias: test3",
+      "tags": [
+        "alias",
+        "test3"
+      ],
+      "examples": [
+        "echo test"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "test3"
+      }
+    },
+    {
+      "command": "echo",
+      "description": "Alias: test_alias",
+      "tags": [
+        "alias",
+        "test_alias"
+      ],
+      "examples": [
+        "echo"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "test_alias"
+      }
+    },
+    {
+      "command": "echo",
+      "description": "Alias: test_blah",
+      "tags": [
+        "alias",
+        "test_blah"
+      ],
+      "examples": [
+        "echo"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "test_blah"
+      }
+    },
+    {
+      "command": "ts-repl.sh",
+      "description": "Alias: ts-repl",
+      "tags": [
+        "alias",
+        "ts-repl"
+      ],
+      "examples": [
+        "ts-repl.sh"
+      ],
+      "source": "alias",
+      "metadata": {
+        "alias_name": "ts-repl"
       }
     },
     {

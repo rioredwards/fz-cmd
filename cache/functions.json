@@ -1,3 +1,5779 @@
 {
-  "commands": []
+  "commands": [
+    {
+      "command": "prompt_goenv",
+      "description": "Function: prompt_goenv",
+      "tags": [
+        "function",
+        "prompt_goenv"
+      ],
+      "examples": [
+        "prompt_goenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_goenv"
+      }
+    },
+    {
+      "command": "als",
+      "description": "Function: als",
+      "tags": [
+        "function",
+        "als"
+      ],
+      "examples": [
+        "als"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "als"
+      }
+    },
+    {
+      "command": "nvm_cache_dir",
+      "description": "Function: nvm_cache_dir",
+      "tags": [
+        "function",
+        "nvm_cache_dir"
+      ],
+      "examples": [
+        "nvm_cache_dir"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_cache_dir"
+      }
+    },
+    {
+      "command": "nvm_strip_iojs_prefix",
+      "description": "Function: nvm_strip_iojs_prefix",
+      "tags": [
+        "function",
+        "nvm_strip_iojs_prefix"
+      ],
+      "examples": [
+        "nvm_strip_iojs_prefix"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_strip_iojs_prefix"
+      }
+    },
+    {
+      "command": "fz-gc-widget",
+      "description": "Function: fz-gc-widget",
+      "tags": [
+        "function",
+        "fz-gc-widget"
+      ],
+      "examples": [
+        "fz-gc-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fz-gc-widget"
+      }
+    },
+    {
+      "command": "prompt_powerlevel9k_teardown",
+      "description": "Function: prompt_powerlevel9k_teardown",
+      "tags": [
+        "function",
+        "prompt_powerlevel9k_teardown"
+      ],
+      "examples": [
+        "prompt_powerlevel9k_teardown"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_powerlevel9k_teardown"
+      }
+    },
+    {
+      "command": "spectrum_bls",
+      "description": "Function: spectrum_bls",
+      "tags": [
+        "function",
+        "spectrum_bls"
+      ],
+      "examples": [
+        "spectrum_bls"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "spectrum_bls"
+      }
+    },
+    {
+      "command": "prompt_jenv",
+      "description": "Function: prompt_jenv",
+      "tags": [
+        "function",
+        "prompt_jenv"
+      ],
+      "examples": [
+        "prompt_jenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_jenv"
+      }
+    },
+    {
+      "command": "nvm_get_make_jobs",
+      "description": "Function: nvm_get_make_jobs",
+      "tags": [
+        "function",
+        "nvm_get_make_jobs"
+      ],
+      "examples": [
+        "nvm_get_make_jobs"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_make_jobs"
+      }
+    },
+    {
+      "command": "gbda",
+      "description": "Function: gbda",
+      "tags": [
+        "function",
+        "gbda"
+      ],
+      "examples": [
+        "gbda"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gbda"
+      }
+    },
+    {
+      "command": "fzf-git-hashes-widget",
+      "description": "Function: fzf-git-hashes-widget",
+      "tags": [
+        "function",
+        "fzf-git-hashes-widget"
+      ],
+      "examples": [
+        "fzf-git-hashes-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-git-hashes-widget"
+      }
+    },
+    {
+      "command": "git_commits_ahead",
+      "description": "Function: git_commits_ahead",
+      "tags": [
+        "function",
+        "git_commits_ahead"
+      ],
+      "examples": [
+        "git_commits_ahead"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_commits_ahead"
+      }
+    },
+    {
+      "command": "nvm_binary_available",
+      "description": "Function: nvm_binary_available",
+      "tags": [
+        "function",
+        "nvm_binary_available"
+      ],
+      "examples": [
+        "nvm_binary_available"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_binary_available"
+      }
+    },
+    {
+      "command": "p9k_configure",
+      "description": "Function: p9k_configure",
+      "tags": [
+        "function",
+        "p9k_configure"
+      ],
+      "examples": [
+        "p9k_configure"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "p9k_configure"
+      }
+    },
+    {
+      "command": "instant_prompt_dir_writable",
+      "description": "Function: instant_prompt_dir_writable",
+      "tags": [
+        "function",
+        "instant_prompt_dir_writable"
+      ],
+      "examples": [
+        "instant_prompt_dir_writable"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_dir_writable"
+      }
+    },
+    {
+      "command": "gbds",
+      "description": "Function: gbds",
+      "tags": [
+        "function",
+        "gbds"
+      ],
+      "examples": [
+        "gbds"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gbds"
+      }
+    },
+    {
+      "command": "nvm_npm_global_modules",
+      "description": "Function: nvm_npm_global_modules",
+      "tags": [
+        "function",
+        "nvm_npm_global_modules"
+      ],
+      "examples": [
+        "nvm_npm_global_modules"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_npm_global_modules"
+      }
+    },
+    {
+      "command": "nvm_has_system_iojs",
+      "description": "Function: nvm_has_system_iojs",
+      "tags": [
+        "function",
+        "nvm_has_system_iojs"
+      ],
+      "examples": [
+        "nvm_has_system_iojs"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_has_system_iojs"
+      }
+    },
+    {
+      "command": "git_commits_behind",
+      "description": "Function: git_commits_behind",
+      "tags": [
+        "function",
+        "git_commits_behind"
+      ],
+      "examples": [
+        "git_commits_behind"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_commits_behind"
+      }
+    },
+    {
+      "command": "git_prompt_status",
+      "description": "Function: git_prompt_status",
+      "tags": [
+        "function",
+        "git_prompt_status"
+      ],
+      "examples": [
+        "git_prompt_status"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_prompt_status"
+      }
+    },
+    {
+      "command": "nvm_print_formatted_alias",
+      "description": "Function: nvm_print_formatted_alias",
+      "tags": [
+        "function",
+        "nvm_print_formatted_alias"
+      ],
+      "examples": [
+        "nvm_print_formatted_alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_print_formatted_alias"
+      }
+    },
+    {
+      "command": "omz_urldecode",
+      "description": "Function: omz_urldecode",
+      "tags": [
+        "function",
+        "omz_urldecode"
+      ],
+      "examples": [
+        "omz_urldecode"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "omz_urldecode"
+      }
+    },
+    {
+      "command": "nvm_set_colors",
+      "description": "Function: nvm_set_colors",
+      "tags": [
+        "function",
+        "nvm_set_colors"
+      ],
+      "examples": [
+        "nvm_set_colors"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_set_colors"
+      }
+    },
+    {
+      "command": "prompt_kubecontext",
+      "description": "Function: prompt_kubecontext",
+      "tags": [
+        "function",
+        "prompt_kubecontext"
+      ],
+      "examples": [
+        "prompt_kubecontext"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_kubecontext"
+      }
+    },
+    {
+      "command": "fz-cmd-widget",
+      "description": "Function: fz-cmd-widget",
+      "tags": [
+        "function",
+        "fz-cmd-widget"
+      ],
+      "examples": [
+        "fz-cmd-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fz-cmd-widget"
+      }
+    },
+    {
+      "command": "prompt_ip",
+      "description": "Function: prompt_ip",
+      "tags": [
+        "function",
+        "prompt_ip"
+      ],
+      "examples": [
+        "prompt_ip"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_ip"
+      }
+    },
+    {
+      "command": "compinit",
+      "description": "Function: compinit",
+      "tags": [
+        "function",
+        "compinit"
+      ],
+      "examples": [
+        "compinit"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "compinit"
+      }
+    },
+    {
+      "command": "d",
+      "description": "Function: d",
+      "tags": [
+        "function",
+        "d"
+      ],
+      "examples": [
+        "d"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "d"
+      }
+    },
+    {
+      "command": "pip",
+      "description": "Function: pip",
+      "tags": [
+        "function",
+        "pip"
+      ],
+      "examples": [
+        "pip"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "pip"
+      }
+    },
+    {
+      "command": "nvm_strip_path",
+      "description": "Function: nvm_strip_path",
+      "tags": [
+        "function",
+        "nvm_strip_path"
+      ],
+      "examples": [
+        "nvm_strip_path"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_strip_path"
+      }
+    },
+    {
+      "command": "cdi",
+      "description": "Function: cdi",
+      "tags": [
+        "function",
+        "cdi"
+      ],
+      "examples": [
+        "cdi"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "cdi"
+      }
+    },
+    {
+      "command": "omz_urlencode",
+      "description": "Function: omz_urlencode",
+      "tags": [
+        "function",
+        "omz_urlencode"
+      ],
+      "examples": [
+        "omz_urlencode"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "omz_urlencode"
+      }
+    },
+    {
+      "command": "z",
+      "description": "Function: z",
+      "tags": [
+        "function",
+        "z"
+      ],
+      "examples": [
+        "z"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "z"
+      }
+    },
+    {
+      "command": "nvm_clang_version",
+      "description": "Function: nvm_clang_version",
+      "tags": [
+        "function",
+        "nvm_clang_version"
+      ],
+      "examples": [
+        "nvm_clang_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_clang_version"
+      }
+    },
+    {
+      "command": "prompt_host",
+      "description": "Function: prompt_host",
+      "tags": [
+        "function",
+        "prompt_host"
+      ],
+      "examples": [
+        "prompt_host"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_host"
+      }
+    },
+    {
+      "command": "clipcopy",
+      "description": "Function: clipcopy",
+      "tags": [
+        "function",
+        "clipcopy"
+      ],
+      "examples": [
+        "clipcopy"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "clipcopy"
+      }
+    },
+    {
+      "command": "nvm_rc_version",
+      "description": "Function: nvm_rc_version",
+      "tags": [
+        "function",
+        "nvm_rc_version"
+      ],
+      "examples": [
+        "nvm_rc_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_rc_version"
+      }
+    },
+    {
+      "command": "prompt_example",
+      "description": "Function: prompt_example",
+      "tags": [
+        "function",
+        "prompt_example"
+      ],
+      "examples": [
+        "prompt_example"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_example"
+      }
+    },
+    {
+      "command": "prompt_symfony2_version",
+      "description": "Function: prompt_symfony2_version",
+      "tags": [
+        "function",
+        "prompt_symfony2_version"
+      ],
+      "examples": [
+        "prompt_symfony2_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_symfony2_version"
+      }
+    },
+    {
+      "command": "prompt_chruby",
+      "description": "Function: prompt_chruby",
+      "tags": [
+        "function",
+        "prompt_chruby"
+      ],
+      "examples": [
+        "prompt_chruby"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_chruby"
+      }
+    },
+    {
+      "command": "nvm",
+      "description": "Function: nvm",
+      "tags": [
+        "function",
+        "nvm"
+      ],
+      "examples": [
+        "nvm"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm"
+      }
+    },
+    {
+      "command": "nvm_is_natural_num",
+      "description": "Function: nvm_is_natural_num",
+      "tags": [
+        "function",
+        "nvm_is_natural_num"
+      ],
+      "examples": [
+        "nvm_is_natural_num"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_is_natural_num"
+      }
+    },
+    {
+      "command": "host-info",
+      "description": "Function: host-info",
+      "tags": [
+        "function",
+        "host-info"
+      ],
+      "examples": [
+        "host-info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "host-info"
+      }
+    },
+    {
+      "command": "p10k-instant-prompt-finalize",
+      "description": "Function: p10k-instant-prompt-finalize",
+      "tags": [
+        "function",
+        "p10k-instant-prompt-finalize"
+      ],
+      "examples": [
+        "p10k-instant-prompt-finalize"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "p10k-instant-prompt-finalize"
+      }
+    },
+    {
+      "command": "compdef",
+      "description": "Function: compdef",
+      "tags": [
+        "function",
+        "compdef"
+      ],
+      "examples": [
+        "compdef"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "compdef"
+      }
+    },
+    {
+      "command": "prompt_vi_mode",
+      "description": "Function: prompt_vi_mode",
+      "tags": [
+        "function",
+        "prompt_vi_mode"
+      ],
+      "examples": [
+        "prompt_vi_mode"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_vi_mode"
+      }
+    },
+    {
+      "command": "nvm_print_npm_version",
+      "description": "Function: nvm_print_npm_version",
+      "tags": [
+        "function",
+        "nvm_print_npm_version"
+      ],
+      "examples": [
+        "nvm_print_npm_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_print_npm_version"
+      }
+    },
+    {
+      "command": "add-zle-hook-widget",
+      "description": "Function: add-zle-hook-widget",
+      "tags": [
+        "function",
+        "add-zle-hook-widget"
+      ],
+      "examples": [
+        "add-zle-hook-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "add-zle-hook-widget"
+      }
+    },
+    {
+      "command": "nvm_curl_libz_support",
+      "description": "Function: nvm_curl_libz_support",
+      "tags": [
+        "function",
+        "nvm_curl_libz_support"
+      ],
+      "examples": [
+        "nvm_curl_libz_support"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_curl_libz_support"
+      }
+    },
+    {
+      "command": "prompt_lf",
+      "description": "Function: prompt_lf",
+      "tags": [
+        "function",
+        "prompt_lf"
+      ],
+      "examples": [
+        "prompt_lf"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_lf"
+      }
+    },
+    {
+      "command": "fz-gc",
+      "description": "Function: fz-gc",
+      "tags": [
+        "function",
+        "fz-gc"
+      ],
+      "examples": [
+        "fz-gc"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fz-gc"
+      }
+    },
+    {
+      "command": "fzf-git-worktrees-widget",
+      "description": "Function: fzf-git-worktrees-widget",
+      "tags": [
+        "function",
+        "fzf-git-worktrees-widget"
+      ],
+      "examples": [
+        "fzf-git-worktrees-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-git-worktrees-widget"
+      }
+    },
+    {
+      "command": "prompt_ranger",
+      "description": "Function: prompt_ranger",
+      "tags": [
+        "function",
+        "prompt_ranger"
+      ],
+      "examples": [
+        "prompt_ranger"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_ranger"
+      }
+    },
+    {
+      "command": "ggfl",
+      "description": "Function: ggfl",
+      "tags": [
+        "function",
+        "ggfl"
+      ],
+      "examples": [
+        "ggfl"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "ggfl"
+      }
+    },
+    {
+      "command": "compdump",
+      "description": "Function: compdump",
+      "tags": [
+        "function",
+        "compdump"
+      ],
+      "examples": [
+        "compdump"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "compdump"
+      }
+    },
+    {
+      "command": "instant_prompt_toolbox",
+      "description": "Function: instant_prompt_toolbox",
+      "tags": [
+        "function",
+        "instant_prompt_toolbox"
+      ],
+      "examples": [
+        "instant_prompt_toolbox"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_toolbox"
+      }
+    },
+    {
+      "command": "prompt_toolbox",
+      "description": "Function: prompt_toolbox",
+      "tags": [
+        "function",
+        "prompt_toolbox"
+      ],
+      "examples": [
+        "prompt_toolbox"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_toolbox"
+      }
+    },
+    {
+      "command": "takegit",
+      "description": "Function: takegit",
+      "tags": [
+        "function",
+        "takegit"
+      ],
+      "examples": [
+        "takegit"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "takegit"
+      }
+    },
+    {
+      "command": "prompt_midnight_commander",
+      "description": "Function: prompt_midnight_commander",
+      "tags": [
+        "function",
+        "prompt_midnight_commander"
+      ],
+      "examples": [
+        "prompt_midnight_commander"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_midnight_commander"
+      }
+    },
+    {
+      "command": "nvm_ls_remote_iojs",
+      "description": "Function: nvm_ls_remote_iojs",
+      "tags": [
+        "function",
+        "nvm_ls_remote_iojs"
+      ],
+      "examples": [
+        "nvm_ls_remote_iojs"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_ls_remote_iojs"
+      }
+    },
+    {
+      "command": "nvm_is_iojs_version",
+      "description": "Function: nvm_is_iojs_version",
+      "tags": [
+        "function",
+        "nvm_is_iojs_version"
+      ],
+      "examples": [
+        "nvm_is_iojs_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_is_iojs_version"
+      }
+    },
+    {
+      "command": "command_not_found_handler",
+      "description": "Function: command_not_found_handler",
+      "tags": [
+        "function",
+        "command_not_found_handler"
+      ],
+      "examples": [
+        "command_not_found_handler"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "command_not_found_handler"
+      }
+    },
+    {
+      "command": "omz_history",
+      "description": "Function: omz_history",
+      "tags": [
+        "function",
+        "omz_history"
+      ],
+      "examples": [
+        "omz_history"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "omz_history"
+      }
+    },
+    {
+      "command": "nvm_download",
+      "description": "Function: nvm_download",
+      "tags": [
+        "function",
+        "nvm_download"
+      ],
+      "examples": [
+        "nvm_download"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_download"
+      }
+    },
+    {
+      "command": "py",
+      "description": "Function: py",
+      "tags": [
+        "function",
+        "py"
+      ],
+      "examples": [
+        "py"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "py"
+      }
+    },
+    {
+      "command": "env_default",
+      "description": "Function: env_default",
+      "tags": [
+        "function",
+        "env_default"
+      ],
+      "examples": [
+        "env_default"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "env_default"
+      }
+    },
+    {
+      "command": "fzf-git-remotes-widget",
+      "description": "Function: fzf-git-remotes-widget",
+      "tags": [
+        "function",
+        "fzf-git-remotes-widget"
+      ],
+      "examples": [
+        "fzf-git-remotes-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-git-remotes-widget"
+      }
+    },
+    {
+      "command": "prompt_prompt_char",
+      "description": "Function: prompt_prompt_char",
+      "tags": [
+        "function",
+        "prompt_prompt_char"
+      ],
+      "examples": [
+        "prompt_prompt_char"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_prompt_char"
+      }
+    },
+    {
+      "command": "nvm_version_path",
+      "description": "Function: nvm_version_path",
+      "tags": [
+        "function",
+        "nvm_version_path"
+      ],
+      "examples": [
+        "nvm_version_path"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_version_path"
+      }
+    },
+    {
+      "command": "gitstatus_process_results_p9k_",
+      "description": "Function: gitstatus_process_results_p9k_",
+      "tags": [
+        "function",
+        "gitstatus_process_results_p9k_"
+      ],
+      "examples": [
+        "gitstatus_process_results_p9k_"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gitstatus_process_results_p9k_"
+      }
+    },
+    {
+      "command": "prompt_nnn",
+      "description": "Function: prompt_nnn",
+      "tags": [
+        "function",
+        "prompt_nnn"
+      ],
+      "examples": [
+        "prompt_nnn"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_nnn"
+      }
+    },
+    {
+      "command": "fzf-git-stashes-widget",
+      "description": "Function: fzf-git-stashes-widget",
+      "tags": [
+        "function",
+        "fzf-git-stashes-widget"
+      ],
+      "examples": [
+        "fzf-git-stashes-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-git-stashes-widget"
+      }
+    },
+    {
+      "command": "diff",
+      "description": "Function: diff",
+      "tags": [
+        "function",
+        "diff"
+      ],
+      "examples": [
+        "diff"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "diff"
+      }
+    },
+    {
+      "command": "chruby_prompt_info",
+      "description": "Function: chruby_prompt_info",
+      "tags": [
+        "function",
+        "chruby_prompt_info"
+      ],
+      "examples": [
+        "chruby_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "chruby_prompt_info"
+      }
+    },
+    {
+      "command": "nvm_get_checksum",
+      "description": "Function: nvm_get_checksum",
+      "tags": [
+        "function",
+        "nvm_get_checksum"
+      ],
+      "examples": [
+        "nvm_get_checksum"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_checksum"
+      }
+    },
+    {
+      "command": "compaudit",
+      "description": "Function: compaudit",
+      "tags": [
+        "function",
+        "compaudit"
+      ],
+      "examples": [
+        "compaudit"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "compaudit"
+      }
+    },
+    {
+      "command": "prompt_php_version",
+      "description": "Function: prompt_php_version",
+      "tags": [
+        "function",
+        "prompt_php_version"
+      ],
+      "examples": [
+        "prompt_php_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_php_version"
+      }
+    },
+    {
+      "command": "get_icon_names",
+      "description": "Function: get_icon_names",
+      "tags": [
+        "function",
+        "get_icon_names"
+      ],
+      "examples": [
+        "get_icon_names"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "get_icon_names"
+      }
+    },
+    {
+      "command": "hg_prompt_info",
+      "description": "Function: hg_prompt_info",
+      "tags": [
+        "function",
+        "hg_prompt_info"
+      ],
+      "examples": [
+        "hg_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "hg_prompt_info"
+      }
+    },
+    {
+      "command": "fz-cmd",
+      "description": "Function: fz-cmd",
+      "tags": [
+        "function",
+        "fz-cmd"
+      ],
+      "examples": [
+        "fz-cmd"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fz-cmd"
+      }
+    },
+    {
+      "command": "script_exists",
+      "description": "Function: script_exists",
+      "tags": [
+        "function",
+        "script_exists"
+      ],
+      "examples": [
+        "script_exists"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "script_exists"
+      }
+    },
+    {
+      "command": "nvm_has_system_node",
+      "description": "Function: nvm_has_system_node",
+      "tags": [
+        "function",
+        "nvm_has_system_node"
+      ],
+      "examples": [
+        "nvm_has_system_node"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_has_system_node"
+      }
+    },
+    {
+      "command": "prompt_terraform_version",
+      "description": "Function: prompt_terraform_version",
+      "tags": [
+        "function",
+        "prompt_terraform_version"
+      ],
+      "examples": [
+        "prompt_terraform_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_terraform_version"
+      }
+    },
+    {
+      "command": "prompt_swap",
+      "description": "Function: prompt_swap",
+      "tags": [
+        "function",
+        "prompt_swap"
+      ],
+      "examples": [
+        "prompt_swap"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_swap"
+      }
+    },
+    {
+      "command": "down-line-or-beginning-search",
+      "description": "Function: down-line-or-beginning-search",
+      "tags": [
+        "function",
+        "down-line-or-beginning-search"
+      ],
+      "examples": [
+        "down-line-or-beginning-search"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "down-line-or-beginning-search"
+      }
+    },
+    {
+      "command": "bashcompinit",
+      "description": "Function: bashcompinit",
+      "tags": [
+        "function",
+        "bashcompinit"
+      ],
+      "examples": [
+        "bashcompinit"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "bashcompinit"
+      }
+    },
+    {
+      "command": "fzf-git-tags-widget",
+      "description": "Function: fzf-git-tags-widget",
+      "tags": [
+        "function",
+        "fzf-git-tags-widget"
+      ],
+      "examples": [
+        "fzf-git-tags-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-git-tags-widget"
+      }
+    },
+    {
+      "command": "nvm_find_project_dir",
+      "description": "Function: nvm_find_project_dir",
+      "tags": [
+        "function",
+        "nvm_find_project_dir"
+      ],
+      "examples": [
+        "nvm_find_project_dir"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_find_project_dir"
+      }
+    },
+    {
+      "command": "instant_prompt_context",
+      "description": "Function: instant_prompt_context",
+      "tags": [
+        "function",
+        "instant_prompt_context"
+      ],
+      "examples": [
+        "instant_prompt_context"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_context"
+      }
+    },
+    {
+      "command": "prompt_context",
+      "description": "Function: prompt_context",
+      "tags": [
+        "function",
+        "prompt_context"
+      ],
+      "examples": [
+        "prompt_context"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_context"
+      }
+    },
+    {
+      "command": "prompt_laravel_version",
+      "description": "Function: prompt_laravel_version",
+      "tags": [
+        "function",
+        "prompt_laravel_version"
+      ],
+      "examples": [
+        "prompt_laravel_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_laravel_version"
+      }
+    },
+    {
+      "command": "nvm_remote_versions",
+      "description": "Function: nvm_remote_versions",
+      "tags": [
+        "function",
+        "nvm_remote_versions"
+      ],
+      "examples": [
+        "nvm_remote_versions"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_remote_versions"
+      }
+    },
+    {
+      "command": "prompt_powerlevel9k_setup",
+      "description": "Function: prompt_powerlevel9k_setup",
+      "tags": [
+        "function",
+        "prompt_powerlevel9k_setup"
+      ],
+      "examples": [
+        "prompt_powerlevel9k_setup"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_powerlevel9k_setup"
+      }
+    },
+    {
+      "command": "prompt_command_execution_time",
+      "description": "Function: prompt_command_execution_time",
+      "tags": [
+        "function",
+        "prompt_command_execution_time"
+      ],
+      "examples": [
+        "prompt_command_execution_time"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_command_execution_time"
+      }
+    },
+    {
+      "command": "nvm_resolve_local_alias",
+      "description": "Function: nvm_resolve_local_alias",
+      "tags": [
+        "function",
+        "nvm_resolve_local_alias"
+      ],
+      "examples": [
+        "nvm_resolve_local_alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_resolve_local_alias"
+      }
+    },
+    {
+      "command": "git_current_user_name",
+      "description": "Function: git_current_user_name",
+      "tags": [
+        "function",
+        "git_current_user_name"
+      ],
+      "examples": [
+        "git_current_user_name"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_current_user_name"
+      }
+    },
+    {
+      "command": "instant_prompt_nix_shell",
+      "description": "Function: instant_prompt_nix_shell",
+      "tags": [
+        "function",
+        "instant_prompt_nix_shell"
+      ],
+      "examples": [
+        "instant_prompt_nix_shell"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_nix_shell"
+      }
+    },
+    {
+      "command": "prompt_background_jobs",
+      "description": "Function: prompt_background_jobs",
+      "tags": [
+        "function",
+        "prompt_background_jobs"
+      ],
+      "examples": [
+        "prompt_background_jobs"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_background_jobs"
+      }
+    },
+    {
+      "command": "conda_prompt_info",
+      "description": "Function: conda_prompt_info",
+      "tags": [
+        "function",
+        "conda_prompt_info"
+      ],
+      "examples": [
+        "conda_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "conda_prompt_info"
+      }
+    },
+    {
+      "command": "git_current_branch",
+      "description": "Function: git_current_branch",
+      "tags": [
+        "function",
+        "git_current_branch"
+      ],
+      "examples": [
+        "git_current_branch"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_current_branch"
+      }
+    },
+    {
+      "command": "nvm_validate_implicit_alias",
+      "description": "Function: nvm_validate_implicit_alias",
+      "tags": [
+        "function",
+        "nvm_validate_implicit_alias"
+      ],
+      "examples": [
+        "nvm_validate_implicit_alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_validate_implicit_alias"
+      }
+    },
+    {
+      "command": "instant_prompt_user",
+      "description": "Function: instant_prompt_user",
+      "tags": [
+        "function",
+        "instant_prompt_user"
+      ],
+      "examples": [
+        "instant_prompt_user"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_user"
+      }
+    },
+    {
+      "command": "nvm_install_binary_extract",
+      "description": "Function: nvm_install_binary_extract",
+      "tags": [
+        "function",
+        "nvm_install_binary_extract"
+      ],
+      "examples": [
+        "nvm_install_binary_extract"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_install_binary_extract"
+      }
+    },
+    {
+      "command": "nvm_extract_tarball",
+      "description": "Function: nvm_extract_tarball",
+      "tags": [
+        "function",
+        "nvm_extract_tarball"
+      ],
+      "examples": [
+        "nvm_extract_tarball"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_extract_tarball"
+      }
+    },
+    {
+      "command": "instant_prompt_time",
+      "description": "Function: instant_prompt_time",
+      "tags": [
+        "function",
+        "instant_prompt_time"
+      ],
+      "examples": [
+        "instant_prompt_time"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_time"
+      }
+    },
+    {
+      "command": "nvm_supports_xz",
+      "description": "Function: nvm_supports_xz",
+      "tags": [
+        "function",
+        "nvm_supports_xz"
+      ],
+      "examples": [
+        "nvm_supports_xz"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_supports_xz"
+      }
+    },
+    {
+      "command": "nvm_is_valid_version",
+      "description": "Function: nvm_is_valid_version",
+      "tags": [
+        "function",
+        "nvm_is_valid_version"
+      ],
+      "examples": [
+        "nvm_is_valid_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_is_valid_version"
+      }
+    },
+    {
+      "command": "instant_prompt_ranger",
+      "description": "Function: instant_prompt_ranger",
+      "tags": [
+        "function",
+        "instant_prompt_ranger"
+      ],
+      "examples": [
+        "instant_prompt_ranger"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_ranger"
+      }
+    },
+    {
+      "command": "take",
+      "description": "Function: take",
+      "tags": [
+        "function",
+        "take"
+      ],
+      "examples": [
+        "take"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "take"
+      }
+    },
+    {
+      "command": "nvm_curl_version",
+      "description": "Function: nvm_curl_version",
+      "tags": [
+        "function",
+        "nvm_curl_version"
+      ],
+      "examples": [
+        "nvm_curl_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_curl_version"
+      }
+    },
+    {
+      "command": "powerlevel10k_plugin_unload",
+      "description": "Function: powerlevel10k_plugin_unload",
+      "tags": [
+        "function",
+        "powerlevel10k_plugin_unload"
+      ],
+      "examples": [
+        "powerlevel10k_plugin_unload"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "powerlevel10k_plugin_unload"
+      }
+    },
+    {
+      "command": "prompt_ssh",
+      "description": "Function: prompt_ssh",
+      "tags": [
+        "function",
+        "prompt_ssh"
+      ],
+      "examples": [
+        "prompt_ssh"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_ssh"
+      }
+    },
+    {
+      "command": "takedir",
+      "description": "Function: takedir",
+      "tags": [
+        "function",
+        "takedir"
+      ],
+      "examples": [
+        "takedir"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "takedir"
+      }
+    },
+    {
+      "command": "nvm_alias_path",
+      "description": "Function: nvm_alias_path",
+      "tags": [
+        "function",
+        "nvm_alias_path"
+      ],
+      "examples": [
+        "nvm_alias_path"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_alias_path"
+      }
+    },
+    {
+      "command": "git_prompt_info",
+      "description": "Function: git_prompt_info",
+      "tags": [
+        "function",
+        "git_prompt_info"
+      ],
+      "examples": [
+        "git_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_prompt_info"
+      }
+    },
+    {
+      "command": "prompt_nvm",
+      "description": "Function: prompt_nvm",
+      "tags": [
+        "function",
+        "prompt_nvm"
+      ],
+      "examples": [
+        "prompt_nvm"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_nvm"
+      }
+    },
+    {
+      "command": "prompt_gcloud",
+      "description": "Function: prompt_gcloud",
+      "tags": [
+        "function",
+        "prompt_gcloud"
+      ],
+      "examples": [
+        "prompt_gcloud"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_gcloud"
+      }
+    },
+    {
+      "command": "zi",
+      "description": "Function: zi",
+      "tags": [
+        "function",
+        "zi"
+      ],
+      "examples": [
+        "zi"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "zi"
+      }
+    },
+    {
+      "command": "nvm_ls_remote_index_tab",
+      "description": "Function: nvm_ls_remote_index_tab",
+      "tags": [
+        "function",
+        "nvm_ls_remote_index_tab"
+      ],
+      "examples": [
+        "nvm_ls_remote_index_tab"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_ls_remote_index_tab"
+      }
+    },
+    {
+      "command": "gitstatus_start_p9k_",
+      "description": "Function: gitstatus_start_p9k_",
+      "tags": [
+        "function",
+        "gitstatus_start_p9k_"
+      ],
+      "examples": [
+        "gitstatus_start_p9k_"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gitstatus_start_p9k_"
+      }
+    },
+    {
+      "command": "prompt_direnv",
+      "description": "Function: prompt_direnv",
+      "tags": [
+        "function",
+        "prompt_direnv"
+      ],
+      "examples": [
+        "prompt_direnv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_direnv"
+      }
+    },
+    {
+      "command": "instant_prompt_per_directory_history",
+      "description": "Function: instant_prompt_per_directory_history",
+      "tags": [
+        "function",
+        "instant_prompt_per_directory_history"
+      ],
+      "examples": [
+        "instant_prompt_per_directory_history"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_per_directory_history"
+      }
+    },
+    {
+      "command": "nvm_iojs_prefix",
+      "description": "Function: nvm_iojs_prefix",
+      "tags": [
+        "function",
+        "nvm_iojs_prefix"
+      ],
+      "examples": [
+        "nvm_iojs_prefix"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_iojs_prefix"
+      }
+    },
+    {
+      "command": "nvm_cd",
+      "description": "Function: nvm_cd",
+      "tags": [
+        "function",
+        "nvm_cd"
+      ],
+      "examples": [
+        "nvm_cd"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_cd"
+      }
+    },
+    {
+      "command": "nvm_get_minor_version",
+      "description": "Function: nvm_get_minor_version",
+      "tags": [
+        "function",
+        "nvm_get_minor_version"
+      ],
+      "examples": [
+        "nvm_get_minor_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_minor_version"
+      }
+    },
+    {
+      "command": "prompt_symfony2_tests",
+      "description": "Function: prompt_symfony2_tests",
+      "tags": [
+        "function",
+        "prompt_symfony2_tests"
+      ],
+      "examples": [
+        "prompt_symfony2_tests"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_symfony2_tests"
+      }
+    },
+    {
+      "command": "svn_prompt_info",
+      "description": "Function: svn_prompt_info",
+      "tags": [
+        "function",
+        "svn_prompt_info"
+      ],
+      "examples": [
+        "svn_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "svn_prompt_info"
+      }
+    },
+    {
+      "command": "fzf-completion",
+      "description": "Function: fzf-completion",
+      "tags": [
+        "function",
+        "fzf-completion"
+      ],
+      "examples": [
+        "fzf-completion"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-completion"
+      }
+    },
+    {
+      "command": "nvm_is_version_installed",
+      "description": "Function: nvm_is_version_installed",
+      "tags": [
+        "function",
+        "nvm_is_version_installed"
+      ],
+      "examples": [
+        "nvm_is_version_installed"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_is_version_installed"
+      }
+    },
+    {
+      "command": "azure_prompt_info",
+      "description": "Function: azure_prompt_info",
+      "tags": [
+        "function",
+        "azure_prompt_info"
+      ],
+      "examples": [
+        "azure_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "azure_prompt_info"
+      }
+    },
+    {
+      "command": "nvm_find_nvmrc",
+      "description": "Function: nvm_find_nvmrc",
+      "tags": [
+        "function",
+        "nvm_find_nvmrc"
+      ],
+      "examples": [
+        "nvm_find_nvmrc"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_find_nvmrc"
+      }
+    },
+    {
+      "command": "prompt_ram",
+      "description": "Function: prompt_ram",
+      "tags": [
+        "function",
+        "prompt_ram"
+      ],
+      "examples": [
+        "prompt_ram"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_ram"
+      }
+    },
+    {
+      "command": "nvm_has",
+      "description": "Function: nvm_has",
+      "tags": [
+        "function",
+        "nvm_has"
+      ],
+      "examples": [
+        "nvm_has"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_has"
+      }
+    },
+    {
+      "command": "nvm_get_arch",
+      "description": "Function: nvm_get_arch",
+      "tags": [
+        "function",
+        "nvm_get_arch"
+      ],
+      "examples": [
+        "nvm_get_arch"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_arch"
+      }
+    },
+    {
+      "command": "prompt_swift_version",
+      "description": "Function: prompt_swift_version",
+      "tags": [
+        "function",
+        "prompt_swift_version"
+      ],
+      "examples": [
+        "prompt_swift_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_swift_version"
+      }
+    },
+    {
+      "command": "git_repo_name",
+      "description": "Function: git_repo_name",
+      "tags": [
+        "function",
+        "git_repo_name"
+      ],
+      "examples": [
+        "git_repo_name"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_repo_name"
+      }
+    },
+    {
+      "command": "nvm_alias",
+      "description": "Function: nvm_alias",
+      "tags": [
+        "function",
+        "nvm_alias"
+      ],
+      "examples": [
+        "nvm_alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_alias"
+      }
+    },
+    {
+      "command": "nvm_echo_with_colors",
+      "description": "Function: nvm_echo_with_colors",
+      "tags": [
+        "function",
+        "nvm_echo_with_colors"
+      ],
+      "examples": [
+        "nvm_echo_with_colors"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_echo_with_colors"
+      }
+    },
+    {
+      "command": "prompt_date",
+      "description": "Function: prompt_date",
+      "tags": [
+        "function",
+        "prompt_date"
+      ],
+      "examples": [
+        "prompt_date"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_date"
+      }
+    },
+    {
+      "command": "instant_prompt_host",
+      "description": "Function: instant_prompt_host",
+      "tags": [
+        "function",
+        "instant_prompt_host"
+      ],
+      "examples": [
+        "instant_prompt_host"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_host"
+      }
+    },
+    {
+      "command": "nvm_normalize_version",
+      "description": "Function: nvm_normalize_version",
+      "tags": [
+        "function",
+        "nvm_normalize_version"
+      ],
+      "examples": [
+        "nvm_normalize_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_normalize_version"
+      }
+    },
+    {
+      "command": "compinstall",
+      "description": "Function: compinstall",
+      "tags": [
+        "function",
+        "compinstall"
+      ],
+      "examples": [
+        "compinstall"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "compinstall"
+      }
+    },
+    {
+      "command": "prompt_nix_shell",
+      "description": "Function: prompt_nix_shell",
+      "tags": [
+        "function",
+        "prompt_nix_shell"
+      ],
+      "examples": [
+        "prompt_nix_shell"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_nix_shell"
+      }
+    },
+    {
+      "command": "gitstatus_query_p9k_",
+      "description": "Function: gitstatus_query_p9k_",
+      "tags": [
+        "function",
+        "gitstatus_query_p9k_"
+      ],
+      "examples": [
+        "gitstatus_query_p9k_"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gitstatus_query_p9k_"
+      }
+    },
+    {
+      "command": "nvm_get_os",
+      "description": "Function: nvm_get_os",
+      "tags": [
+        "function",
+        "nvm_get_os"
+      ],
+      "examples": [
+        "nvm_get_os"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_os"
+      }
+    },
+    {
+      "command": "print_icon",
+      "description": "Function: print_icon",
+      "tags": [
+        "function",
+        "print_icon"
+      ],
+      "examples": [
+        "print_icon"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "print_icon"
+      }
+    },
+    {
+      "command": "nvm_ls_remote",
+      "description": "Function: nvm_ls_remote",
+      "tags": [
+        "function",
+        "nvm_ls_remote"
+      ],
+      "examples": [
+        "nvm_ls_remote"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_ls_remote"
+      }
+    },
+    {
+      "command": "nvm_print_implicit_alias",
+      "description": "Function: nvm_print_implicit_alias",
+      "tags": [
+        "function",
+        "nvm_print_implicit_alias"
+      ],
+      "examples": [
+        "nvm_print_implicit_alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_print_implicit_alias"
+      }
+    },
+    {
+      "command": "is_theme",
+      "description": "Function: is_theme",
+      "tags": [
+        "function",
+        "is_theme"
+      ],
+      "examples": [
+        "is_theme"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "is_theme"
+      }
+    },
+    {
+      "command": "instant_prompt_lf",
+      "description": "Function: instant_prompt_lf",
+      "tags": [
+        "function",
+        "instant_prompt_lf"
+      ],
+      "examples": [
+        "instant_prompt_lf"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_lf"
+      }
+    },
+    {
+      "command": "prompt_taskwarrior",
+      "description": "Function: prompt_taskwarrior",
+      "tags": [
+        "function",
+        "prompt_taskwarrior"
+      ],
+      "examples": [
+        "prompt_taskwarrior"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_taskwarrior"
+      }
+    },
+    {
+      "command": "git_develop_branch",
+      "description": "Function: git_develop_branch",
+      "tags": [
+        "function",
+        "git_develop_branch"
+      ],
+      "examples": [
+        "git_develop_branch"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_develop_branch"
+      }
+    },
+    {
+      "command": "parse_git_dirty",
+      "description": "Function: parse_git_dirty",
+      "tags": [
+        "function",
+        "parse_git_dirty"
+      ],
+      "examples": [
+        "parse_git_dirty"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "parse_git_dirty"
+      }
+    },
+    {
+      "command": "prompt_luaenv",
+      "description": "Function: prompt_luaenv",
+      "tags": [
+        "function",
+        "prompt_luaenv"
+      ],
+      "examples": [
+        "prompt_luaenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_luaenv"
+      }
+    },
+    {
+      "command": "virtualenv_prompt_info",
+      "description": "Function: virtualenv_prompt_info",
+      "tags": [
+        "function",
+        "virtualenv_prompt_info"
+      ],
+      "examples": [
+        "virtualenv_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "virtualenv_prompt_info"
+      }
+    },
+    {
+      "command": "prompt_cpu_arch",
+      "description": "Function: prompt_cpu_arch",
+      "tags": [
+        "function",
+        "prompt_cpu_arch"
+      ],
+      "examples": [
+        "prompt_cpu_arch"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_cpu_arch"
+      }
+    },
+    {
+      "command": "prompt_xplr",
+      "description": "Function: prompt_xplr",
+      "tags": [
+        "function",
+        "prompt_xplr"
+      ],
+      "examples": [
+        "prompt_xplr"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_xplr"
+      }
+    },
+    {
+      "command": "nvm_auto",
+      "description": "Function: nvm_auto",
+      "tags": [
+        "function",
+        "nvm_auto"
+      ],
+      "examples": [
+        "nvm_auto"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_auto"
+      }
+    },
+    {
+      "command": "prompt_aws",
+      "description": "Function: prompt_aws",
+      "tags": [
+        "function",
+        "prompt_aws"
+      ],
+      "examples": [
+        "prompt_aws"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_aws"
+      }
+    },
+    {
+      "command": "git_prompt_short_sha",
+      "description": "Function: git_prompt_short_sha",
+      "tags": [
+        "function",
+        "git_prompt_short_sha"
+      ],
+      "examples": [
+        "git_prompt_short_sha"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_prompt_short_sha"
+      }
+    },
+    {
+      "command": "g-subbump",
+      "description": "Function: g-subbump",
+      "tags": [
+        "function",
+        "g-subbump"
+      ],
+      "examples": [
+        "g-subbump"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "g-subbump"
+      }
+    },
+    {
+      "command": "nvm_print_alias_path",
+      "description": "Function: nvm_print_alias_path",
+      "tags": [
+        "function",
+        "nvm_print_alias_path"
+      ],
+      "examples": [
+        "nvm_print_alias_path"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_print_alias_path"
+      }
+    },
+    {
+      "command": "git_main_branch",
+      "description": "Function: git_main_branch",
+      "tags": [
+        "function",
+        "git_main_branch"
+      ],
+      "examples": [
+        "git_main_branch"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_main_branch"
+      }
+    },
+    {
+      "command": "nvm_node_version_has_solaris_binary",
+      "description": "Function: nvm_node_version_has_solaris_binary",
+      "tags": [
+        "function",
+        "nvm_node_version_has_solaris_binary"
+      ],
+      "examples": [
+        "nvm_node_version_has_solaris_binary"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_node_version_has_solaris_binary"
+      }
+    },
+    {
+      "command": "list-missing-scripts",
+      "description": "Function: list-missing-scripts",
+      "tags": [
+        "function",
+        "list-missing-scripts"
+      ],
+      "examples": [
+        "list-missing-scripts"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "list-missing-scripts"
+      }
+    },
+    {
+      "command": "getColorCode",
+      "description": "Function: getColorCode",
+      "tags": [
+        "function",
+        "getColorCode"
+      ],
+      "examples": [
+        "getColorCode"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "getColorCode"
+      }
+    },
+    {
+      "command": "nvm_has_colors",
+      "description": "Function: nvm_has_colors",
+      "tags": [
+        "function",
+        "nvm_has_colors"
+      ],
+      "examples": [
+        "nvm_has_colors"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_has_colors"
+      }
+    },
+    {
+      "command": "nvm_prompt_info",
+      "description": "Function: nvm_prompt_info",
+      "tags": [
+        "function",
+        "nvm_prompt_info"
+      ],
+      "examples": [
+        "nvm_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_prompt_info"
+      }
+    },
+    {
+      "command": "rvm_prompt_info",
+      "description": "Function: rvm_prompt_info",
+      "tags": [
+        "function",
+        "rvm_prompt_info"
+      ],
+      "examples": [
+        "rvm_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "rvm_prompt_info"
+      }
+    },
+    {
+      "command": "title",
+      "description": "Function: title",
+      "tags": [
+        "function",
+        "title"
+      ],
+      "examples": [
+        "title"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "title"
+      }
+    },
+    {
+      "command": "omz_termsupport_precmd",
+      "description": "Function: omz_termsupport_precmd",
+      "tags": [
+        "function",
+        "omz_termsupport_precmd"
+      ],
+      "examples": [
+        "omz_termsupport_precmd"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "omz_termsupport_precmd"
+      }
+    },
+    {
+      "command": "nvm_err_with_colors",
+      "description": "Function: nvm_err_with_colors",
+      "tags": [
+        "function",
+        "nvm_err_with_colors"
+      ],
+      "examples": [
+        "nvm_err_with_colors"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_err_with_colors"
+      }
+    },
+    {
+      "command": "prompt_fvm",
+      "description": "Function: prompt_fvm",
+      "tags": [
+        "function",
+        "prompt_fvm"
+      ],
+      "examples": [
+        "prompt_fvm"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_fvm"
+      }
+    },
+    {
+      "command": "nvm_install_binary",
+      "description": "Function: nvm_install_binary",
+      "tags": [
+        "function",
+        "nvm_install_binary"
+      ],
+      "examples": [
+        "nvm_install_binary"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_install_binary"
+      }
+    },
+    {
+      "command": "prompt_docker_machine",
+      "description": "Function: prompt_docker_machine",
+      "tags": [
+        "function",
+        "prompt_docker_machine"
+      ],
+      "examples": [
+        "prompt_docker_machine"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_docker_machine"
+      }
+    },
+    {
+      "command": "nvm_print_versions",
+      "description": "Function: nvm_print_versions",
+      "tags": [
+        "function",
+        "nvm_print_versions"
+      ],
+      "examples": [
+        "nvm_print_versions"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_print_versions"
+      }
+    },
+    {
+      "command": "prompt_todo",
+      "description": "Function: prompt_todo",
+      "tags": [
+        "function",
+        "prompt_todo"
+      ],
+      "examples": [
+        "prompt_todo"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_todo"
+      }
+    },
+    {
+      "command": "prompt_google_app_cred",
+      "description": "Function: prompt_google_app_cred",
+      "tags": [
+        "function",
+        "prompt_google_app_cred"
+      ],
+      "examples": [
+        "prompt_google_app_cred"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_google_app_cred"
+      }
+    },
+    {
+      "command": "prompt_battery",
+      "description": "Function: prompt_battery",
+      "tags": [
+        "function",
+        "prompt_battery"
+      ],
+      "examples": [
+        "prompt_battery"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_battery"
+      }
+    },
+    {
+      "command": "prompt__p9k_internal_nothing",
+      "description": "Function: prompt__p9k_internal_nothing",
+      "tags": [
+        "function",
+        "prompt__p9k_internal_nothing"
+      ],
+      "examples": [
+        "prompt__p9k_internal_nothing"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt__p9k_internal_nothing"
+      }
+    },
+    {
+      "command": "edit-command-line",
+      "description": "Function: edit-command-line",
+      "tags": [
+        "function",
+        "edit-command-line"
+      ],
+      "examples": [
+        "edit-command-line"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "edit-command-line"
+      }
+    },
+    {
+      "command": "instant_prompt_direnv",
+      "description": "Function: instant_prompt_direnv",
+      "tags": [
+        "function",
+        "instant_prompt_direnv"
+      ],
+      "examples": [
+        "instant_prompt_direnv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_direnv"
+      }
+    },
+    {
+      "command": "prompt_rust_version",
+      "description": "Function: prompt_rust_version",
+      "tags": [
+        "function",
+        "prompt_rust_version"
+      ],
+      "examples": [
+        "prompt_rust_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_rust_version"
+      }
+    },
+    {
+      "command": "instant_prompt_vim_shell",
+      "description": "Function: instant_prompt_vim_shell",
+      "tags": [
+        "function",
+        "instant_prompt_vim_shell"
+      ],
+      "examples": [
+        "instant_prompt_vim_shell"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_vim_shell"
+      }
+    },
+    {
+      "command": "uninstall_oh_my_zsh",
+      "description": "Function: uninstall_oh_my_zsh",
+      "tags": [
+        "function",
+        "uninstall_oh_my_zsh"
+      ],
+      "examples": [
+        "uninstall_oh_my_zsh"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "uninstall_oh_my_zsh"
+      }
+    },
+    {
+      "command": "nvm_echo",
+      "description": "Function: nvm_echo",
+      "tags": [
+        "function",
+        "nvm_echo"
+      ],
+      "examples": [
+        "nvm_echo"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_echo"
+      }
+    },
+    {
+      "command": "nvm_version_dir",
+      "description": "Function: nvm_version_dir",
+      "tags": [
+        "function",
+        "nvm_version_dir"
+      ],
+      "examples": [
+        "nvm_version_dir"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_version_dir"
+      }
+    },
+    {
+      "command": "nvm_format_version",
+      "description": "Function: nvm_format_version",
+      "tags": [
+        "function",
+        "nvm_format_version"
+      ],
+      "examples": [
+        "nvm_format_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_format_version"
+      }
+    },
+    {
+      "command": "prompt_status",
+      "description": "Function: prompt_status",
+      "tags": [
+        "function",
+        "prompt_status"
+      ],
+      "examples": [
+        "prompt_status"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_status"
+      }
+    },
+    {
+      "command": "nvm_ls",
+      "description": "Function: nvm_ls",
+      "tags": [
+        "function",
+        "nvm_ls"
+      ],
+      "examples": [
+        "nvm_ls"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_ls"
+      }
+    },
+    {
+      "command": "colors",
+      "description": "Function: colors",
+      "tags": [
+        "function",
+        "colors"
+      ],
+      "examples": [
+        "colors"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "colors"
+      }
+    },
+    {
+      "command": "prompt_timewarrior",
+      "description": "Function: prompt_timewarrior",
+      "tags": [
+        "function",
+        "prompt_timewarrior"
+      ],
+      "examples": [
+        "prompt_timewarrior"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_timewarrior"
+      }
+    },
+    {
+      "command": "gdv",
+      "description": "Function: gdv",
+      "tags": [
+        "function",
+        "gdv"
+      ],
+      "examples": [
+        "gdv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gdv"
+      }
+    },
+    {
+      "command": "prompt_proxy",
+      "description": "Function: prompt_proxy",
+      "tags": [
+        "function",
+        "prompt_proxy"
+      ],
+      "examples": [
+        "prompt_proxy"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_proxy"
+      }
+    },
+    {
+      "command": "nvm_iojs_version_has_solaris_binary",
+      "description": "Function: nvm_iojs_version_has_solaris_binary",
+      "tags": [
+        "function",
+        "nvm_iojs_version_has_solaris_binary"
+      ],
+      "examples": [
+        "nvm_iojs_version_has_solaris_binary"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_iojs_version_has_solaris_binary"
+      }
+    },
+    {
+      "command": "omz_diagnostic_dump",
+      "description": "Function: omz_diagnostic_dump",
+      "tags": [
+        "function",
+        "omz_diagnostic_dump"
+      ],
+      "examples": [
+        "omz_diagnostic_dump"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "omz_diagnostic_dump"
+      }
+    },
+    {
+      "command": "nvm_process_parameters",
+      "description": "Function: nvm_process_parameters",
+      "tags": [
+        "function",
+        "nvm_process_parameters"
+      ],
+      "examples": [
+        "nvm_process_parameters"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_process_parameters"
+      }
+    },
+    {
+      "command": "nvm_ensure_default_set",
+      "description": "Function: nvm_ensure_default_set",
+      "tags": [
+        "function",
+        "nvm_ensure_default_set"
+      ],
+      "examples": [
+        "nvm_ensure_default_set"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_ensure_default_set"
+      }
+    },
+    {
+      "command": "prompt_history",
+      "description": "Function: prompt_history",
+      "tags": [
+        "function",
+        "prompt_history"
+      ],
+      "examples": [
+        "prompt_history"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_history"
+      }
+    },
+    {
+      "command": "omz",
+      "description": "Function: omz",
+      "tags": [
+        "function",
+        "omz"
+      ],
+      "examples": [
+        "omz"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "omz"
+      }
+    },
+    {
+      "command": "nvm_install_default_packages",
+      "description": "Function: nvm_install_default_packages",
+      "tags": [
+        "function",
+        "nvm_install_default_packages"
+      ],
+      "examples": [
+        "nvm_install_default_packages"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_install_default_packages"
+      }
+    },
+    {
+      "command": "ggf",
+      "description": "Function: ggf",
+      "tags": [
+        "function",
+        "ggf"
+      ],
+      "examples": [
+        "ggf"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "ggf"
+      }
+    },
+    {
+      "command": "prompt_public_ip",
+      "description": "Function: prompt_public_ip",
+      "tags": [
+        "function",
+        "prompt_public_ip"
+      ],
+      "examples": [
+        "prompt_public_ip"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_public_ip"
+      }
+    },
+    {
+      "command": "ggl",
+      "description": "Function: ggl",
+      "tags": [
+        "function",
+        "ggl"
+      ],
+      "examples": [
+        "ggl"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "ggl"
+      }
+    },
+    {
+      "command": "ggp",
+      "description": "Function: ggp",
+      "tags": [
+        "function",
+        "ggp"
+      ],
+      "examples": [
+        "ggp"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "ggp"
+      }
+    },
+    {
+      "command": "nvm_remote_version",
+      "description": "Function: nvm_remote_version",
+      "tags": [
+        "function",
+        "nvm_remote_version"
+      ],
+      "examples": [
+        "nvm_remote_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_remote_version"
+      }
+    },
+    {
+      "command": "ggu",
+      "description": "Function: ggu",
+      "tags": [
+        "function",
+        "ggu"
+      ],
+      "examples": [
+        "ggu"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "ggu"
+      }
+    },
+    {
+      "command": "fz-cd-widget",
+      "description": "Function: fz-cd-widget",
+      "tags": [
+        "function",
+        "fz-cd-widget"
+      ],
+      "examples": [
+        "fz-cd-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fz-cd-widget"
+      }
+    },
+    {
+      "command": "nvm_compare_checksum",
+      "description": "Function: nvm_compare_checksum",
+      "tags": [
+        "function",
+        "nvm_compare_checksum"
+      ],
+      "examples": [
+        "nvm_compare_checksum"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_compare_checksum"
+      }
+    },
+    {
+      "command": "nvm_die_on_prefix",
+      "description": "Function: nvm_die_on_prefix",
+      "tags": [
+        "function",
+        "nvm_die_on_prefix"
+      ],
+      "examples": [
+        "nvm_die_on_prefix"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_die_on_prefix"
+      }
+    },
+    {
+      "command": "ruby_prompt_info",
+      "description": "Function: ruby_prompt_info",
+      "tags": [
+        "function",
+        "ruby_prompt_info"
+      ],
+      "examples": [
+        "ruby_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "ruby_prompt_info"
+      }
+    },
+    {
+      "command": "spectrum_ls",
+      "description": "Function: spectrum_ls",
+      "tags": [
+        "function",
+        "spectrum_ls"
+      ],
+      "examples": [
+        "spectrum_ls"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "spectrum_ls"
+      }
+    },
+    {
+      "command": "VCS_INFO_formats",
+      "description": "Function: VCS_INFO_formats",
+      "tags": [
+        "function",
+        "VCS_INFO_formats"
+      ],
+      "examples": [
+        "VCS_INFO_formats"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "VCS_INFO_formats"
+      }
+    },
+    {
+      "command": "nvm_version",
+      "description": "Function: nvm_version",
+      "tags": [
+        "function",
+        "nvm_version"
+      ],
+      "examples": [
+        "nvm_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_version"
+      }
+    },
+    {
+      "command": "nvm_install_latest_npm",
+      "description": "Function: nvm_install_latest_npm",
+      "tags": [
+        "function",
+        "nvm_install_latest_npm"
+      ],
+      "examples": [
+        "nvm_install_latest_npm"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_install_latest_npm"
+      }
+    },
+    {
+      "command": "grename",
+      "description": "Function: grename",
+      "tags": [
+        "function",
+        "grename"
+      ],
+      "examples": [
+        "grename"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "grename"
+      }
+    },
+    {
+      "command": "nvm_ls_current",
+      "description": "Function: nvm_ls_current",
+      "tags": [
+        "function",
+        "nvm_ls_current"
+      ],
+      "examples": [
+        "nvm_ls_current"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_ls_current"
+      }
+    },
+    {
+      "command": "upgrade_oh_my_zsh",
+      "description": "Function: upgrade_oh_my_zsh",
+      "tags": [
+        "function",
+        "upgrade_oh_my_zsh"
+      ],
+      "examples": [
+        "upgrade_oh_my_zsh"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "upgrade_oh_my_zsh"
+      }
+    },
+    {
+      "command": "bracketed-paste-magic",
+      "description": "Function: bracketed-paste-magic",
+      "tags": [
+        "function",
+        "bracketed-paste-magic"
+      ],
+      "examples": [
+        "bracketed-paste-magic"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "bracketed-paste-magic"
+      }
+    },
+    {
+      "command": "nvm_write_nvmrc",
+      "description": "Function: nvm_write_nvmrc",
+      "tags": [
+        "function",
+        "nvm_write_nvmrc"
+      ],
+      "examples": [
+        "nvm_write_nvmrc"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_write_nvmrc"
+      }
+    },
+    {
+      "command": "nvm_is_merged_node_version",
+      "description": "Function: nvm_is_merged_node_version",
+      "tags": [
+        "function",
+        "nvm_is_merged_node_version"
+      ],
+      "examples": [
+        "nvm_is_merged_node_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_is_merged_node_version"
+      }
+    },
+    {
+      "command": "nvm_tree_contains_path",
+      "description": "Function: nvm_tree_contains_path",
+      "tags": [
+        "function",
+        "nvm_tree_contains_path"
+      ],
+      "examples": [
+        "nvm_tree_contains_path"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_tree_contains_path"
+      }
+    },
+    {
+      "command": "prompt_node_version",
+      "description": "Function: prompt_node_version",
+      "tags": [
+        "function",
+        "prompt_node_version"
+      ],
+      "examples": [
+        "prompt_node_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_node_version"
+      }
+    },
+    {
+      "command": "prompt_yazi",
+      "description": "Function: prompt_yazi",
+      "tags": [
+        "function",
+        "prompt_yazi"
+      ],
+      "examples": [
+        "prompt_yazi"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_yazi"
+      }
+    },
+    {
+      "command": "nvm_is_zsh",
+      "description": "Function: nvm_is_zsh",
+      "tags": [
+        "function",
+        "nvm_is_zsh"
+      ],
+      "examples": [
+        "nvm_is_zsh"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_is_zsh"
+      }
+    },
+    {
+      "command": "nvm_nvmrc_invalid_msg",
+      "description": "Function: nvm_nvmrc_invalid_msg",
+      "tags": [
+        "function",
+        "nvm_nvmrc_invalid_msg"
+      ],
+      "examples": [
+        "nvm_nvmrc_invalid_msg"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_nvmrc_invalid_msg"
+      }
+    },
+    {
+      "command": "prompt_vim_shell",
+      "description": "Function: prompt_vim_shell",
+      "tags": [
+        "function",
+        "prompt_vim_shell"
+      ],
+      "examples": [
+        "prompt_vim_shell"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_vim_shell"
+      }
+    },
+    {
+      "command": "tf_prompt_info",
+      "description": "Function: tf_prompt_info",
+      "tags": [
+        "function",
+        "tf_prompt_info"
+      ],
+      "examples": [
+        "tf_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "tf_prompt_info"
+      }
+    },
+    {
+      "command": "mjump",
+      "description": "Function: mjump",
+      "tags": [
+        "function",
+        "mjump"
+      ],
+      "examples": [
+        "mjump"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "mjump"
+      }
+    },
+    {
+      "command": "nvm_use_if_needed",
+      "description": "Function: nvm_use_if_needed",
+      "tags": [
+        "function",
+        "nvm_use_if_needed"
+      ],
+      "examples": [
+        "nvm_use_if_needed"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_use_if_needed"
+      }
+    },
+    {
+      "command": "gccd",
+      "description": "Function: gccd",
+      "tags": [
+        "function",
+        "gccd"
+      ],
+      "examples": [
+        "gccd"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gccd"
+      }
+    },
+    {
+      "command": "nvm_get_default_packages",
+      "description": "Function: nvm_get_default_packages",
+      "tags": [
+        "function",
+        "nvm_get_default_packages"
+      ],
+      "examples": [
+        "nvm_get_default_packages"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_default_packages"
+      }
+    },
+    {
+      "command": "prompt_pyenv",
+      "description": "Function: prompt_pyenv",
+      "tags": [
+        "function",
+        "prompt_pyenv"
+      ],
+      "examples": [
+        "prompt_pyenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_pyenv"
+      }
+    },
+    {
+      "command": "gunwipall",
+      "description": "Function: gunwipall",
+      "tags": [
+        "function",
+        "gunwipall"
+      ],
+      "examples": [
+        "gunwipall"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gunwipall"
+      }
+    },
+    {
+      "command": "nvm_version_greater",
+      "description": "Function: nvm_version_greater",
+      "tags": [
+        "function",
+        "nvm_version_greater"
+      ],
+      "examples": [
+        "nvm_version_greater"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_version_greater"
+      }
+    },
+    {
+      "command": "prompt_perlbrew",
+      "description": "Function: prompt_perlbrew",
+      "tags": [
+        "function",
+        "prompt_perlbrew"
+      ],
+      "examples": [
+        "prompt_perlbrew"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_perlbrew"
+      }
+    },
+    {
+      "command": "instant_prompt_status",
+      "description": "Function: instant_prompt_status",
+      "tags": [
+        "function",
+        "instant_prompt_status"
+      ],
+      "examples": [
+        "instant_prompt_status"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_status"
+      }
+    },
+    {
+      "command": "is_plugin",
+      "description": "Function: is_plugin",
+      "tags": [
+        "function",
+        "is_plugin"
+      ],
+      "examples": [
+        "is_plugin"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "is_plugin"
+      }
+    },
+    {
+      "command": "git_prompt_long_sha",
+      "description": "Function: git_prompt_long_sha",
+      "tags": [
+        "function",
+        "git_prompt_long_sha"
+      ],
+      "examples": [
+        "git_prompt_long_sha"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_prompt_long_sha"
+      }
+    },
+    {
+      "command": "nvm_process_nvmrc",
+      "description": "Function: nvm_process_nvmrc",
+      "tags": [
+        "function",
+        "nvm_process_nvmrc"
+      ],
+      "examples": [
+        "nvm_process_nvmrc"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_process_nvmrc"
+      }
+    },
+    {
+      "command": "nvm_command_info",
+      "description": "Function: nvm_command_info",
+      "tags": [
+        "function",
+        "nvm_command_info"
+      ],
+      "examples": [
+        "nvm_command_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_command_info"
+      }
+    },
+    {
+      "command": "prompt_go_version",
+      "description": "Function: prompt_go_version",
+      "tags": [
+        "function",
+        "prompt_go_version"
+      ],
+      "examples": [
+        "prompt_go_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_go_version"
+      }
+    },
+    {
+      "command": "nvm_grep",
+      "description": "Function: nvm_grep",
+      "tags": [
+        "function",
+        "nvm_grep"
+      ],
+      "examples": [
+        "nvm_grep"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_grep"
+      }
+    },
+    {
+      "command": "pyenv_prompt_info",
+      "description": "Function: pyenv_prompt_info",
+      "tags": [
+        "function",
+        "pyenv_prompt_info"
+      ],
+      "examples": [
+        "pyenv_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "pyenv_prompt_info"
+      }
+    },
+    {
+      "command": "instant_prompt_date",
+      "description": "Function: instant_prompt_date",
+      "tags": [
+        "function",
+        "instant_prompt_date"
+      ],
+      "examples": [
+        "instant_prompt_date"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_date"
+      }
+    },
+    {
+      "command": "nvm_version_greater_than_or_equal_to",
+      "description": "Function: nvm_version_greater_than_or_equal_to",
+      "tags": [
+        "function",
+        "nvm_version_greater_than_or_equal_to"
+      ],
+      "examples": [
+        "nvm_version_greater_than_or_equal_to"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_version_greater_than_or_equal_to"
+      }
+    },
+    {
+      "command": "copypath",
+      "description": "Function: copypath",
+      "tags": [
+        "function",
+        "copypath"
+      ],
+      "examples": [
+        "copypath"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "copypath"
+      }
+    },
+    {
+      "command": "nvm_print_default_alias",
+      "description": "Function: nvm_print_default_alias",
+      "tags": [
+        "function",
+        "nvm_print_default_alias"
+      ],
+      "examples": [
+        "nvm_print_default_alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_print_default_alias"
+      }
+    },
+    {
+      "command": "instant_prompt_os_icon",
+      "description": "Function: instant_prompt_os_icon",
+      "tags": [
+        "function",
+        "instant_prompt_os_icon"
+      ],
+      "examples": [
+        "instant_prompt_os_icon"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_os_icon"
+      }
+    },
+    {
+      "command": "takezip",
+      "description": "Function: takezip",
+      "tags": [
+        "function",
+        "takezip"
+      ],
+      "examples": [
+        "takezip"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "takezip"
+      }
+    },
+    {
+      "command": "nvm_add_iojs_prefix",
+      "description": "Function: nvm_add_iojs_prefix",
+      "tags": [
+        "function",
+        "nvm_add_iojs_prefix"
+      ],
+      "examples": [
+        "nvm_add_iojs_prefix"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_add_iojs_prefix"
+      }
+    },
+    {
+      "command": "prompt_azure",
+      "description": "Function: prompt_azure",
+      "tags": [
+        "function",
+        "prompt_azure"
+      ],
+      "examples": [
+        "prompt_azure"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_azure"
+      }
+    },
+    {
+      "command": "prompt_nodeenv",
+      "description": "Function: prompt_nodeenv",
+      "tags": [
+        "function",
+        "prompt_nodeenv"
+      ],
+      "examples": [
+        "prompt_nodeenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_nodeenv"
+      }
+    },
+    {
+      "command": "detect-clipboard",
+      "description": "Function: detect-clipboard",
+      "tags": [
+        "function",
+        "detect-clipboard"
+      ],
+      "examples": [
+        "detect-clipboard"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "detect-clipboard"
+      }
+    },
+    {
+      "command": "nvm_install_source",
+      "description": "Function: nvm_install_source",
+      "tags": [
+        "function",
+        "nvm_install_source"
+      ],
+      "examples": [
+        "nvm_install_source"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_install_source"
+      }
+    },
+    {
+      "command": "url-quote-magic",
+      "description": "Function: url-quote-magic",
+      "tags": [
+        "function",
+        "url-quote-magic"
+      ],
+      "examples": [
+        "url-quote-magic"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "url-quote-magic"
+      }
+    },
+    {
+      "command": "nvm_sanitize_path",
+      "description": "Function: nvm_sanitize_path",
+      "tags": [
+        "function",
+        "nvm_sanitize_path"
+      ],
+      "examples": [
+        "nvm_sanitize_path"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_sanitize_path"
+      }
+    },
+    {
+      "command": "alias_value",
+      "description": "Function: alias_value",
+      "tags": [
+        "function",
+        "alias_value"
+      ],
+      "examples": [
+        "alias_value"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "alias_value"
+      }
+    },
+    {
+      "command": "omz_termsupport_cwd",
+      "description": "Function: omz_termsupport_cwd",
+      "tags": [
+        "function",
+        "omz_termsupport_cwd"
+      ],
+      "examples": [
+        "omz_termsupport_cwd"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "omz_termsupport_cwd"
+      }
+    },
+    {
+      "command": "nvm_get_artifact_compression",
+      "description": "Function: nvm_get_artifact_compression",
+      "tags": [
+        "function",
+        "nvm_get_artifact_compression"
+      ],
+      "examples": [
+        "nvm_get_artifact_compression"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_artifact_compression"
+      }
+    },
+    {
+      "command": "fzf-git-lreflogs-widget",
+      "description": "Function: fzf-git-lreflogs-widget",
+      "tags": [
+        "function",
+        "fzf-git-lreflogs-widget"
+      ],
+      "examples": [
+        "fzf-git-lreflogs-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-git-lreflogs-widget"
+      }
+    },
+    {
+      "command": "nvm_download_artifact",
+      "description": "Function: nvm_download_artifact",
+      "tags": [
+        "function",
+        "nvm_download_artifact"
+      ],
+      "examples": [
+        "nvm_download_artifact"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_download_artifact"
+      }
+    },
+    {
+      "command": "prompt_openfoam",
+      "description": "Function: prompt_openfoam",
+      "tags": [
+        "function",
+        "prompt_openfoam"
+      ],
+      "examples": [
+        "prompt_openfoam"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_openfoam"
+      }
+    },
+    {
+      "command": "instant_prompt_dir",
+      "description": "Function: instant_prompt_dir",
+      "tags": [
+        "function",
+        "instant_prompt_dir"
+      ],
+      "examples": [
+        "instant_prompt_dir"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_dir"
+      }
+    },
+    {
+      "command": "nvm_install_npm_if_needed",
+      "description": "Function: nvm_install_npm_if_needed",
+      "tags": [
+        "function",
+        "nvm_install_npm_if_needed"
+      ],
+      "examples": [
+        "nvm_install_npm_if_needed"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_install_npm_if_needed"
+      }
+    },
+    {
+      "command": "fzf-file-widget",
+      "description": "Function: fzf-file-widget",
+      "tags": [
+        "function",
+        "fzf-file-widget"
+      ],
+      "examples": [
+        "fzf-file-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-file-widget"
+      }
+    },
+    {
+      "command": "try_alias_value",
+      "description": "Function: try_alias_value",
+      "tags": [
+        "function",
+        "try_alias_value"
+      ],
+      "examples": [
+        "try_alias_value"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "try_alias_value"
+      }
+    },
+    {
+      "command": "instant_prompt_xplr",
+      "description": "Function: instant_prompt_xplr",
+      "tags": [
+        "function",
+        "instant_prompt_xplr"
+      ],
+      "examples": [
+        "instant_prompt_xplr"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_xplr"
+      }
+    },
+    {
+      "command": "getent",
+      "description": "Function: getent",
+      "tags": [
+        "function",
+        "getent"
+      ],
+      "examples": [
+        "getent"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "getent"
+      }
+    },
+    {
+      "command": "git_prompt_behind",
+      "description": "Function: git_prompt_behind",
+      "tags": [
+        "function",
+        "git_prompt_behind"
+      ],
+      "examples": [
+        "git_prompt_behind"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_prompt_behind"
+      }
+    },
+    {
+      "command": "ggpnp",
+      "description": "Function: ggpnp",
+      "tags": [
+        "function",
+        "ggpnp"
+      ],
+      "examples": [
+        "ggpnp"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "ggpnp"
+      }
+    },
+    {
+      "command": "instant_prompt_prompt_char",
+      "description": "Function: instant_prompt_prompt_char",
+      "tags": [
+        "function",
+        "instant_prompt_prompt_char"
+      ],
+      "examples": [
+        "instant_prompt_prompt_char"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_prompt_char"
+      }
+    },
+    {
+      "command": "nvm_curl_use_compression",
+      "description": "Function: nvm_curl_use_compression",
+      "tags": [
+        "function",
+        "nvm_curl_use_compression"
+      ],
+      "examples": [
+        "nvm_curl_use_compression"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_curl_use_compression"
+      }
+    },
+    {
+      "command": "p9k_prompt_segment",
+      "description": "Function: p9k_prompt_segment",
+      "tags": [
+        "function",
+        "p9k_prompt_segment"
+      ],
+      "examples": [
+        "p9k_prompt_segment"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "p9k_prompt_segment"
+      }
+    },
+    {
+      "command": "nvm_get_checksum_alg",
+      "description": "Function: nvm_get_checksum_alg",
+      "tags": [
+        "function",
+        "nvm_get_checksum_alg"
+      ],
+      "examples": [
+        "nvm_get_checksum_alg"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_checksum_alg"
+      }
+    },
+    {
+      "command": "prompt_rvm",
+      "description": "Function: prompt_rvm",
+      "tags": [
+        "function",
+        "prompt_rvm"
+      ],
+      "examples": [
+        "prompt_rvm"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_rvm"
+      }
+    },
+    {
+      "command": "git_prompt_ahead",
+      "description": "Function: git_prompt_ahead",
+      "tags": [
+        "function",
+        "git_prompt_ahead"
+      ],
+      "examples": [
+        "git_prompt_ahead"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_prompt_ahead"
+      }
+    },
+    {
+      "command": "prompt_haskell_stack",
+      "description": "Function: prompt_haskell_stack",
+      "tags": [
+        "function",
+        "prompt_haskell_stack"
+      ],
+      "examples": [
+        "prompt_haskell_stack"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_haskell_stack"
+      }
+    },
+    {
+      "command": "prompt_detect_virt",
+      "description": "Function: prompt_detect_virt",
+      "tags": [
+        "function",
+        "prompt_detect_virt"
+      ],
+      "examples": [
+        "prompt_detect_virt"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_detect_virt"
+      }
+    },
+    {
+      "command": "nvm_ensure_version_installed",
+      "description": "Function: nvm_ensure_version_installed",
+      "tags": [
+        "function",
+        "nvm_ensure_version_installed"
+      ],
+      "examples": [
+        "nvm_ensure_version_installed"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_ensure_version_installed"
+      }
+    },
+    {
+      "command": "prompt_nodenv",
+      "description": "Function: prompt_nodenv",
+      "tags": [
+        "function",
+        "prompt_nodenv"
+      ],
+      "examples": [
+        "prompt_nodenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_nodenv"
+      }
+    },
+    {
+      "command": "nvm_has_solaris_binary",
+      "description": "Function: nvm_has_solaris_binary",
+      "tags": [
+        "function",
+        "nvm_has_solaris_binary"
+      ],
+      "examples": [
+        "nvm_has_solaris_binary"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_has_solaris_binary"
+      }
+    },
+    {
+      "command": "prompt_package",
+      "description": "Function: prompt_package",
+      "tags": [
+        "function",
+        "prompt_package"
+      ],
+      "examples": [
+        "prompt_package"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_package"
+      }
+    },
+    {
+      "command": "nvm_is_alias",
+      "description": "Function: nvm_is_alias",
+      "tags": [
+        "function",
+        "nvm_is_alias"
+      ],
+      "examples": [
+        "nvm_is_alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_is_alias"
+      }
+    },
+    {
+      "command": "fzf-git-each_ref-widget",
+      "description": "Function: fzf-git-each_ref-widget",
+      "tags": [
+        "function",
+        "fzf-git-each_ref-widget"
+      ],
+      "examples": [
+        "fzf-git-each_ref-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-git-each_ref-widget"
+      }
+    },
+    {
+      "command": "rbenv_prompt_info",
+      "description": "Function: rbenv_prompt_info",
+      "tags": [
+        "function",
+        "rbenv_prompt_info"
+      ],
+      "examples": [
+        "rbenv_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "rbenv_prompt_info"
+      }
+    },
+    {
+      "command": "prompt_virtualenv",
+      "description": "Function: prompt_virtualenv",
+      "tags": [
+        "function",
+        "prompt_virtualenv"
+      ],
+      "examples": [
+        "prompt_virtualenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_virtualenv"
+      }
+    },
+    {
+      "command": "my_git_formatter",
+      "description": "Function: my_git_formatter",
+      "tags": [
+        "function",
+        "my_git_formatter"
+      ],
+      "examples": [
+        "my_git_formatter"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "my_git_formatter"
+      }
+    },
+    {
+      "command": "gitstatus_stop_p9k_",
+      "description": "Function: gitstatus_stop_p9k_",
+      "tags": [
+        "function",
+        "gitstatus_stop_p9k_"
+      ],
+      "examples": [
+        "gitstatus_stop_p9k_"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gitstatus_stop_p9k_"
+      }
+    },
+    {
+      "command": "prompt_phpenv",
+      "description": "Function: prompt_phpenv",
+      "tags": [
+        "function",
+        "prompt_phpenv"
+      ],
+      "examples": [
+        "prompt_phpenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_phpenv"
+      }
+    },
+    {
+      "command": "prompt_dotnet_version",
+      "description": "Function: prompt_dotnet_version",
+      "tags": [
+        "function",
+        "prompt_dotnet_version"
+      ],
+      "examples": [
+        "prompt_dotnet_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_dotnet_version"
+      }
+    },
+    {
+      "command": "takeurl",
+      "description": "Function: takeurl",
+      "tags": [
+        "function",
+        "takeurl"
+      ],
+      "examples": [
+        "takeurl"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "takeurl"
+      }
+    },
+    {
+      "command": "p10k",
+      "description": "Function: p10k",
+      "tags": [
+        "function",
+        "p10k"
+      ],
+      "examples": [
+        "p10k"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "p10k"
+      }
+    },
+    {
+      "command": "add-zsh-hook",
+      "description": "Function: add-zsh-hook",
+      "tags": [
+        "function",
+        "add-zsh-hook"
+      ],
+      "examples": [
+        "add-zsh-hook"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "add-zsh-hook"
+      }
+    },
+    {
+      "command": "prompt_os_icon",
+      "description": "Function: prompt_os_icon",
+      "tags": [
+        "function",
+        "prompt_os_icon"
+      ],
+      "examples": [
+        "prompt_os_icon"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_os_icon"
+      }
+    },
+    {
+      "command": "gitstatus_check_p9k_",
+      "description": "Function: gitstatus_check_p9k_",
+      "tags": [
+        "function",
+        "gitstatus_check_p9k_"
+      ],
+      "examples": [
+        "gitstatus_check_p9k_"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gitstatus_check_p9k_"
+      }
+    },
+    {
+      "command": "mkcd",
+      "description": "Function: mkcd",
+      "tags": [
+        "function",
+        "mkcd"
+      ],
+      "examples": [
+        "mkcd"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "mkcd"
+      }
+    },
+    {
+      "command": "nvm_get_download_slug",
+      "description": "Function: nvm_get_download_slug",
+      "tags": [
+        "function",
+        "nvm_get_download_slug"
+      ],
+      "examples": [
+        "nvm_get_download_slug"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_download_slug"
+      }
+    },
+    {
+      "command": "prompt_root_indicator",
+      "description": "Function: prompt_root_indicator",
+      "tags": [
+        "function",
+        "prompt_root_indicator"
+      ],
+      "examples": [
+        "prompt_root_indicator"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_root_indicator"
+      }
+    },
+    {
+      "command": "fz-search",
+      "description": "Function: fz-search",
+      "tags": [
+        "function",
+        "fz-search"
+      ],
+      "examples": [
+        "fz-search"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fz-search"
+      }
+    },
+    {
+      "command": "zsh_stats",
+      "description": "Function: zsh_stats",
+      "tags": [
+        "function",
+        "zsh_stats"
+      ],
+      "examples": [
+        "zsh_stats"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "zsh_stats"
+      }
+    },
+    {
+      "command": "clippaste",
+      "description": "Function: clippaste",
+      "tags": [
+        "function",
+        "clippaste"
+      ],
+      "examples": [
+        "clippaste"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "clippaste"
+      }
+    },
+    {
+      "command": "nvm_get_mirror",
+      "description": "Function: nvm_get_mirror",
+      "tags": [
+        "function",
+        "nvm_get_mirror"
+      ],
+      "examples": [
+        "nvm_get_mirror"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_mirror"
+      }
+    },
+    {
+      "command": "prompt_vcs",
+      "description": "Function: prompt_vcs",
+      "tags": [
+        "function",
+        "prompt_vcs"
+      ],
+      "examples": [
+        "prompt_vcs"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_vcs"
+      }
+    },
+    {
+      "command": "nvm_resolve_alias",
+      "description": "Function: nvm_resolve_alias",
+      "tags": [
+        "function",
+        "nvm_resolve_alias"
+      ],
+      "examples": [
+        "nvm_resolve_alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_resolve_alias"
+      }
+    },
+    {
+      "command": "zrecompile",
+      "description": "Function: zrecompile",
+      "tags": [
+        "function",
+        "zrecompile"
+      ],
+      "examples": [
+        "zrecompile"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "zrecompile"
+      }
+    },
+    {
+      "command": "handle_completion_insecurities",
+      "description": "Function: handle_completion_insecurities",
+      "tags": [
+        "function",
+        "handle_completion_insecurities"
+      ],
+      "examples": [
+        "handle_completion_insecurities"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "handle_completion_insecurities"
+      }
+    },
+    {
+      "command": "nvm_num_version_groups",
+      "description": "Function: nvm_num_version_groups",
+      "tags": [
+        "function",
+        "nvm_num_version_groups"
+      ],
+      "examples": [
+        "nvm_num_version_groups"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_num_version_groups"
+      }
+    },
+    {
+      "command": "instant_prompt_midnight_commander",
+      "description": "Function: instant_prompt_midnight_commander",
+      "tags": [
+        "function",
+        "instant_prompt_midnight_commander"
+      ],
+      "examples": [
+        "instant_prompt_midnight_commander"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_midnight_commander"
+      }
+    },
+    {
+      "command": "fzf-cd-widget",
+      "description": "Function: fzf-cd-widget",
+      "tags": [
+        "function",
+        "fzf-cd-widget"
+      ],
+      "examples": [
+        "fzf-cd-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-cd-widget"
+      }
+    },
+    {
+      "command": "fzf-history-widget",
+      "description": "Function: fzf-history-widget",
+      "tags": [
+        "function",
+        "fzf-history-widget"
+      ],
+      "examples": [
+        "fzf-history-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-history-widget"
+      }
+    },
+    {
+      "command": "nvm_err",
+      "description": "Function: nvm_err",
+      "tags": [
+        "function",
+        "nvm_err"
+      ],
+      "examples": [
+        "nvm_err"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_err"
+      }
+    },
+    {
+      "command": "prompt_asdf",
+      "description": "Function: prompt_asdf",
+      "tags": [
+        "function",
+        "prompt_asdf"
+      ],
+      "examples": [
+        "prompt_asdf"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_asdf"
+      }
+    },
+    {
+      "command": "nvm_has_non_aliased",
+      "description": "Function: nvm_has_non_aliased",
+      "tags": [
+        "function",
+        "nvm_has_non_aliased"
+      ],
+      "examples": [
+        "nvm_has_non_aliased"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_has_non_aliased"
+      }
+    },
+    {
+      "command": "git_current_user_email",
+      "description": "Function: git_current_user_email",
+      "tags": [
+        "function",
+        "git_current_user_email"
+      ],
+      "examples": [
+        "git_current_user_email"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_current_user_email"
+      }
+    },
+    {
+      "command": "git_remote_status",
+      "description": "Function: git_remote_status",
+      "tags": [
+        "function",
+        "git_remote_status"
+      ],
+      "examples": [
+        "git_remote_status"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_remote_status"
+      }
+    },
+    {
+      "command": "nvm_get_latest",
+      "description": "Function: nvm_get_latest",
+      "tags": [
+        "function",
+        "nvm_get_latest"
+      ],
+      "examples": [
+        "nvm_get_latest"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_latest"
+      }
+    },
+    {
+      "command": "prompt_disk_usage",
+      "description": "Function: prompt_disk_usage",
+      "tags": [
+        "function",
+        "prompt_disk_usage"
+      ],
+      "examples": [
+        "prompt_disk_usage"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_disk_usage"
+      }
+    },
+    {
+      "command": "start-local-server",
+      "description": "Function: start-local-server",
+      "tags": [
+        "function",
+        "start-local-server"
+      ],
+      "examples": [
+        "start-local-server"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "start-local-server"
+      }
+    },
+    {
+      "command": "instant_prompt_nnn",
+      "description": "Function: instant_prompt_nnn",
+      "tags": [
+        "function",
+        "instant_prompt_nnn"
+      ],
+      "examples": [
+        "instant_prompt_nnn"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_nnn"
+      }
+    },
+    {
+      "command": "vi_mode_prompt_info",
+      "description": "Function: vi_mode_prompt_info",
+      "tags": [
+        "function",
+        "vi_mode_prompt_info"
+      ],
+      "examples": [
+        "vi_mode_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "vi_mode_prompt_info"
+      }
+    },
+    {
+      "command": "fzf-git-branches-widget",
+      "description": "Function: fzf-git-branches-widget",
+      "tags": [
+        "function",
+        "fzf-git-branches-widget"
+      ],
+      "examples": [
+        "fzf-git-branches-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-git-branches-widget"
+      }
+    },
+    {
+      "command": "prompt_dropbox",
+      "description": "Function: prompt_dropbox",
+      "tags": [
+        "function",
+        "prompt_dropbox"
+      ],
+      "examples": [
+        "prompt_dropbox"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_dropbox"
+      }
+    },
+    {
+      "command": "nvm_change_path",
+      "description": "Function: nvm_change_path",
+      "tags": [
+        "function",
+        "nvm_change_path"
+      ],
+      "examples": [
+        "nvm_change_path"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_change_path"
+      }
+    },
+    {
+      "command": "nvm_node_prefix",
+      "description": "Function: nvm_node_prefix",
+      "tags": [
+        "function",
+        "nvm_node_prefix"
+      ],
+      "examples": [
+        "nvm_node_prefix"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_node_prefix"
+      }
+    },
+    {
+      "command": "default",
+      "description": "Function: default",
+      "tags": [
+        "function",
+        "default"
+      ],
+      "examples": [
+        "default"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "default"
+      }
+    },
+    {
+      "command": "instant_prompt__p9k_internal_nothing",
+      "description": "Function: instant_prompt__p9k_internal_nothing",
+      "tags": [
+        "function",
+        "instant_prompt__p9k_internal_nothing"
+      ],
+      "examples": [
+        "instant_prompt__p9k_internal_nothing"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt__p9k_internal_nothing"
+      }
+    },
+    {
+      "command": "cd",
+      "description": "Function: cd",
+      "tags": [
+        "function",
+        "cd"
+      ],
+      "examples": [
+        "cd"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "cd"
+      }
+    },
+    {
+      "command": "fzf-git-files-widget",
+      "description": "Function: fzf-git-files-widget",
+      "tags": [
+        "function",
+        "fzf-git-files-widget"
+      ],
+      "examples": [
+        "fzf-git-files-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fzf-git-files-widget"
+      }
+    },
+    {
+      "command": "nvm_stdout_is_terminal",
+      "description": "Function: nvm_stdout_is_terminal",
+      "tags": [
+        "function",
+        "nvm_stdout_is_terminal"
+      ],
+      "examples": [
+        "nvm_stdout_is_terminal"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_stdout_is_terminal"
+      }
+    },
+    {
+      "command": "prompt_per_directory_history",
+      "description": "Function: prompt_per_directory_history",
+      "tags": [
+        "function",
+        "prompt_per_directory_history"
+      ],
+      "examples": [
+        "prompt_per_directory_history"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_per_directory_history"
+      }
+    },
+    {
+      "command": "mise",
+      "description": "Function: mise",
+      "tags": [
+        "function",
+        "mise"
+      ],
+      "examples": [
+        "mise"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "mise"
+      }
+    },
+    {
+      "command": "git_prompt_remote",
+      "description": "Function: git_prompt_remote",
+      "tags": [
+        "function",
+        "git_prompt_remote"
+      ],
+      "examples": [
+        "git_prompt_remote"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_prompt_remote"
+      }
+    },
+    {
+      "command": "prompt_dir_writable",
+      "description": "Function: prompt_dir_writable",
+      "tags": [
+        "function",
+        "prompt_dir_writable"
+      ],
+      "examples": [
+        "prompt_dir_writable"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_dir_writable"
+      }
+    },
+    {
+      "command": "prompt_aws_eb_env",
+      "description": "Function: prompt_aws_eb_env",
+      "tags": [
+        "function",
+        "prompt_aws_eb_env"
+      ],
+      "examples": [
+        "prompt_aws_eb_env"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_aws_eb_env"
+      }
+    },
+    {
+      "command": "instant_prompt_yazi",
+      "description": "Function: instant_prompt_yazi",
+      "tags": [
+        "function",
+        "instant_prompt_yazi"
+      ],
+      "examples": [
+        "instant_prompt_yazi"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_yazi"
+      }
+    },
+    {
+      "command": "is-at-least",
+      "description": "Function: is-at-least",
+      "tags": [
+        "function",
+        "is-at-least"
+      ],
+      "examples": [
+        "is-at-least"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "is-at-least"
+      }
+    },
+    {
+      "command": "prompt_vpn_ip",
+      "description": "Function: prompt_vpn_ip",
+      "tags": [
+        "function",
+        "prompt_vpn_ip"
+      ],
+      "examples": [
+        "prompt_vpn_ip"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_vpn_ip"
+      }
+    },
+    {
+      "command": "work_in_progress",
+      "description": "Function: work_in_progress",
+      "tags": [
+        "function",
+        "work_in_progress"
+      ],
+      "examples": [
+        "work_in_progress"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "work_in_progress"
+      }
+    },
+    {
+      "command": "prompt_scalaenv",
+      "description": "Function: prompt_scalaenv",
+      "tags": [
+        "function",
+        "prompt_scalaenv"
+      ],
+      "examples": [
+        "prompt_scalaenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_scalaenv"
+      }
+    },
+    {
+      "command": "open_command",
+      "description": "Function: open_command",
+      "tags": [
+        "function",
+        "open_command"
+      ],
+      "examples": [
+        "open_command"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "open_command"
+      }
+    },
+    {
+      "command": "gdnolock",
+      "description": "Function: gdnolock",
+      "tags": [
+        "function",
+        "gdnolock"
+      ],
+      "examples": [
+        "gdnolock"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "gdnolock"
+      }
+    },
+    {
+      "command": "regexp-replace",
+      "description": "Function: regexp-replace",
+      "tags": [
+        "function",
+        "regexp-replace"
+      ],
+      "examples": [
+        "regexp-replace"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "regexp-replace"
+      }
+    },
+    {
+      "command": "nvm_print_color_code",
+      "description": "Function: nvm_print_color_code",
+      "tags": [
+        "function",
+        "nvm_print_color_code"
+      ],
+      "examples": [
+        "nvm_print_color_code"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_print_color_code"
+      }
+    },
+    {
+      "command": "add-alias",
+      "description": "Function: add-alias",
+      "tags": [
+        "function",
+        "add-alias"
+      ],
+      "examples": [
+        "add-alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "add-alias"
+      }
+    },
+    {
+      "command": "prompt_plenv",
+      "description": "Function: prompt_plenv",
+      "tags": [
+        "function",
+        "prompt_plenv"
+      ],
+      "examples": [
+        "prompt_plenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_plenv"
+      }
+    },
+    {
+      "command": "prompt_java_version",
+      "description": "Function: prompt_java_version",
+      "tags": [
+        "function",
+        "prompt_java_version"
+      ],
+      "examples": [
+        "prompt_java_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_java_version"
+      }
+    },
+    {
+      "command": "compgen",
+      "description": "Function: compgen",
+      "tags": [
+        "function",
+        "compgen"
+      ],
+      "examples": [
+        "compgen"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "compgen"
+      }
+    },
+    {
+      "command": "git_previous_branch",
+      "description": "Function: git_previous_branch",
+      "tags": [
+        "function",
+        "git_previous_branch"
+      ],
+      "examples": [
+        "git_previous_branch"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "git_previous_branch"
+      }
+    },
+    {
+      "command": "nvm_normalize_lts",
+      "description": "Function: nvm_normalize_lts",
+      "tags": [
+        "function",
+        "nvm_normalize_lts"
+      ],
+      "examples": [
+        "nvm_normalize_lts"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_normalize_lts"
+      }
+    },
+    {
+      "command": "prompt_anaconda",
+      "description": "Function: prompt_anaconda",
+      "tags": [
+        "function",
+        "prompt_anaconda"
+      ],
+      "examples": [
+        "prompt_anaconda"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_anaconda"
+      }
+    },
+    {
+      "command": "fz-npm",
+      "description": "Function: fz-npm",
+      "tags": [
+        "function",
+        "fz-npm"
+      ],
+      "examples": [
+        "fz-npm"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fz-npm"
+      }
+    },
+    {
+      "command": "nvm_get_checksum_binary",
+      "description": "Function: nvm_get_checksum_binary",
+      "tags": [
+        "function",
+        "nvm_get_checksum_binary"
+      ],
+      "examples": [
+        "nvm_get_checksum_binary"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_checksum_binary"
+      }
+    },
+    {
+      "command": "instant_prompt_example",
+      "description": "Function: instant_prompt_example",
+      "tags": [
+        "function",
+        "instant_prompt_example"
+      ],
+      "examples": [
+        "instant_prompt_example"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_example"
+      }
+    },
+    {
+      "command": "fz-cmd-status",
+      "description": "Function: fz-cmd-status",
+      "tags": [
+        "function",
+        "fz-cmd-status"
+      ],
+      "examples": [
+        "fz-cmd-status"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fz-cmd-status"
+      }
+    },
+    {
+      "command": "nvm_ensure_version_prefix",
+      "description": "Function: nvm_ensure_version_prefix",
+      "tags": [
+        "function",
+        "nvm_ensure_version_prefix"
+      ],
+      "examples": [
+        "nvm_ensure_version_prefix"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_ensure_version_prefix"
+      }
+    },
+    {
+      "command": "omz_termsupport_preexec",
+      "description": "Function: omz_termsupport_preexec",
+      "tags": [
+        "function",
+        "omz_termsupport_preexec"
+      ],
+      "examples": [
+        "omz_termsupport_preexec"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "omz_termsupport_preexec"
+      }
+    },
+    {
+      "command": "complete",
+      "description": "Function: complete",
+      "tags": [
+        "function",
+        "complete"
+      ],
+      "examples": [
+        "complete"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "complete"
+      }
+    },
+    {
+      "command": "nvm_wrap_with_color_code",
+      "description": "Function: nvm_wrap_with_color_code",
+      "tags": [
+        "function",
+        "nvm_wrap_with_color_code"
+      ],
+      "examples": [
+        "nvm_wrap_with_color_code"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_wrap_with_color_code"
+      }
+    },
+    {
+      "command": "prompt_rbenv",
+      "description": "Function: prompt_rbenv",
+      "tags": [
+        "function",
+        "prompt_rbenv"
+      ],
+      "examples": [
+        "prompt_rbenv"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_rbenv"
+      }
+    },
+    {
+      "command": "prompt_user",
+      "description": "Function: prompt_user",
+      "tags": [
+        "function",
+        "prompt_user"
+      ],
+      "examples": [
+        "prompt_user"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_user"
+      }
+    },
+    {
+      "command": "instant_prompt_root_indicator",
+      "description": "Function: instant_prompt_root_indicator",
+      "tags": [
+        "function",
+        "instant_prompt_root_indicator"
+      ],
+      "examples": [
+        "instant_prompt_root_indicator"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_root_indicator"
+      }
+    },
+    {
+      "command": "prompt_load",
+      "description": "Function: prompt_load",
+      "tags": [
+        "function",
+        "prompt_load"
+      ],
+      "examples": [
+        "prompt_load"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_load"
+      }
+    },
+    {
+      "command": "instant_prompt_vi_mode",
+      "description": "Function: instant_prompt_vi_mode",
+      "tags": [
+        "function",
+        "instant_prompt_vi_mode"
+      ],
+      "examples": [
+        "instant_prompt_vi_mode"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_vi_mode"
+      }
+    },
+    {
+      "command": "instant_prompt_chezmoi_shell",
+      "description": "Function: instant_prompt_chezmoi_shell",
+      "tags": [
+        "function",
+        "instant_prompt_chezmoi_shell"
+      ],
+      "examples": [
+        "instant_prompt_chezmoi_shell"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_chezmoi_shell"
+      }
+    },
+    {
+      "command": "prompt_chezmoi_shell",
+      "description": "Function: prompt_chezmoi_shell",
+      "tags": [
+        "function",
+        "prompt_chezmoi_shell"
+      ],
+      "examples": [
+        "prompt_chezmoi_shell"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_chezmoi_shell"
+      }
+    },
+    {
+      "command": "nvm_check_file_permissions",
+      "description": "Function: nvm_check_file_permissions",
+      "tags": [
+        "function",
+        "nvm_check_file_permissions"
+      ],
+      "examples": [
+        "nvm_check_file_permissions"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_check_file_permissions"
+      }
+    },
+    {
+      "command": "up-line-or-beginning-search",
+      "description": "Function: up-line-or-beginning-search",
+      "tags": [
+        "function",
+        "up-line-or-beginning-search"
+      ],
+      "examples": [
+        "up-line-or-beginning-search"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "up-line-or-beginning-search"
+      }
+    },
+    {
+      "command": "nvm_sanitize_auth_header",
+      "description": "Function: nvm_sanitize_auth_header",
+      "tags": [
+        "function",
+        "nvm_sanitize_auth_header"
+      ],
+      "examples": [
+        "nvm_sanitize_auth_header"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_sanitize_auth_header"
+      }
+    },
+    {
+      "command": "prompt_time",
+      "description": "Function: prompt_time",
+      "tags": [
+        "function",
+        "prompt_time"
+      ],
+      "examples": [
+        "prompt_time"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_time"
+      }
+    },
+    {
+      "command": "nvm_get_colors",
+      "description": "Function: nvm_get_colors",
+      "tags": [
+        "function",
+        "nvm_get_colors"
+      ],
+      "examples": [
+        "nvm_get_colors"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_get_colors"
+      }
+    },
+    {
+      "command": "nvm_match_version",
+      "description": "Function: nvm_match_version",
+      "tags": [
+        "function",
+        "nvm_match_version"
+      ],
+      "examples": [
+        "nvm_match_version"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_match_version"
+      }
+    },
+    {
+      "command": "prompt_rspec_stats",
+      "description": "Function: prompt_rspec_stats",
+      "tags": [
+        "function",
+        "prompt_rspec_stats"
+      ],
+      "examples": [
+        "prompt_rspec_stats"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_rspec_stats"
+      }
+    },
+    {
+      "command": "nvm_list_aliases",
+      "description": "Function: nvm_list_aliases",
+      "tags": [
+        "function",
+        "nvm_list_aliases"
+      ],
+      "examples": [
+        "nvm_list_aliases"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_list_aliases"
+      }
+    },
+    {
+      "command": "nvm_make_alias",
+      "description": "Function: nvm_make_alias",
+      "tags": [
+        "function",
+        "nvm_make_alias"
+      ],
+      "examples": [
+        "nvm_make_alias"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_make_alias"
+      }
+    },
+    {
+      "command": "nvm_npmrc_bad_news_bears",
+      "description": "Function: nvm_npmrc_bad_news_bears",
+      "tags": [
+        "function",
+        "nvm_npmrc_bad_news_bears"
+      ],
+      "examples": [
+        "nvm_npmrc_bad_news_bears"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_npmrc_bad_news_bears"
+      }
+    },
+    {
+      "command": "jenv_prompt_info",
+      "description": "Function: jenv_prompt_info",
+      "tags": [
+        "function",
+        "jenv_prompt_info"
+      ],
+      "examples": [
+        "jenv_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "jenv_prompt_info"
+      }
+    },
+    {
+      "command": "prompt_dir",
+      "description": "Function: prompt_dir",
+      "tags": [
+        "function",
+        "prompt_dir"
+      ],
+      "examples": [
+        "prompt_dir"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_dir"
+      }
+    },
+    {
+      "command": "prompt_nordvpn",
+      "description": "Function: prompt_nordvpn",
+      "tags": [
+        "function",
+        "prompt_nordvpn"
+      ],
+      "examples": [
+        "prompt_nordvpn"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_nordvpn"
+      }
+    },
+    {
+      "command": "instant_prompt_ssh",
+      "description": "Function: instant_prompt_ssh",
+      "tags": [
+        "function",
+        "instant_prompt_ssh"
+      ],
+      "examples": [
+        "instant_prompt_ssh"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "instant_prompt_ssh"
+      }
+    },
+    {
+      "command": "prompt_wifi",
+      "description": "Function: prompt_wifi",
+      "tags": [
+        "function",
+        "prompt_wifi"
+      ],
+      "examples": [
+        "prompt_wifi"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_wifi"
+      }
+    },
+    {
+      "command": "prompt_terraform",
+      "description": "Function: prompt_terraform",
+      "tags": [
+        "function",
+        "prompt_terraform"
+      ],
+      "examples": [
+        "prompt_terraform"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "prompt_terraform"
+      }
+    },
+    {
+      "command": "nvm_find_up",
+      "description": "Function: nvm_find_up",
+      "tags": [
+        "function",
+        "nvm_find_up"
+      ],
+      "examples": [
+        "nvm_find_up"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_find_up"
+      }
+    },
+    {
+      "command": "bzr_prompt_info",
+      "description": "Function: bzr_prompt_info",
+      "tags": [
+        "function",
+        "bzr_prompt_info"
+      ],
+      "examples": [
+        "bzr_prompt_info"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "bzr_prompt_info"
+      }
+    },
+    {
+      "command": "nvm_compute_checksum",
+      "description": "Function: nvm_compute_checksum",
+      "tags": [
+        "function",
+        "nvm_compute_checksum"
+      ],
+      "examples": [
+        "nvm_compute_checksum"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "nvm_compute_checksum"
+      }
+    }
+  ]
 }

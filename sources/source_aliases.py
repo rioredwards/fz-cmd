@@ -21,12 +21,12 @@ def get_aliases() -> List[Dict[str, str]]:
         List of dictionaries with 'name' and 'value' keys
     """
     try:
-        # Get aliases from zsh
+        # Get aliases from zsh (interactive mode to load user's .zshrc)
         result = subprocess.run(
-            ["zsh", "-c", "alias"],
+            ["zsh", "-i", "-c", "alias"],
             capture_output=True,
             text=True,
-            timeout=5
+            timeout=10
         )
         
         if result.returncode != 0:
