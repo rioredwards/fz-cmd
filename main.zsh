@@ -144,8 +144,9 @@ _fz-cmd-core() {
 	local selected
 	selected=$(cat "$formatted_file" | fzf \
 		--ansi \
+		--no-hscroll \
 		--preview "$preview_cmd" \
-		--preview-window "down:10:wrap" \
+		--preview-window "right:60%:wrap" \
 		--delimiter $'\t' \
 		--with-nth 1)
 

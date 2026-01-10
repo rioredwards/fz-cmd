@@ -3,13 +3,14 @@
 Format JSON commands for fzf display.
 
 Outputs tab-separated format:
-<ansi_display>\t<command>\t<description>\t<tags>\t<examples>
+<display>\t<command>\t<description>\t<tags>\t<examples>
 
-Field 1: ANSI-colored display (command + dim description/tags) - searchable
+Field 1: command + padding + invisible searchable text (description/tags)
+         The padding pushes searchable text behind the preview window
 Field 2: Raw command for extraction after selection
 Fields 3-5: Raw data for preview script
 
-Use with: fzf --ansi --delimiter='\\t' --with-nth=1
+Use with: fzf --ansi --delimiter='\\t' --with-nth=1 --preview-window=right:60%
 """
 
 import json
@@ -17,7 +18,7 @@ import sys
 from typing import List, Dict, Any, Optional
 
 # ANSI color codes
-DIM = "\033[90m"  # Dark gray
+DIM = "\033[38;2;31;31;31m"  # RGB(31,31,31) = #1f1f1f - matches terminal bg
 RESET = "\033[0m"
 
 
@@ -29,7 +30,10 @@ def format_command(cmd: Dict[str, Any]) -> str:
         cmd: Command dictionary with command, description, tags, examples
         
     Returns:
-        Tab-separated: <ansi_display>\\t<command>\\t<description>\\t<tags>\\t<examples>
+        Tab-separated: <display>\\t<command>\\t<description>\\t<tags>\\t<examples>
+        
+    Display format: command + huge padding + invisible searchable text
+    The padding pushes searchable text behind the preview window.
     """
     command = cmd.get("command", "").strip()
     description = cmd.get("description", "").strip()
@@ -39,18 +43,21 @@ def format_command(cmd: Dict[str, Any]) -> str:
     tags_str = ", ".join(tags) if tags else ""
     examples_str = " | ".join(examples) if examples else ""
     
-    # Build the dimmed suffix (description and tags)
-    suffix_parts = []
+    # Build searchable suffix (invisible but contributes to search)
+    search_parts = []
     if description:
-        suffix_parts.append(description)
+        search_parts.append(description)
     if tags_str:
-        suffix_parts.append(tags_str)
+        search_parts.append(tags_str)
     
-    suffix = " | ".join(suffix_parts)
+    search_text = " ".join(search_parts)
     
-    # Field 1: ANSI display (searchable)
-    if suffix:
-        display = f"{command}  {DIM}{suffix}{RESET}"
+    # Huge padding pushes invisible text behind preview window
+    PADDING = " " * 300
+    
+    # Field 1: command (visible) + padding + invisible searchable text
+    if search_text:
+        display = f"{command}{PADDING}{DIM}{search_text}{RESET}"
     else:
         display = command
     
