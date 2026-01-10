@@ -1,841 +1,11 @@
 {
   "commands": [
     {
-      "command": "fz-cmd",
-      "description": "History: fz-cmd",
-      "tags": [],
-      "examples": [
-        "fz-cmd"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "claude --help | less -S",
-      "description": "History: claude --help | less -S",
-      "tags": [],
-      "examples": [
-        "claude --help | less -S"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "./run_tests.sh",
-      "description": "History: ./run_tests.sh",
-      "tags": [],
-      "examples": [
-        "./run_tests.sh"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "./scripts/run_tests.sh",
-      "description": "History: ./scripts/run_tests.sh",
-      "tags": [],
-      "examples": [
-        "./scripts/run_tests.sh"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
       "command": "omz reload",
       "description": "History: omz reload",
       "tags": [],
       "examples": [
         "omz reload"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fzf --man",
-      "description": "History: fzf --man",
-      "tags": [],
-      "examples": [
-        "fzf --man"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "export MANPAGER=\"sh -c 'col -bx | bat -l man -p --paging=always'\"",
-      "description": "History: export MANPAGER=\"sh -c 'col -bx | bat -l man -p --",
-      "tags": [],
-      "examples": [
-        "export MANPAGER=\"sh -c 'col -bx | bat -l man -p --paging=always'\""
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "# Use template to rearrange fields\\; echo foo,bar,baz | fzf --delimiter , --with-nth '{n},{1},{3},{2},{1..2}'",
-      "description": "History: # Use template to rearrange fields\\; echo foo,bar,",
-      "tags": [],
-      "examples": [
-        "# Use template to rearrange fields\\; echo foo,bar,baz | fzf --delimiter , --with-nth '{n},{1},{3},{2},{1..2}'"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "echo foo,bar,baz | fzf --delimiter , --with-nth '{n},{1},{3},{2},{1..2}'",
-      "description": "History: echo foo,bar,baz | fzf --delimiter , --with-nth '{",
-      "tags": [],
-      "examples": [
-        "echo foo,bar,baz | fzf --delimiter , --with-nth '{n},{1},{3},{2},{1..2}'"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "echo foo,bar,baz | fzf --delimiter , --with-nth '{n},{1},{3},{2},{1..2}' --height=-1",
-      "description": "History: echo foo,bar,baz | fzf --delimiter , --with-nth '{",
-      "tags": [],
-      "examples": [
-        "echo foo,bar,baz | fzf --delimiter , --with-nth '{n},{1},{3},{2},{1..2}' --height=-1"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fzf --info-command='echo -e \"\\x1b[33;1m$FZF_POS\\x1b[m/$FZF_INFO \u00f0\u0083\u00bf\u0083\u00b2\u0083\u00bb\\; \"\\; '",
-      "description": "History: fzf --info-command='echo -e \"\\x1b[33;1m$FZF_POS\\x1",
-      "tags": [],
-      "examples": [
-        "fzf --info-command='echo -e \"\\x1b[33;1m$FZF_POS\\x1b[m/$FZF_INFO \u00f0\u0083\u00bf\u0083\u00b2\u0083\u00bb\\; \"\\; '"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "mjump() {\\",
-      "description": "History: mjump() {\\",
-      "tags": [],
-      "examples": [
-        "mjump() {\\"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "mjump",
-      "description": "History: mjump",
-      "tags": [],
-      "examples": [
-        "mjump"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "mjump fzf",
-      "description": "History: mjump fzf",
-      "tags": [],
-      "examples": [
-        "mjump fzf"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "export FZ_CMD_DEBUG=1",
-      "description": "History: export FZ_CMD_DEBUG=1",
-      "tags": [],
-      "examples": [
-        "export FZ_CMD_DEBUG=1"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "apropos ssh | fzf | sed 's/ (.*//' | xargs -r man",
-      "description": "History: apropos ssh | fzf | sed 's/ (.*//' | xargs -r man",
-      "tags": [],
-      "examples": [
-        "apropos ssh | fzf | sed 's/ (.*//' | xargs -r man"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "apropos directory | fzf | sed 's/ (.*//' | xargs -r man",
-      "description": "History: apropos directory | fzf | sed 's/ (.*//' | xargs -",
-      "tags": [],
-      "examples": [
-        "apropos directory | fzf | sed 's/ (.*//' | xargs -r man"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "apropos ssh \\\\; | fzf --preview 'echo {} | sed \"s/ (.*//\" | xargs man | col -bx | bat -l man -p'",
-      "description": "History: apropos ssh \\\\; | fzf --preview 'echo {} | sed \"s/",
-      "tags": [],
-      "examples": [
-        "apropos ssh \\\\; | fzf --preview 'echo {} | sed \"s/ (.*//\" | xargs man | col -bx | bat -l man -p'"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "tldr rg",
-      "description": "History: tldr rg",
-      "tags": [],
-      "examples": [
-        "tldr rg"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "man rsync | col -bx | rg -n \"EXAMPLES|Example\" -n",
-      "description": "History: man rsync | col -bx | rg -n \"EXAMPLES|Example\" -n",
-      "tags": [],
-      "examples": [
-        "man rsync | col -bx | rg -n \"EXAMPLES|Example\" -n"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "add-alias mjump() {\\",
-      "description": "History: add-alias mjump() {\\",
-      "tags": [],
-      "examples": [
-        "add-alias mjump() {\\"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "add-alias \"mjump() {\\",
-      "description": "History: add-alias \"mjump() {\\",
-      "tags": [],
-      "examples": [
-        "add-alias \"mjump() {\\"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "add-alias",
-      "description": "History: add-alias",
-      "tags": [],
-      "examples": [
-        "add-alias"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "source ~/.dotfiles/.zshrc",
-      "description": "History: source ~/.dotfiles/.zshrc",
-      "tags": [],
-      "examples": [
-        "source ~/.dotfiles/.zshrc"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-gc",
-      "description": "History: fz-gc",
-      "tags": [],
-      "examples": [
-        "fz-gc"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git commit -m \"feat(zsh/alias): improve add-alias command and add an alias for man page searching\"",
-      "description": "History: git commit -m \"feat(zsh/alias): improve add-alias ",
-      "tags": [],
-      "examples": [
-        "git commit -m \"feat(zsh/alias): improve add-alias command and add an alias for man page searching\""
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git log --oneline --graph --all",
-      "description": "History: git log --oneline --graph --all",
-      "tags": [],
-      "examples": [
-        "git log --oneline --graph --all"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git log --oneline",
-      "description": "History: git log --oneline",
-      "tags": [],
-      "examples": [
-        "git log --oneline"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git log",
-      "description": "History: git log",
-      "tags": [],
-      "examples": [
-        "git log"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "ga zsh/aliases.zsh",
-      "description": "History: ga zsh/aliases.zsh",
-      "tags": [],
-      "examples": [
-        "ga zsh/aliases.zsh"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "mjump sed",
-      "description": "History: mjump sed",
-      "tags": [],
-      "examples": [
-        "mjump sed"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "tldr sed",
-      "description": "History: tldr sed",
-      "tags": [],
-      "examples": [
-        "tldr sed"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "copypath",
-      "description": "History: copypath",
-      "tags": [],
-      "examples": [
-        "copypath"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git diff /Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/\u00e2\u0083\u00bc\u0083\u00a5_merged_file.json /Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/_limited\\(merged_file\\).json",
-      "description": "History: git diff /Users/rioredwards/.dotfiles/zsh/fz-cmd/t",
-      "tags": [],
-      "examples": [
-        "git diff /Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/\u00e2\u0083\u00bc\u0083\u00a5_merged_file.json /Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/_limited\\(merged_file\\).json"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "shasum -a 256 \"/Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/\u00e2\u0083\u00bc\u0083\u00a5_merged_file.json\" \\\\; \"/Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/_limited(merged_file).json\"",
-      "description": "History: shasum -a 256 \"/Users/rioredwards/.dotfiles/zsh/fz",
-      "tags": [],
-      "examples": [
-        "shasum -a 256 \"/Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/\u00e2\u0083\u00bc\u0083\u00a5_merged_file.json\" \\\\; \"/Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/_limited(merged_file).json\""
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git diff --no-index \\\\; \"/Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/\u00e2\u0083\u00bc\u0083\u00a5_merged_file.json\" \\\\; \"/Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/_limited(merged_file).json\"",
-      "description": "History: git diff --no-index \\\\; \"/Users/rioredwards/.dotfi",
-      "tags": [],
-      "examples": [
-        "git diff --no-index \\\\; \"/Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/\u00e2\u0083\u00bc\u0083\u00a5_merged_file.json\" \\\\; \"/Users/rioredwards/.dotfiles/zsh/fz-cmd/temp/_limited(merged_file).json\""
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "echo hello",
-      "description": "History: echo hello",
-      "tags": [],
-      "examples": [
-        "echo hello"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "bindkey | grep -i 'meta-a\\|\\\\ea'",
-      "description": "History: bindkey | grep -i 'meta-a\\|\\\\ea'",
-      "tags": [],
-      "examples": [
-        "bindkey | grep -i 'meta-a\\|\\\\ea'"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "bindkey | less",
-      "description": "History: bindkey | less",
-      "tags": [],
-      "examples": [
-        "bindkey | less"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git clone git@github.com:junegunn/everything.fzf.git",
-      "description": "History: git clone git@github.com:junegunn/everything.fzf.g",
-      "tags": [],
-      "examples": [
-        "git clone git@github.com:junegunn/everything.fzf.git"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "mv everything.fzf ~/scripts",
-      "description": "History: mv everything.fzf ~/scripts",
-      "tags": [],
-      "examples": [
-        "mv everything.fzf ~/scripts"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-search ~/",
-      "description": "History: fz-search ~/",
-      "tags": [],
-      "examples": [
-        "fz-search ~/"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "/Users/rioredwards/scripts/",
-      "description": "History: /Users/rioredwards/scripts/",
-      "tags": [],
-      "examples": [
-        "/Users/rioredwards/scripts/"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "cursor .",
-      "description": "History: cursor .",
-      "tags": [],
-      "examples": [
-        "cursor ."
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "script_exists fz-chrome.sh",
-      "description": "History: script_exists fz-chrome.sh",
-      "tags": [],
-      "examples": [
-        "script_exists fz-chrome.sh"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "script_exists ts-repl",
-      "description": "History: script_exists ts-repl",
-      "tags": [],
-      "examples": [
-        "script_exists ts-repl"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "script_exists ts-repl.sh",
-      "description": "History: script_exists ts-repl.sh",
-      "tags": [],
-      "examples": [
-        "script_exists ts-repl.sh"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "run_script_if_exists fz-chrome.sh",
-      "description": "History: run_script_if_exists fz-chrome.sh",
-      "tags": [],
-      "examples": [
-        "run_script_if_exists fz-chrome.sh"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-chrome.sh",
-      "description": "History: fz-chrome.sh",
-      "tags": [],
-      "examples": [
-        "fz-chrome.sh"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git-quicklog",
-      "description": "History: git-quicklog",
-      "tags": [],
-      "examples": [
-        "git-quicklog"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "chmod +x ~/scripts/everything.fzf/chrome.fzf",
-      "description": "History: chmod +x ~/scripts/everything.fzf/chrome.fzf",
-      "tags": [],
-      "examples": [
-        "chmod +x ~/scripts/everything.fzf/chrome.fzf"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "~/scripts/everything.fzf/chrome.fzf",
-      "description": "History: ~/scripts/everything.fzf/chrome.fzf",
-      "tags": [],
-      "examples": [
-        "~/scripts/everything.fzf/chrome.fzf"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "brew install bash ruby bat chrome-cli figlet gh mise ripgrep",
-      "description": "History: brew install bash ruby bat chrome-cli figlet gh mi",
-      "tags": [],
-      "examples": [
-        "brew install bash ruby bat chrome-cli figlet gh mise ripgrep"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "which ruby",
-      "description": "History: which ruby",
-      "tags": [],
-      "examples": [
-        "which ruby"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "brew uninstall ruby",
-      "description": "History: brew uninstall ruby",
-      "tags": [],
-      "examples": [
-        "brew uninstall ruby"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "echo $BASE_PATH",
-      "description": "History: echo $BASE_PATH",
-      "tags": [],
-      "examples": [
-        "echo $BASE_PATH"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "echo \"$BASE_PATH\"",
-      "description": "History: echo \"$BASE_PATH\"",
-      "tags": [],
-      "examples": [
-        "echo \"$BASE_PATH\""
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "brew install ruby",
-      "description": "History: brew install ruby",
-      "tags": [],
-      "examples": [
-        "brew install ruby"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "echo 'eval \"$(mise activate zsh)\"' >> ~/.zshrc\\; source ~/.zshrc",
-      "description": "History: echo 'eval \"$(mise activate zsh)\"' >> ~/.zshrc\\; s",
-      "tags": [],
-      "examples": [
-        "echo 'eval \"$(mise activate zsh)\"' >> ~/.zshrc\\; source ~/.zshrc"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "which ruby\\; ruby -v\\; which rubocop\\; rubocop -V",
-      "description": "History: which ruby\\; ruby -v\\; which rubocop\\; rubocop -V",
-      "tags": [],
-      "examples": [
-        "which ruby\\; ruby -v\\; which rubocop\\; rubocop -V"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "nvim ~/.zshrc",
-      "description": "History: nvim ~/.zshrc",
-      "tags": [],
-      "examples": [
-        "nvim ~/.zshrc"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "mise install ruby@3.4\\; mise use -g ruby@3.4",
-      "description": "History: mise install ruby@3.4\\; mise use -g ruby@3.4",
-      "tags": [],
-      "examples": [
-        "mise install ruby@3.4\\; mise use -g ruby@3.4"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "eval \"$(mise activate zsh)\"",
-      "description": "History: eval \"$(mise activate zsh)\"",
-      "tags": [],
-      "examples": [
-        "eval \"$(mise activate zsh)\""
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "brew install libyaml pkg-config openssl@3 readline",
-      "description": "History: brew install libyaml pkg-config openssl@3 readline",
-      "tags": [],
-      "examples": [
-        "brew install libyaml pkg-config openssl@3 readline"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "export RUBY_CONFIGURE_OPTS=\"--with-libyaml-dir=$(brew --prefix libyaml) --with-openssl-dir=$(brew --prefix openssl@3) --with-readline-dir=$(brew --prefix readline)\"\\",
-      "description": "History: export RUBY_CONFIGURE_OPTS=\"--with-libyaml-dir=$(b",
-      "tags": [],
-      "examples": [
-        "export RUBY_CONFIGURE_OPTS=\"--with-libyaml-dir=$(brew --prefix libyaml) --with-openssl-dir=$(brew --prefix openssl@3) --with-readline-dir=$(brew --prefix readline)\"\\"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "which ruby\\; ruby -v",
-      "description": "History: which ruby\\; ruby -v",
-      "tags": [],
-      "examples": [
-        "which ruby\\; ruby -v"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "gem install rubocop\\; rubocop -V",
-      "description": "History: gem install rubocop\\; rubocop -V",
-      "tags": [],
-      "examples": [
-        "gem install rubocop\\; rubocop -V"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-chrome",
-      "description": "History: fz-chrome",
-      "tags": [],
-      "examples": [
-        "fz-chrome"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-apps",
-      "description": "History: fz-apps",
-      "tags": [],
-      "examples": [
-        "fz-apps"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-figlet",
-      "description": "History: fz-figlet",
-      "tags": [],
-      "examples": [
-        "fz-figlet"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-gist",
-      "description": "History: fz-gist",
-      "tags": [],
-      "examples": [
-        "fz-gist"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-mise",
-      "description": "History: fz-mise",
-      "tags": [],
-      "examples": [
-        "fz-mise"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-pr",
-      "description": "History: fz-pr",
-      "tags": [],
-      "examples": [
-        "fz-pr"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git -v",
-      "description": "History: git -v",
-      "tags": [],
-      "examples": [
-        "git -v"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "git clone git@github.com:junegunn/fzf-git.sh.git",
-      "description": "History: git clone git@github.com:junegunn/fzf-git.sh.git",
-      "tags": [],
-      "examples": [
-        "git clone git@github.com:junegunn/fzf-git.sh.git"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "cp -r ~/Coding/fzf-git.sh ~/scripts",
-      "description": "History: cp -r ~/Coding/fzf-git.sh ~/scripts",
-      "tags": [],
-      "examples": [
-        "cp -r ~/Coding/fzf-git.sh ~/scripts"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "d",
-      "description": "History: d",
-      "tags": [],
-      "examples": [
-        "d"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-git",
-      "description": "History: fz-git",
-      "tags": [],
-      "examples": [
-        "fz-git"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-git branches",
-      "description": "History: fz-git branches",
-      "tags": [],
-      "examples": [
-        "fz-git branches"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "chmod +x ~/scripts/fzf-git.sh/fzf-git.sh",
-      "description": "History: chmod +x ~/scripts/fzf-git.sh/fzf-git.sh",
-      "tags": [],
-      "examples": [
-        "chmod +x ~/scripts/fzf-git.sh/fzf-git.sh"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "mjump tldr",
-      "description": "History: mjump tldr",
-      "tags": [],
-      "examples": [
-        "mjump tldr"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "mjump rg",
-      "description": "History: mjump rg",
-      "tags": [],
-      "examples": [
-        "mjump rg"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "bindkey | rg 'fzf-git|_fzf_git|\\^G'",
-      "description": "History: bindkey | rg 'fzf-git|_fzf_git|\\^G'",
-      "tags": [],
-      "examples": [
-        "bindkey | rg 'fzf-git|_fzf_git|\\^G'"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "fz-gcb",
-      "description": "History: fz-gcb",
-      "tags": [],
-      "examples": [
-        "fz-gcb"
       ],
       "source": "history",
       "metadata": {}
@@ -866,6 +36,16 @@
       "tags": [],
       "examples": [
         "git for-each-ref"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "fz-cmd",
+      "description": "History: fz-cmd",
+      "tags": [],
+      "examples": [
+        "fz-cmd"
       ],
       "source": "history",
       "metadata": {}
@@ -971,6 +151,26 @@
       "metadata": {}
     },
     {
+      "command": "fz-chrome",
+      "description": "History: fz-chrome",
+      "tags": [],
+      "examples": [
+        "fz-chrome"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "fz-pr",
+      "description": "History: fz-pr",
+      "tags": [],
+      "examples": [
+        "fz-pr"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
       "command": "git push",
       "description": "History: git push",
       "tags": [],
@@ -1056,6 +256,16 @@
       "tags": [],
       "examples": [
         "git checkout -b re/fixing-stuff"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git log --oneline",
+      "description": "History: git log --oneline",
+      "tags": [],
+      "examples": [
+        "git log --oneline"
       ],
       "source": "history",
       "metadata": {}
@@ -1551,6 +761,16 @@
       "metadata": {}
     },
     {
+      "command": "./scripts/run_tests.sh",
+      "description": "History: ./scripts/run_tests.sh",
+      "tags": [],
+      "examples": [
+        "./scripts/run_tests.sh"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
       "command": "./scripts/refresh_cache.sh",
       "description": "History: ./scripts/refresh_cache.sh",
       "tags": [],
@@ -1606,6 +826,16 @@
       "tags": [],
       "examples": [
         "fz-als"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git -v",
+      "description": "History: git -v",
+      "tags": [],
+      "examples": [
+        "git -v"
       ],
       "source": "history",
       "metadata": {}
@@ -1731,6 +961,16 @@
       "metadata": {}
     },
     {
+      "command": "add-alias",
+      "description": "History: add-alias",
+      "tags": [],
+      "examples": [
+        "add-alias"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
       "command": "cursor ~/.dotfiles/zsh/aliases.zsh",
       "description": "History: cursor ~/.dotfiles/zsh/aliases.zsh",
       "tags": [],
@@ -1771,6 +1011,16 @@
       "metadata": {}
     },
     {
+      "command": "ga zsh/aliases.zsh",
+      "description": "History: ga zsh/aliases.zsh",
+      "tags": [],
+      "examples": [
+        "ga zsh/aliases.zsh"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
       "command": "gcmsg \"feat(aliases): add g-subbump func for committing changes in submodules and updating the parent repo\"",
       "description": "History: gcmsg \"feat(aliases): add g-subbump func for commi",
       "tags": [],
@@ -1786,6 +1036,16 @@
       "tags": [],
       "examples": [
         "ga ./hotkeys"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "fz-gc",
+      "description": "History: fz-gc",
+      "tags": [],
+      "examples": [
+        "fz-gc"
       ],
       "source": "history",
       "metadata": {}
@@ -1971,6 +1231,16 @@
       "metadata": {}
     },
     {
+      "command": "cursor .",
+      "description": "History: cursor .",
+      "tags": [],
+      "examples": [
+        "cursor ."
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
       "command": "gcb ref",
       "description": "History: gcb ref",
       "tags": [],
@@ -2101,6 +1371,16 @@
       "metadata": {}
     },
     {
+      "command": "copypath",
+      "description": "History: copypath",
+      "tags": [],
+      "examples": [
+        "copypath"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
       "command": "gaaa",
       "description": "History: gaaa",
       "tags": [],
@@ -2201,6 +1481,16 @@
       "metadata": {}
     },
     {
+      "command": "fz-apps",
+      "description": "History: fz-apps",
+      "tags": [],
+      "examples": [
+        "fz-apps"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
       "command": "fz-jira",
       "description": "History: fz-jira",
       "tags": [],
@@ -2216,6 +1506,636 @@
       "tags": [],
       "examples": [
         "fz-cd-widget"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "fz-figlet",
+      "description": "History: fz-figlet",
+      "tags": [],
+      "examples": [
+        "fz-figlet"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "fz-gcb",
+      "description": "History: fz-gcb",
+      "tags": [],
+      "examples": [
+        "fz-gcb"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "python3 utils/format_for_fzf.py cache/commands.json | fzf --delimiter='\\t' --with-nth=1",
+      "description": "History: python3 utils/format_for_fzf.py cache/commands.jso",
+      "tags": [],
+      "examples": [
+        "python3 utils/format_for_fzf.py cache/commands.json | fzf --delimiter='\\t' --with-nth=1"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=preview",
+      "description": "History: ./bin/dev --preset=preview",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=preview"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-preview",
+      "description": "History: ./bin/dev --preset=cmd-preview",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-preview"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "python3 utils/format_for_fzf.py cache/commands.json | fzf --delimiter='\\t' --with-nth=1 --nth=..",
+      "description": "History: python3 utils/format_for_fzf.py cache/commands.jso",
+      "tags": [],
+      "examples": [
+        "python3 utils/format_for_fzf.py cache/commands.json | fzf --delimiter='\\t' --with-nth=1 --nth=.."
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "python3 utils/format_for_fzf.py cache/commands.json | fzf --delimiter='\\t' --with-nth=1 --nth=1,2,3,4",
+      "description": "History: python3 utils/format_for_fzf.py cache/commands.jso",
+      "tags": [],
+      "examples": [
+        "python3 utils/format_for_fzf.py cache/commands.json | fzf --delimiter='\\t' --with-nth=1 --nth=1,2,3,4"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gcmsg \"idk\"",
+      "description": "History: gcmsg \"idk\"",
+      "tags": [],
+      "examples": [
+        "gcmsg \"idk\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "python3 utils/format_for_fzf.py cache/commands.json | fzf --ansi",
+      "description": "History: python3 utils/format_for_fzf.py cache/commands.jso",
+      "tags": [],
+      "examples": [
+        "python3 utils/format_for_fzf.py cache/commands.json | fzf --ansi"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-compact",
+      "description": "History: ./bin/dev --preset=cmd-compact",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-compact"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "cal\\",
+      "description": "History: cal\\",
+      "tags": [],
+      "examples": [
+        "cal\\"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-explorer",
+      "description": "History: ./bin/dev --preset=cmd-explorer",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-explorer"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-fullscreen",
+      "description": "History: ./bin/dev --preset=cmd-fullscreen",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-fullscreen"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=",
+      "description": "History: ./bin/dev --preset=",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset="
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-minimal-search",
+      "description": "History: ./bin/dev --preset=cmd-minimal-search",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-minimal-search"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-multiline",
+      "description": "History: ./bin/dev --preset=cmd-multiline",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-multiline"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-cmd-previen",
+      "description": "History: ./bin/dev --preset=cmd-cmd-previen",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-cmd-previen"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-cmd-preview",
+      "description": "History: ./bin/dev --preset=cmd-cmd-preview",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-cmd-preview"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=tags",
+      "description": "History: ./bin/dev --preset=tags",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=tags"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-tags",
+      "description": "History: ./bin/dev --preset=cmd-tags",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-tags"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "z fzf-sandbox\\",
+      "description": "History: z fzf-sandbox\\",
+      "tags": [],
+      "examples": [
+        "z fzf-sandbox\\"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gcmsg \"so many presets! and they look good too\"",
+      "description": "History: gcmsg \"so many presets! and they look good too\"",
+      "tags": [],
+      "examples": [
+        "gcmsg \"so many presets! and they look good too\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/watch --preset=cmd-multiline",
+      "description": "History: ./bin/watch --preset=cmd-multiline",
+      "tags": [],
+      "examples": [
+        "./bin/watch --preset=cmd-multiline"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "z fz-cmd",
+      "description": "History: z fz-cmd",
+      "tags": [],
+      "examples": [
+        "z fz-cmd"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/dev --preset=cmd-preview]",
+      "description": "History: ./bin/dev --preset=cmd-preview]",
+      "tags": [],
+      "examples": [
+        "./bin/dev --preset=cmd-preview]"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gh repo create",
+      "description": "History: gh repo create",
+      "tags": [],
+      "examples": [
+        "gh repo create"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git remote add origin git@github.com:rioredwards/fz-sandbox",
+      "description": "History: git remote add origin git@github.com:rioredwards/f",
+      "tags": [],
+      "examples": [
+        "git remote add origin git@github.com:rioredwards/fz-sandbox"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git remote set-url origin git@github.com:rioredwards/fzf-sandbox && git push -u origin main",
+      "description": "History: git remote set-url origin git@github.com:rioredwar",
+      "tags": [],
+      "examples": [
+        "git remote set-url origin git@github.com:rioredwards/fzf-sandbox && git push -u origin main"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git pull",
+      "description": "History: git pull",
+      "tags": [],
+      "examples": [
+        "git pull"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git pull origin main",
+      "description": "History: git pull origin main",
+      "tags": [],
+      "examples": [
+        "git pull origin main"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git push -f origin main",
+      "description": "History: git push -f origin main",
+      "tags": [],
+      "examples": [
+        "git push -f origin main"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/cycle",
+      "description": "History: ./bin/cycle",
+      "tags": [],
+      "examples": [
+        "./bin/cycle"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gcmsg \"cycle through presets\"",
+      "description": "History: gcmsg \"cycle through presets\"",
+      "tags": [],
+      "examples": [
+        "gcmsg \"cycle through presets\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "g-subbump",
+      "description": "History: g-subbump",
+      "tags": [],
+      "examples": [
+        "g-subbump"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "tldr -l | fzf",
+      "description": "History: tldr -l | fzf",
+      "tags": [],
+      "examples": [
+        "tldr -l | fzf"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/watch --preset=cmd-minimal",
+      "description": "History: ./bin/watch --preset=cmd-minimal",
+      "tags": [],
+      "examples": [
+        "./bin/watch --preset=cmd-minimal"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "cmd-minimal-search",
+      "description": "History: cmd-minimal-search",
+      "tags": [],
+      "examples": [
+        "cmd-minimal-search"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/watch --preset=cmd-minimal-search",
+      "description": "History: ./bin/watch --preset=cmd-minimal-search",
+      "tags": [],
+      "examples": [
+        "./bin/watch --preset=cmd-minimal-search"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/app",
+      "description": "History: ./bin/app",
+      "tags": [],
+      "examples": [
+        "./bin/app"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "DEV=1 FZF_PRESET=cmd-compact ./bin/app",
+      "description": "History: DEV=1 FZF_PRESET=cmd-compact ./bin/app",
+      "tags": [],
+      "examples": [
+        "DEV=1 FZF_PRESET=cmd-compact ./bin/app"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "DEV=0 FZF_PRESET=cmd-compact ./bin/app",
+      "description": "History: DEV=0 FZF_PRESET=cmd-compact ./bin/app",
+      "tags": [],
+      "examples": [
+        "DEV=0 FZF_PRESET=cmd-compact ./bin/app"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gcmsg \"getting there\"",
+      "description": "History: gcmsg \"getting there\"",
+      "tags": [],
+      "examples": [
+        "gcmsg \"getting there\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gcmsg \"trying to solve output not ending up in prompt\"",
+      "description": "History: gcmsg \"trying to solve output not ending up in pro",
+      "tags": [],
+      "examples": [
+        "gcmsg \"trying to solve output not ending up in prompt\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git checkout fbf6438",
+      "description": "History: git checkout fbf6438",
+      "tags": [],
+      "examples": [
+        "git checkout fbf6438"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git checkout 14bc040",
+      "description": "History: git checkout 14bc040",
+      "tags": [],
+      "examples": [
+        "git checkout 14bc040"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gb",
+      "description": "History: gb",
+      "tags": [],
+      "examples": [
+        "gb"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git-quicklog",
+      "description": "History: git-quicklog",
+      "tags": [],
+      "examples": [
+        "git-quicklog"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gl",
+      "description": "History: gl",
+      "tags": [],
+      "examples": [
+        "gl"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "glog",
+      "description": "History: glog",
+      "tags": [],
+      "examples": [
+        "glog"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git checkout aa1a9e0",
+      "description": "History: git checkout aa1a9e0",
+      "tags": [],
+      "examples": [
+        "git checkout aa1a9e0"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "glola",
+      "description": "History: glola",
+      "tags": [],
+      "examples": [
+        "glola"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gco fc29ce2",
+      "description": "History: gco fc29ce2",
+      "tags": [],
+      "examples": [
+        "gco fc29ce2"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gco HEAD^",
+      "description": "History: gco HEAD^",
+      "tags": [],
+      "examples": [
+        "gco HEAD^"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git checkout main -f",
+      "description": "History: git checkout main -f",
+      "tags": [],
+      "examples": [
+        "git checkout main -f"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "echo -e \"test1\\ntest2\\ntest3\" | fzf --preview 'echo hello' --preview-window 'right,50%,<80(bottom,40%)'",
+      "description": "History: echo -e \"test1\\ntest2\\ntest3\" | fzf --preview 'ech",
+      "tags": [],
+      "examples": [
+        "echo -e \"test1\\ntest2\\ntest3\" | fzf --preview 'echo hello' --preview-window 'right,50%,<80(bottom,40%)'"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "echo -e \"test1\\ntest2\\ntest3\" | fzf --preview 'echo hello' --preview-window 'right,50%,<200(bottom,40%)'",
+      "description": "History: echo -e \"test1\\ntest2\\ntest3\" | fzf --preview 'ech",
+      "tags": [],
+      "examples": [
+        "echo -e \"test1\\ntest2\\ntest3\" | fzf --preview 'echo hello' --preview-window 'right,50%,<200(bottom,40%)'"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "FZF_DEFAULT_OPTS=\"\" echo -e \"test1\\ntest2\\ntest3\" | fzf --preview 'echo hello' --preview-window 'right,50%,<80(bottom,40%)'",
+      "description": "History: FZF_DEFAULT_OPTS=\"\" echo -e \"test1\\ntest2\\ntest3\" ",
+      "tags": [],
+      "examples": [
+        "FZF_DEFAULT_OPTS=\"\" echo -e \"test1\\ntest2\\ntest3\" | fzf --preview 'echo hello' --preview-window 'right,50%,<80(bottom,40%)'"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "git stash",
+      "description": "History: git stash",
+      "tags": [],
+      "examples": [
+        "git stash"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gcmsg \"preview window goes vert/horizont based on term width\"",
+      "description": "History: gcmsg \"preview window goes vert/horizont based on ",
+      "tags": [],
+      "examples": [
+        "gcmsg \"preview window goes vert/horizont based on term width\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gcmsg \"wip\"",
+      "description": "History: gcmsg \"wip\"",
+      "tags": [],
+      "examples": [
+        "gcmsg \"wip\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gaa && gcmsg \"wip\"",
+      "description": "History: gaa && gcmsg \"wip\"",
+      "tags": [],
+      "examples": [
+        "gaa && gcmsg \"wip\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gaa && gcmsg \"apply the new theme\"",
+      "description": "History: gaa && gcmsg \"apply the new theme\"",
+      "tags": [],
+      "examples": [
+        "gaa && gcmsg \"apply the new theme\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "scripts/refresh_cache.sh",
+      "description": "History: scripts/refresh_cache.sh",
+      "tags": [],
+      "examples": [
+        "scripts/refresh_cache.sh"
       ],
       "source": "history",
       "metadata": {}

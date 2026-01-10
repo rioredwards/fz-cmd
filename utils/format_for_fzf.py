@@ -18,7 +18,7 @@ import sys
 from typing import List, Dict, Any, Optional
 
 # ANSI color codes
-DIM = "\033[38;2;31;31;31m"  # RGB(31,31,31) = #1f1f1f - matches terminal bg
+DIM = "\033[38;2;29;32;33m"  # RGB(29,32,33) = #1D2021 - matches fzf bg
 RESET = "\033[0m"
 
 

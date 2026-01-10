@@ -138,17 +138,34 @@ _fz-cmd-core() {
 	preview_cmd="echo {} | python3 '$preview_script'"
 
 	# Use fzf to select command
-	# Format: <ansi_display> \t <raw_command>
-	# Field 1: ANSI-colored display (command + dim description/tags) - searchable
+	# Format: <display> \t <command> \t <description> \t <tags> \t <examples>
+	# Field 1: Display (command + invisible searchable text)
 	# Field 2: Raw command for extraction
 	local selected
 	selected=$(cat "$formatted_file" | fzf \
 		--ansi \
 		--no-hscroll \
+		--height=80% \
+		--layout=reverse \
+		--border=rounded \
+		--border-label=" Search All Fields " \
+		--info=inline-right \
+		--pointer="▸" \
+		--prompt="❯❯ " \
+		--header=" Enter: Select │ Ctrl-Y: Copy │ Ctrl-/: Preview │ Esc: Cancel " \
+		--header-border=bottom \
+		--delimiter=$'\t' \
+		--with-nth=1 \
 		--preview "$preview_cmd" \
-		--preview-window "right:60%:wrap" \
-		--delimiter $'\t' \
-		--with-nth 1)
+		--preview-window="right,50%,wrap,border-rounded,<50(bottom,40%,wrap,border-rounded)" \
+		--bind=ctrl-/:toggle-preview \
+		--bind="ctrl-y:execute-silent(echo {} | cut -f2 | pbcopy)+bell" \
+		--color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E \
+		--color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold \
+		--color=info:#928374,prompt:#E78A4E,pointer:#E78A4E \
+		--color=marker:#A9B665,spinner:#E78A4E,header:#928374 \
+		--color=border:#504945,label:#E78A4E \
+		--color=preview-bg:#141617)
 
 	# Cleanup
 	rm -f "$merged_file" "$formatted_file"
