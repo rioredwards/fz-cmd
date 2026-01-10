@@ -1,26 +1,6 @@
 {
   "commands": [
     {
-      "command": "gaa && gcmsg \"umm...\"",
-      "description": "History: gaa && gcmsg \"umm...\"",
-      "tags": [],
-      "examples": [
-        "gaa && gcmsg \"umm...\""
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "gp",
-      "description": "History: gp",
-      "tags": [],
-      "examples": [
-        "gp"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
       "command": "gaa",
       "description": "History: gaa",
       "tags": [],
@@ -96,6 +76,16 @@
       "tags": [],
       "examples": [
         "git commit -m \"add fzf scripts from the internet\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gp",
+      "description": "History: gp",
+      "tags": [],
+      "examples": [
+        "gp"
       ],
       "source": "history",
       "metadata": {}
@@ -2116,6 +2106,16 @@
       "tags": [],
       "examples": [
         "gaa && gcmsg \"apply the new theme\"fz-cmd"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "prompt_kubecontext",
+      "description": "History: prompt_kubecontext",
+      "tags": [],
+      "examples": [
+        "prompt_kubecontext"
       ],
       "source": "history",
       "metadata": {}

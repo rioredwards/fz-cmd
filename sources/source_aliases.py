@@ -74,13 +74,20 @@ def process_aliases() -> List[Dict[str, Any]]:
         name = alias["name"]
         value = alias["value"]
         
+        # Skip internal/uninteresting aliases
+        if name.startswith("_") or name.startswith("."):
+            continue
+        
+        # Truncate long expansions for description
+        desc_value = value if len(value) <= 60 else value[:57] + "..."
+        
         cmd = {
-            "command": value,  # The actual command that gets executed
-            "description": f"Alias: {name}",
+            "command": name,  # The alias name (what user types)
+            "description": f"→ {desc_value}",
             "tags": ["alias", name],
-            "examples": [value],
+            "examples": [name],
             "source": "alias",
-            "metadata": {"alias_name": name}
+            "metadata": {"alias_name": name, "expands_to": value}
         }
         commands.append(cmd)
     

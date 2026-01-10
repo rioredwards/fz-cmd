@@ -32,13 +32,28 @@ def get_functions() -> List[str]:
         if result.returncode != 0:
             return []
         
+        # Prefixes for internal/framework functions to skip
+        skip_prefixes = (
+            "_",           # Internal functions
+            "nvm_",        # NVM internals
+            "prompt_",     # Prompt framework
+            "compdef",     # Completion definitions
+            "compadd",     # Completion helpers
+            "zle-",        # ZLE widgets
+            "async_",      # Async framework
+        )
+        
         functions = []
         for line in result.stdout.strip().split("\n"):
             func_name = line.strip()
-            if func_name and not func_name.startswith("_"):  # Filter internal functions
-                # Additional filter: only valid function name patterns
-                if func_name.replace("_", "").replace("-", "").isalnum():
-                    functions.append(func_name)
+            if not func_name:
+                continue
+            # Skip internal/framework functions
+            if func_name.startswith(skip_prefixes):
+                continue
+            # Only valid function name patterns
+            if func_name.replace("_", "").replace("-", "").isalnum():
+                functions.append(func_name)
         
         return functions
     except (subprocess.TimeoutExpired, FileNotFoundError, subprocess.SubprocessError):
