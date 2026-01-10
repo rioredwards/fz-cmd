@@ -40,11 +40,11 @@ _fz-cmd-core() {
 	local cmd
 	cmd=$(echo -n "$selected" | tr -d '\0')
 
-	# SECURITY: Validate that we extracted a command, not something dangerous
-	# Ensure the command doesn't contain embedded newlines that could cause execution
+	# Convert multiline commands to single-line by replacing newlines with semicolons
+	# This preserves command structure while making it safe for prompt insertion
 	if [[ "$cmd" == *$'\n'* ]]; then
-		echo "Error: Command contains newlines (potential security issue)" >&2
-		return 1
+		# Replace newlines with semicolons and clean up whitespace
+		cmd=$(echo "$cmd" | tr '\n' ';' | sed 's/;;*/;/g' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | sed 's/;$//')
 	fi
 
 	echo -n "$cmd" | pbcopy
