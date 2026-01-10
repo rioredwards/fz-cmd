@@ -3,27 +3,16 @@
 Format JSON commands for fzf display.
 
 Outputs tab-separated format suitable for fzf:
-<formatted_display>\t<command>\t<description>\t<tags>\t<examples>
+<command>\t<description>\t<tags>\t<examples>
 
-The formatted_display is a fixed-width table-like string for visual alignment.
-The remaining fields contain the original data for preview/extraction.
+Use with fzf options:
+  --delimiter='\\t' --with-nth=1    # Display only command
+  # Search happens across all fields by default
 """
 
 import json
 import sys
 from typing import List, Dict, Any, Optional
-
-# Column widths for table-like display
-CMD_WIDTH = 35
-DESC_WIDTH = 50
-TAGS_WIDTH = 40
-
-
-def truncate_pad(text: str, width: int) -> str:
-    """Truncate or pad text to exact width."""
-    if len(text) > width:
-        return text[:width - 3] + "..."
-    return text.ljust(width)
 
 
 def format_command(cmd: Dict[str, Any]) -> str:
@@ -34,31 +23,17 @@ def format_command(cmd: Dict[str, Any]) -> str:
         cmd: Command dictionary with command, description, tags, examples
         
     Returns:
-        Tab-separated string for fzf:
-        formatted_display\tcommand\tdescription\ttags\texamples
+        Tab-separated string: command\tdescription\ttags\texamples
     """
     command = cmd.get("command", "").strip()
     description = cmd.get("description", "").strip()
     tags = cmd.get("tags", [])
     examples = cmd.get("examples", [])
     
-    # Build formatted display (what user sees in fzf list)
-    formatted_cmd = truncate_pad(command, CMD_WIDTH)
-    formatted_desc = truncate_pad(description, DESC_WIDTH)
-    
-    # Format tags as bracketed keywords for display
-    tag_display = " ".join(f"[{t}]" for t in tags[:4]) if tags else ""
-    formatted_tags = truncate_pad(tag_display, TAGS_WIDTH)
-    
-    # Combine into formatted display (visible in fzf)
-    formatted_display = f"{formatted_cmd}  {formatted_desc}  {formatted_tags}"
-    
-    # Format tags and examples as strings for data fields
     tags_str = ", ".join(tags) if tags else ""
     examples_str = " | ".join(examples) if examples else ""
     
-    # Tab-separated: formatted_display \t command \t description \t tags \t examples
-    return f"{formatted_display}\t{command}\t{description}\t{tags_str}\t{examples_str}"
+    return f"{command}\t{description}\t{tags_str}\t{examples_str}"
 
 
 def format_commands(commands: List[Dict[str, Any]], sort_by_recent: Optional[List[str]] = None) -> List[str]:
@@ -123,6 +98,13 @@ def main():
     # Output formatted lines
     for line in formatted:
         print(line)
+    
+    # Write sample to file for debugging (DELETE LATER)
+    with open("/Users/rioredwards/.dotfiles/zsh/fz-cmd/formatted_sample.txt", "w") as f:
+        f.write("# Formatted output sample - tab-separated fields:\n")
+        f.write("# <command>\\t<description>\\t<tags>\\t<examples>\n\n")
+        for line in formatted[:50]:  # First 50 entries
+            f.write(line + "\n")
 
 
 if __name__ == "__main__":

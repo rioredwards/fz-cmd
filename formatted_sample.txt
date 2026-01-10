@@ -1,0 +1,53 @@
+# Formatted output sample - tab-separated fields:
+# <command>\t<description>\t<tags>\t<examples>
+
+brew install	Install package with Homebrew	brew, install, package, homebrew	brew install git | brew install --cask app-name
+cat	Display file contents	cat, file, display, read, contents	cat file.txt | cat ~/.zshrc
+cat /proc/meminfo && cat /proc/cpuinfo	Show detailed memory and CPU information	info, raspberrypi, show, system, memory, cpu, details	
+cd ..	Go to parent directory	cd, directory, parent, up, navigate	cd .. | cd ../..
+cd .dotfiles	Navigate to dotfiles directory	cd, dotfiles, navigate, directory	cd .dotfiles | cd ~/.dotfiles
+clear	Clear terminal screen	clear, terminal, screen, reset	clear
+code -r	Open in VS Code and reload window	code, vscode, editor, open, reload	code -r . | code -r file.txt
+cursor -r .	Open directory in Cursor and reload window	cursor, editor, open, reload, directory	cursor -r . | cursor -r ~/.dotfiles
+cursor .	Open current directory in Cursor	cursor, editor, open, directory	cursor . | cursor ~/.dotfiles
+df -h	Show disk usage in human readable format	info, raspberrypi, show, system, disk, usage, space	df -h /
+docker compose	Run docker compose commands	docker, compose, container, orchestration	docker compose up | docker compose down | docker compose ps
+docker-compose exec	Execute command in running container	docker, compose, exec, execute, container	docker-compose exec app bash | docker-compose exec db psql
+fz-cmd	Search and select commands with tags	fz-cmd, search, commands, fzf, tags	fz-cmd
+fz-gc	Select git commit message from history	fz-gc, git, commit, message, history	fz-gc
+gaa	Git add all (custom alias)	git, add, alias, all	gaaa
+gaaa	Git add all (custom alias)	git, add, alias, all	gaaa
+gcb	Git checkout branch (custom alias)	git, checkout, branch, alias	gcb
+gcm	Git checkout main (custom alias)	git, checkout, main, alias	gcm
+gh pr	GitHub pull request commands	gh, github, pr, pull-request	gh pr list | gh pr create | gh pr view
+gh repo	GitHub repository commands	gh, github, repo, repository	gh repo view | gh repo clone user/repo
+git add -A	Stage all changes including deletions	git, add, stage, all, changes	git add -A | git add -A && git commit -m 'message'
+git branch	List all branches	git, branch, list, branches	git branch | git branch -a
+git checkout	Switch branches or restore files	git, checkout, branch, switch, restore	git checkout main | git checkout -b feature-branch | git checkout -
+git checkout -b	Create and switch to new branch	git, branch, create, new, switch	git checkout -b feature-branch | git checkout -b re/feature
+git chore	Git chore commit (custom alias)	git, commit, chore, alias	git chore 'message'
+git clone	Clone a repository	git, clone, repository, copy, download	git clone git@github.com:user/repo.git | git clone https://github.com/user/repo.git
+git commit -m	Commit staged changes with message	git, commit, save, changes, message	git commit -m 'feat: add feature' | git commit -m 'fix: bug fix'
+git fix	Git fix commit (custom alias)	git, commit, fix, alias	git fix 'message'
+git log --oneline	Show compact git commit history	git, log, history, commits, compact	git log --oneline | git log --oneline -10
+git merge	Merge branches	git, merge, combine, branches	git merge feature-branch | git merge main
+git pull	Pull latest changes from remote	git, pull, update, remote, fetch	git pull | git pull origin main
+git push	Push commits to remote repository	git, push, remote, upload, commits	git push | git push origin main
+git push -f	Force push to remote (use with caution)	git, push, force, remote, overwrite	git push -f | git push -f origin main
+git rebase -i	Interactive rebase to edit commits	git, rebase, interactive, edit, commits	git rebase -i HEAD~3 | git rebase -i main
+git reflog	Show reference log of HEAD changes	git, reflog, history, recover, lost	git reflog | git reflog show HEAD
+git remote -v	Show remote repository URLs	git, remote, url, origin, repository	git remote -v | git remote add origin url
+git reset --hard	Reset to commit and discard all changes (destructive)	git, reset, hard, discard, changes	git reset --hard HEAD | git reset --hard HEAD^1
+git reset --soft	Reset to commit but keep changes staged	git, reset, soft, keep, staged	git reset --soft HEAD^1 | git reset --soft main
+git stash	Stash current changes temporarily	git, stash, save, temporary, changes	git stash | git stash pop | git stash list
+git stash pop	Apply and remove most recent stash	git, stash, pop, apply, restore	git stash pop | git stash pop stash@{0}
+git status	Show git repository status	git, status, repository, changes, track	git status | git status -s
+git wip	Git work in progress commit (custom alias)	git, commit, wip, alias	git wip
+git worktree add	Add a new worktree for parallel work	git, worktree, parallel, branch, checkout	git worktree add ../project-old main | git worktree list
+hostname -I	Show all local IP addresses	ip, address, network, local, host	
+hostnamectl && uname -a && cat /etc/os-release	Show detailed host, kernel and OS information	info, raspberrypi, show, system, model, os, kernel, host	
+htop	Interactive process viewer and system monitor	info, raspberrypi, show, system, detail, processes, monitor, performance	
+list-missing-scripts	List missing expected scripts	scripts, missing, check, list	list-missing-scripts
+ln -s	Create symbolic link	ln, symlink, link, create	ln -s target link-name | ln -s ~/.dotfiles/file ~/.file
+ls	List files in current directory	ls, list, files, directory	ls | ls -la | ls -a
+ls -a	List all files including hidden	ls, list, files, hidden, all	ls -a | ls -la
