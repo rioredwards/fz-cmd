@@ -3,3 +3,4 @@ tldr-commands.yaml
 __pycache__/
 *.pyc
 examples/
+debug/
