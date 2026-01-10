@@ -2,17 +2,23 @@
 """
 Format JSON commands for fzf display.
 
-Outputs tab-separated format suitable for fzf:
-<command>\t<description>\t<tags>\t<examples>
+Outputs tab-separated format:
+<ansi_display>\t<command>\t<description>\t<tags>\t<examples>
 
-Use with fzf options:
-  --delimiter='\\t' --with-nth=1    # Display only command
-  # Search happens across all fields by default
+Field 1: ANSI-colored display (command + dim description/tags) - searchable
+Field 2: Raw command for extraction after selection
+Fields 3-5: Raw data for preview script
+
+Use with: fzf --ansi --delimiter='\\t' --with-nth=1
 """
 
 import json
 import sys
 from typing import List, Dict, Any, Optional
+
+# ANSI color codes
+DIM = "\033[90m"  # Dark gray
+RESET = "\033[0m"
 
 
 def format_command(cmd: Dict[str, Any]) -> str:
@@ -23,7 +29,7 @@ def format_command(cmd: Dict[str, Any]) -> str:
         cmd: Command dictionary with command, description, tags, examples
         
     Returns:
-        Tab-separated string: command\tdescription\ttags\texamples
+        Tab-separated: <ansi_display>\\t<command>\\t<description>\\t<tags>\\t<examples>
     """
     command = cmd.get("command", "").strip()
     description = cmd.get("description", "").strip()
@@ -33,7 +39,23 @@ def format_command(cmd: Dict[str, Any]) -> str:
     tags_str = ", ".join(tags) if tags else ""
     examples_str = " | ".join(examples) if examples else ""
     
-    return f"{command}\t{description}\t{tags_str}\t{examples_str}"
+    # Build the dimmed suffix (description and tags)
+    suffix_parts = []
+    if description:
+        suffix_parts.append(description)
+    if tags_str:
+        suffix_parts.append(tags_str)
+    
+    suffix = " | ".join(suffix_parts)
+    
+    # Field 1: ANSI display (searchable)
+    if suffix:
+        display = f"{command}  {DIM}{suffix}{RESET}"
+    else:
+        display = command
+    
+    # All 5 fields for compatibility with preview script
+    return f"{display}\t{command}\t{description}\t{tags_str}\t{examples_str}"
 
 
 def format_commands(commands: List[Dict[str, Any]], sort_by_recent: Optional[List[str]] = None) -> List[str]:
@@ -101,8 +123,8 @@ def main():
     
     # Write sample to file for debugging (DELETE LATER)
     with open("/Users/rioredwards/.dotfiles/zsh/fz-cmd/formatted_sample.txt", "w") as f:
-        f.write("# Formatted output sample - tab-separated fields:\n")
-        f.write("# <command>\\t<description>\\t<tags>\\t<examples>\n\n")
+        f.write("# Formatted output sample - tab-separated:\n")
+        f.write("# <ansi_display>\\t<command>\\t<description>\\t<tags>\\t<examples>\n\n")
         for line in formatted[:50]:  # First 50 entries
             f.write(line + "\n")
 

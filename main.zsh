@@ -138,16 +138,16 @@ _fz-cmd-core() {
 	preview_cmd="echo {} | python3 '$preview_script'"
 
 	# Use fzf to select command
-	# Format: formatted_display \t command \t description \t tags \t examples
-	# --with-nth 1: Only show the formatted display (first field)
-	# --nth 1,2,3,4,5: Search across all fields including hidden data
+	# Format: <ansi_display> \t <raw_command>
+	# Field 1: ANSI-colored display (command + dim description/tags) - searchable
+	# Field 2: Raw command for extraction
 	local selected
 	selected=$(cat "$formatted_file" | fzf \
+		--ansi \
 		--preview "$preview_cmd" \
 		--preview-window "down:10:wrap" \
 		--delimiter $'\t' \
-		--with-nth 1 \
-		--nth 1,2,3,4,5)
+		--with-nth 1)
 
 	# Cleanup
 	rm -f "$merged_file" "$formatted_file"
@@ -156,10 +156,9 @@ _fz-cmd-core() {
 		return 1
 	fi
 
-	# Extract the command (field 2 after tab delimiter)
+	# Extract the raw command (field 2 after tab delimiter)
 	local cmd
-	# Use awk for more reliable field extraction (handles edge cases better than cut)
-	cmd=$(echo "$selected" | awk -F'\t' 'NF >= 2 {print $2; exit}')
+	cmd=$(echo "$selected" | awk -F'\t' '{print $2}')
 
 	if [ -z "$cmd" ]; then
 		return 1
