@@ -34,6 +34,8 @@ def get_history_entries(max_entries: int = 500) -> List[str]:
         List of history command strings (most recent first)
     """
     # Find history file
+    # TODO: make the history more realtime (rn it won't refresh automatically)
+    # TODO: Maybe use omz_history instead. It shares history between shells more often, so feels more realtime.
     histfile = os.environ.get("HISTFILE", os.path.expanduser("~/.zsh_history"))
     
     if not os.path.exists(histfile):

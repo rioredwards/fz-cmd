@@ -147,30 +147,33 @@ _fz-cmd-core() {
 	# Field 1: Display (command + invisible searchable text)
 	# Field 2: Raw command for extraction
 	local selected
-	selected=$(cat "$formatted_file" | fzf \
-		--ansi \
-		--no-hscroll \
-		--height=80% \
-		--layout=reverse \
-		--border=rounded \
-		--border-label=" Search All Fields " \
-		--info=inline-right \
-		--pointer="▸" \
-		--prompt="❯❯ " \
-		--header=" Enter: Select │ Ctrl-Y: Copy │ Ctrl-/: Preview │ Esc: Cancel " \
-		--header-border=bottom \
-		--delimiter=$'\t' \
-		--with-nth=1 \
+	selected=$(
+		cat "$formatted_file" | fzf \
+			--ansi \
+			--no-hscroll \
+			--height=80% \
+			--layout=reverse \
+			--border=rounded \
+			--border-label=" Search All Fields " \
+			--info=inline-right \
+			--pointer="▸" \
+			--prompt="❯ " \
+			--header=" Enter: Select │ Ctrl-Y: Copy │ Ctrl-/: Preview │ Esc: Cancel " \
+			--header-border=bottom \
+			--delimiter=$'\t' \
+			--with-nth=1
+		# --read0 \ # TODO: make input data NULL-delimited instead of newline-delimited. this handles multiline commands better.
 		--preview "$preview_cmd" \
-		--preview-window="right,50%,wrap,border-rounded,<50(bottom,40%,wrap,border-rounded)" \
-		--bind=ctrl-/:toggle-preview \
-		--bind="ctrl-y:execute-silent(echo {} | cut -f2 | pbcopy)+bell" \
-		--color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E \
-		--color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold \
-		--color=info:#928374,prompt:#E78A4E,pointer:#E78A4E \
-		--color=marker:#A9B665,spinner:#E78A4E,header:#928374 \
-		--color=border:#504945,label:#E78A4E \
-		--color=preview-bg:#141617)
+			--preview-window="right,50%,wrap,border-rounded,<50(bottom,40%,wrap,border-rounded)" \
+			--bind=ctrl-/:toggle-preview \
+			--bind="ctrl-y:execute-silent(echo {} | cut -f2 | pbcopy)+bell" \
+			--color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E \
+			--color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold \
+			--color=info:#928374,prompt:#E78A4E,pointer:#E78A4E \
+			--color=marker:#A9B665,spinner:#E78A4E,header:#928374 \
+			--color=border:#504945,label:#E78A4E \
+			--color=preview-bg:#141617
+	)
 
 	# Cleanup
 	rm -f "$merged_file" "$formatted_file"
@@ -197,6 +200,9 @@ _fz-cmd-core() {
 	# CRITICAL SAFETY: This function ONLY returns the command string
 	# It NEVER executes anything. Commands are only inserted into the buffer
 	# and require explicit user confirmation (Enter key) to execute.
+
+	# Record usage for recent sorting (runs in background to not slow down)
+	python3 "$UTILS_DIR/recent_tracker.py" record "$cmd" &>/dev/null &
 
 	# Copy to clipboard (macOS) - this is safe, just copies text
 	echo -n "$cmd" | pbcopy
