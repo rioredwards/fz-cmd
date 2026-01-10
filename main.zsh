@@ -1,44 +1,46 @@
 _fz-cmd-core() {
 	local script_dir="${HOME}/.dotfiles/zsh/fz-cmd"
-	local dedupe_script="${script_dir}/utils/deduplicate_history.py"
+	local dedupe_script="${script_dir}/utils/deduplicate_with_tldr.py"
+	local preview_script="${script_dir}/utils/preview_tldr.py"
 	
 	local selected
 	selected=$(
 		atuin history list --format "{command}" --reverse=false --print0 2>/dev/null |
 			python3 "$dedupe_script" |
 			fzf \
-				--ansi \
-				--no-hscroll \
-				--height=80% \
-				--layout=reverse \
-				--border=rounded \
-				--border-label=" Command History " \
-				--info=inline-right \
-				--pointer="▸" \
-				--prompt="❯ " \
-				--header=" Enter: Select │ Esc: Cancel " \
-				--header-border=bottom \
-				--color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E \
-				--color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold \
-				--color=info:#928374,prompt:#E78A4E,pointer:#E78A4E \
-				--color=marker:#A9B665,spinner:#E78A4E,header:#928374 \
-				--color=border:#504945,label:#E78A4E \
-				--color=preview-bg:#141617 \
-				--read0
-		# --preview "$preview_cmd" \
-		# --preview-window="right,50%,wrap,border-rounded,<50(bottom,40%,wrap,border-rounded)" \
-		# --bind=ctrl-/:toggle-preview \
-		# --bind="ctrl-y:execute-silent(echo {} | cut -f2 | pbcopy)+bell" \
+			--ansi \
+			--no-hscroll \
+			--height=80% \
+			--layout=reverse \
+			--border=rounded \
+			--border-label=" Command History " \
+			--info=inline-right \
+			--pointer="▸" \
+			--prompt="❯ " \
+			--header=" Enter: Select │ Ctrl-/: Preview │ Esc: Cancel " \
+			--header-border=bottom \
+			--delimiter=$'\t' \
+			--with-nth=1 \
+			--preview="$preview_script {2}" \
+			--preview-window="right,50%,wrap,border-rounded" \
+			--bind="ctrl-/:toggle-preview" \
+			--color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E \
+			--color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold \
+			--color=info:#928374,prompt:#E78A4E,pointer:#E78A4E \
+			--color=marker:#A9B665,spinner:#E78A4E,header:#928374 \
+			--color=border:#504945,label:#E78A4E \
+			--color=preview-bg:#141617 \
+			--read0
 	)
 
 	if [ -z "$selected" ]; then
 		return 1
 	fi
 
-	# Since atuin outputs raw commands (not tab-separated), $selected IS the command
-	# Remove any trailing null bytes that might have been preserved
+	# Extract command from tab-delimited format: <command>\t<tldr_content>
+	# Field 1 is the command, field 2 is the tldr content (we only need field 1)
 	local cmd
-	cmd=$(echo -n "$selected" | tr -d '\0')
+	cmd=$(echo -n "$selected" | cut -f1 | tr -d '\0')
 
 	# Convert multiline commands to single-line by replacing newlines with semicolons
 	# This preserves command structure while making it safe for prompt insertion
