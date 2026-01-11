@@ -22,8 +22,37 @@ _fz-cmd-core() {
 		echo "" >> "$debug_log"
 	fi
 	
+	# Collect aliases: format as name=value, one per line
+	local aliases_data=""
+	if command -v alias >/dev/null 2>&1; then
+		aliases_data=$(alias 2>/dev/null | sed -E "s/^alias //" | while IFS= read -r alias_line; do
+			if [ -z "$alias_line" ]; then
+				continue
+			fi
+			# Extract name and value
+			local alias_name alias_value
+			if echo "$alias_line" | grep -qE "^[^=]+='.*'$"; then
+				alias_name=$(echo "$alias_line" | sed -E "s/='.*'$//")
+				alias_value=$(echo "$alias_line" | sed -E "s/^[^=]+='(.*)'$/\1/")
+			elif echo "$alias_line" | grep -qE '^[^=]+=".*"$'; then
+				alias_name=$(echo "$alias_line" | sed -E 's/=".*"$//')
+				alias_value=$(echo "$alias_line" | sed -E 's/^[^=]+="(.*)"$/\1/')
+			else
+				alias_name=$(echo "$alias_line" | sed -E 's/=[^=]*$//')
+				alias_value=$(echo "$alias_line" | sed -E 's/^[^=]+=//')
+			fi
+			if [ -n "$alias_name" ] && [ -n "$alias_value" ]; then
+				echo "${alias_name}=${alias_value}"
+			fi
+		done)
+	fi
+	
+	# Collect functions: just the names, one per line
+	local functions_data=""
+	functions_data=$(print -l ${(k)functions} 2>/dev/null | grep -E '^[a-zA-Z_][a-zA-Z0-9_-]*$' | sort -u)
+	
 	local dedupe_output
-	dedupe_output=$(echo -n "$atuin_output" | python3 "$dedupe_script")
+	dedupe_output=$(echo -n "$atuin_output" | FZ_CMD_ALIASES="$aliases_data" FZ_CMD_FUNCTIONS="$functions_data" python3 "$dedupe_script")
 	local dedupe_exit=$?
 	
 	if [ -n "$debug_log" ]; then

@@ -1,21 +1,85 @@
 #!/usr/bin/env python3
 """
-Deduplicate null-delimited command history and match with tldr pages.
+Deduplicate null-delimited command history and match with tldr pages, aliases, and functions.
 
 Reads null-delimited commands from stdin, deduplicates them (keeping most recent),
-matches each command to its tldr page (if available), and outputs tab-delimited:
-<command>\t<tldr_content>
+matches each command to its alias/function (if available), otherwise tldr page,
+and outputs tab-delimited: <command>\t<alias_or_function_or_tldr_content>
 
 Output is null-delimited for fzf --read0.
 """
 
 import sys
 import subprocess
+import os
 import re
 from typing import Dict, Optional
 
 # Cache for tldr lookups to avoid repeated subprocess calls
 _tldr_cache: Dict[str, Optional[str]] = {}
+
+# Aliases and functions dictionaries
+_aliases: Dict[str, str] = {}
+_functions: set = set()
+
+
+def parse_aliases_and_functions():
+    """Parse aliases and functions from environment variables."""
+    global _aliases, _functions
+    
+    # Parse aliases from FZ_CMD_ALIASES environment variable
+    # Format: name=value, one per line
+    aliases_data = os.environ.get('FZ_CMD_ALIASES', '')
+    if aliases_data:
+        for line in aliases_data.split('\n'):
+            line = line.strip()
+            if not line:
+                continue
+            if '=' in line:
+                parts = line.split('=', 1)
+                if len(parts) == 2:
+                    alias_name = parts[0].strip()
+                    alias_value = parts[1].strip()
+                    if alias_name and alias_value:
+                        _aliases[alias_name] = alias_value
+    
+    # Parse functions from FZ_CMD_FUNCTIONS environment variable
+    # Format: function name, one per line
+    functions_data = os.environ.get('FZ_CMD_FUNCTIONS', '')
+    if functions_data:
+        for line in functions_data.split('\n'):
+            func_name = line.strip()
+            if func_name:
+                _functions.add(func_name)
+
+
+def get_alias_or_function_info(command: str) -> Optional[str]:
+    """
+    Get alias or function info for a command.
+    
+    Args:
+        command: The full command string
+        
+    Returns:
+        Alias value if command matches an alias, "Function: name" if matches a function,
+        or None if no match
+    """
+    # Extract base command (first word, before any flags/args)
+    base_cmd = command.split()[0] if command.split() else command
+    base_cmd = base_cmd.strip()
+    
+    if not base_cmd:
+        return None
+    
+    # Check if base command exactly matches an alias name
+    if base_cmd in _aliases:
+        return _aliases[base_cmd]
+    
+    # Check if base command exactly matches a function name
+    if base_cmd in _functions:
+        return f"Function: {base_cmd}"
+    
+    return None
 
 
 def get_tldr_content(command: str) -> Optional[str]:
@@ -61,6 +125,9 @@ def get_tldr_content(command: str) -> Optional[str]:
 
 
 def main():
+    # Parse aliases and functions from environment
+    parse_aliases_and_functions()
+    
     seen = set()
     
     # Read null-delimited input
@@ -85,18 +152,22 @@ def main():
         if cmd not in seen:
             seen.add(cmd)
             
-            # Get tldr content for this command
-            tldr_content = get_tldr_content(cmd)
+            # Get alias/function info first (priority over tldr)
+            alias_or_func_info = get_alias_or_function_info(cmd)
             
-            # Format as: <command>\t<tldr_content>
-            # Replace tabs in tldr content with spaces to avoid breaking delimiter
-            # (tldr pages shouldn't have tabs, but just in case)
-            if tldr_content:
-                # Replace tabs with spaces in tldr content to preserve delimiter
-                safe_tldr = tldr_content.replace('\t', '    ')
-                output = f"{cmd}\t{safe_tldr}"
+            if alias_or_func_info:
+                # Replace tabs with spaces to preserve delimiter
+                safe_info = alias_or_func_info.replace('\t', '    ')
+                output = f"{cmd}\t{safe_info}"
             else:
-                output = f"{cmd}\t"
+                # Fall back to tldr content
+                tldr_content = get_tldr_content(cmd)
+                if tldr_content:
+                    # Replace tabs with spaces in tldr content to preserve delimiter
+                    safe_tldr = tldr_content.replace('\t', '    ')
+                    output = f"{cmd}\t{safe_tldr}"
+                else:
+                    output = f"{cmd}\t"
             
             # Output as null-delimited bytes
             sys.stdout.buffer.write(output.encode('utf-8', errors='replace'))
