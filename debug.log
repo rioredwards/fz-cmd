@@ -1,14 +1,14 @@
 === atuin_output (first 10 entries) ===
 FZ_CMD_DEBUG_LOG=1 fz-cmd
 omz reload
-FZ_CMD_DEBUG_LOG=1 fz-cmd
-omz reload
-z fz-cmd
-cd
+gaa && gcmsg "debugging"
 fz-cmd
 omz reload
-tldr omz
-omz tldr
+fz-cmd
+fz-cmd
+FZ_CMD_DEBUG_LOG=1 fz-cmd
+omz reload
+FZ_CMD_DEBUG_LOG=1 fz-cmd
 
 === dedupe_output (first 10 entries) ===
 FZ_CMD_DEBUG_LOG=1 fz-cmd	
@@ -40,6 +40,8 @@ More information: <https://github.com/ohmyzsh/ohmyzsh>.
 
 - Set an Oh My Zsh theme in `~/.zshrc`:
     omz theme set theme
+gaa && gcmsg "debugging"	
+fz-cmd	
 z fz-cmd	z
 
 Tracks the most used (by frequency) directories and enables quickly navigating to them using string patterns or `regex`.
@@ -87,7 +89,6 @@ More information: <https://www.gnu.org/software/bash/manual/bash.html#index-cd>.
 
 - Go to the root directory:
     cd /
-fz-cmd	
 tldr omz	tldr
 
 Display simple help pages for command-line tools from the tldr-pages project.
@@ -145,7 +146,6 @@ More information: <https://github.com/ohmyzsh/ohmyzsh>.
 
 - Set an Oh My Zsh theme in `~/.zshrc`:
     omz theme set theme
-gaa && gcmsg "debugging"	
 FZ_CMD_DEBUG_LOG=/fz-cmd/debug.log fz-cmd	
 FZ_CMD_DEBUG_LOG=/tmp/fz-cmd-debug.log fz-cmd	
 

@@ -34,8 +34,8 @@ _fz-cmd-core() {
 		echo "" >> "$debug_log"
 	fi
 	
-	local selected
-	selected=$(echo -n "$dedupe_output" | fzf \
+	local cmd
+	cmd=$(echo -n "$dedupe_output" | fzf \
 		--ansi \
 		--no-hscroll \
 		--height=80% \
@@ -49,6 +49,7 @@ _fz-cmd-core() {
 		--header-border=bottom \
 		--delimiter=$'\t' \
 		--with-nth=1 \
+		--accept-nth=1 \
 		--preview="$preview_script {2}" \
 		--preview-window="right,50%,wrap,border-rounded" \
 		--bind="ctrl-/:toggle-preview" \
@@ -61,14 +62,9 @@ _fz-cmd-core() {
 		--read0)
 	local fzf_exit=$?
 
-	if [ -z "$selected" ]; then
+	if [ -z "$cmd" ]; then
 		return 1
 	fi
-
-	# Extract command from tab-delimited format: <command>\t<tldr_content>
-	# Field 1 is the command, field 2 is the tldr content (we only need field 1)
-	local cmd
-	cmd=$(echo -n "$selected" | cut -d$'\t' -f1)
 
 	# Convert multiline commands to single-line by replacing newlines with semicolons
 	# This preserves command structure while making it safe for prompt insertion
