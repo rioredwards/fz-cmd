@@ -1,36 +1,151 @@
-[WRAPPER] fz-cmd function called
-[INIT] Starting fz-cmd-core
-[INIT] Script dir: /Users/rioredwards/.dotfiles/zsh/fz-cmd
-[INIT] Dedupe script: /Users/rioredwards/.dotfiles/zsh/fz-cmd/utils/deduplicate_with_tldr.py
-[INIT] Preview script: /Users/rioredwards/.dotfiles/zsh/fz-cmd/utils/preview_tldr.py
-[PHASE1] Fetching history from atuin...
-[PHASE1] Atuin returned 7658 commands (exit code: 0)
-[PHASE1] Data format: null-delimited strings
-[PHASE1] Data size: 226888 bytes
-[PHASE1] === Sample atuin output (first 5 commands) ===
-[PHASE1]   [1] FZ_CMD_DEBUG_LOG=1 fz-cmd
-[PHASE1]   [2] omz reload
-[PHASE1]   [3] FZ_CMD_DEBUG_LOG=/fz-cmd/debug.log fz-cmd
-[PHASE1]   [4] FZ_CMD_DEBUG_LOG=/tmp/fz-cmd-debug.log fz-cmd
-[PHASE1]   [5] bat /tmp/fz-cmd-debug.log
-[PHASE1] === End Sample atuin output (first 5 commands) ===
-[PHASE2] Processing through deduplicate_with_tldr.py...
-[PHASE2] Input format: null-delimited commands
-[PHASE2] Expected output format: null-delimited, tab-separated <command>	<tldr_content>
-[PHASE2] Deduplication returned 2776 entries (exit code: 0)
-[PHASE2] Data size: 1845121 bytes
-[PHASE2] Output format: null-delimited, tab-separated entries
-[PHASE2] === Sample dedupe output (first 3 entries) ===
-[PHASE2]   [1] FZ_CMD_DEBUG_LOG=1 fz-cmd	
-[PHASE2]   [2] omz reload	omz
-[PHASE2] === End Sample dedupe output (first 3 entries) ===
-[PHASE2] First entry structure:
-[PHASE2]   Command part: FZ_CMD_DEBUG_LOG=1 fz-cmd...
-[PHASE2]   TLDR part length: 0 chars
-[PHASE2]   TLDR part: (empty)
-[PHASE3] Launching fzf for user selection...
-[PHASE3] fzf config: delimiter=tab, with-nth=1 (show only command), preview=field 2 (tldr content)
-[PHASE3] Preview script: /Users/rioredwards/.dotfiles/zsh/fz-cmd/utils/preview_tldr.py
-[PHASE3] User cancelled (ESC pressed, exit code: 130)
-[PHASE4] No selection, exiting
-[WRAPPER] No command to insert (exit code: 1, cmd empty: yes)
+=== atuin_output (first 10 entries) ===
+FZ_CMD_DEBUG_LOG=1 fz-cmd
+omz reload
+FZ_CMD_DEBUG_LOG=1 fz-cmd
+omz reload
+z fz-cmd
+cd
+fz-cmd
+omz reload
+tldr omz
+omz tldr
+
+=== dedupe_output (first 10 entries) ===
+FZ_CMD_DEBUG_LOG=1 fz-cmd	
+omz reload	omz
+
+Oh My Zsh command-line tool.
+More information: <https://github.com/ohmyzsh/ohmyzsh>.
+
+- Update Oh My Zsh:
+    omz update
+
+- Print the changes from the latest update of Oh My Zsh:
+    omz changelog
+
+- Restart the current Zsh session and Oh My Zsh:
+    omz reload
+
+- List all available plugins:
+    omz plugin list
+
+- List all enabled plugins:
+    omz plugin list --enabled
+
+- Enable/Disable an Oh My Zsh plugin:
+    omz plugin enable|disable plugin
+
+- List all available themes:
+    omz theme list
+
+- Set an Oh My Zsh theme in `~/.zshrc`:
+    omz theme set theme
+z fz-cmd	z
+
+Tracks the most used (by frequency) directories and enables quickly navigating to them using string patterns or `regex`.
+More information: <https://github.com/rupa/z>.
+
+- Go to a directory that contains `string` in the name:
+    z string
+
+- Go to a directory that contains `string1` and then `string2`:
+    z string1 string2
+
+- Go to the highest-ranked directory matching `string`:
+    z -r string
+
+- Go to the most recently accessed directory matching `string`:
+    z -t string
+
+- List all directories in `z`'s database matching `string`:
+    z -l string
+
+- Remove the current directory from `z`'s database:
+    z -x
+
+- Restrict matches to subdirectories of the current directory:
+    z -c string
+cd	cd
+
+Change the current working directory.
+More information: <https://www.gnu.org/software/bash/manual/bash.html#index-cd>.
+
+- Go to the specified directory:
+    cd path/to/directory
+
+- Go up to the parent of the current directory:
+    cd ..
+
+- Go to the home directory of the current user:
+    cd
+
+- Go to the home directory of the specified user:
+    cd ~username
+
+- Go to the previously chosen directory:
+    cd -
+
+- Go to the root directory:
+    cd /
+fz-cmd	
+tldr omz	tldr
+
+Display simple help pages for command-line tools from the tldr-pages project.
+Note: The `--language` and `--list` options are not required by the client specification, but most clients implement them.
+More information: <https://github.com/tldr-pages/tldr/blob/main/CLIENT-SPECIFICATION.md#command-line-interface>.
+
+- Print the tldr page for a specific command (hint: this is how you got here!):
+    tldr command
+
+- Print the tldr page for a specific subcommand:
+    tldr command subcommand
+
+- Print the tldr page for a command in the given language (if available, otherwise fall back to English):
+    tldr [-L|--language] language_code command
+
+- Print the tldr page for a command from a specific platform:
+    tldr [-p|--platform] android|cisco-ios|common|dos|freebsd|linux|netbsd|openbsd|osx|sunos|windows command
+
+- Update the local cache of tldr pages:
+    tldr [-u|--update]
+
+- List all pages for the current platform and `common`:
+    tldr [-l|--list]
+
+- List all available subcommand pages for a command:
+    tldr [-l|--list] | grep command | column
+
+- Print the tldr page for a random command:
+    tldr [-l|--list] | shuf [-n|--head-count] 1 | xargs tldr
+omz tldr	omz
+
+Oh My Zsh command-line tool.
+More information: <https://github.com/ohmyzsh/ohmyzsh>.
+
+- Update Oh My Zsh:
+    omz update
+
+- Print the changes from the latest update of Oh My Zsh:
+    omz changelog
+
+- Restart the current Zsh session and Oh My Zsh:
+    omz reload
+
+- List all available plugins:
+    omz plugin list
+
+- List all enabled plugins:
+    omz plugin list --enabled
+
+- Enable/Disable an Oh My Zsh plugin:
+    omz plugin enable|disable plugin
+
+- List all available themes:
+    omz theme list
+
+- Set an Oh My Zsh theme in `~/.zshrc`:
+    omz theme set theme
+gaa && gcmsg "debugging"	
+FZ_CMD_DEBUG_LOG=/fz-cmd/debug.log fz-cmd	
+FZ_CMD_DEBUG_LOG=/tmp/fz-cmd-debug.log fz-cmd	
+

@@ -1,0 +1,29 @@
+# Simplicity First - No Over-Engineering
+
+## Core Principle
+**Do the absolute minimum needed to solve the problem. Nothing more.**
+
+## Rules
+1. **When asked for simple features (like debug logging), add ONLY what was requested. No helpers, no abstractions, no "nice-to-haves".**
+
+2. **Before writing code, ask: "What's the simplest way to do this?" Then do that. Don't add "what if" features.**
+
+3. **If the user asks for X, give them X. Don't give them X, Y, Z, and a framework for future expansion.**
+
+4. **Prefer inline code over functions/helpers unless there's clear repetition (3+ uses).**
+
+5. **No premature optimization. No "this might be useful later" code.**
+
+6. **When debugging: add the minimum logging needed. Don't build logging frameworks.**
+
+7. **If you find yourself writing more than 10-20 lines for a simple request, stop and simplify.**
+
+## Examples
+- ❌ User wants debug logging → Don't create helper functions, formatting utilities, or multiple log levels
+- ✅ User wants debug logging → Add `echo "debug: $var" >> logfile`
+
+- ❌ User wants to see data → Don't create sample formatters, truncation helpers, or structured output
+- ✅ User wants to see data → Dump the raw data: `echo "$data" >> logfile`
+
+## Remember
+**The best code is the code you don't write. Less is more. Always.**
