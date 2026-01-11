@@ -47,9 +47,20 @@ _fz-cmd-core() {
 		done)
 	fi
 	
-	# Collect functions: just the names, one per line
+	# Collect functions: name=body, one per line
 	local functions_data=""
-	functions_data=$(print -l ${(k)functions} 2>/dev/null | grep -E '^[a-zA-Z_][a-zA-Z0-9_-]*$' | sort -u)
+	functions_data=$(print -l ${(k)functions} 2>/dev/null | grep -E '^[a-zA-Z_][a-zA-Z0-9_-]*$' | sort -u | while IFS= read -r func_name; do
+		if [ -z "$func_name" ]; then
+			continue
+		fi
+		# Get function body using 'functions' associative array
+		local func_body="${functions[$func_name]}"
+		if [ -n "$func_body" ]; then
+			# Replace newlines with semicolons for single-line output
+			func_body=$(echo "$func_body" | tr '\n' ';' | sed 's/;;*/;/g' | sed 's/;$//')
+			echo "${func_name}=${func_body}"
+		fi
+	done)
 	
 	local dedupe_output
 	dedupe_output=$(echo -n "$atuin_output" | FZ_CMD_ALIASES="$aliases_data" FZ_CMD_FUNCTIONS="$functions_data" python3 "$dedupe_script")

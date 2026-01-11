@@ -20,7 +20,7 @@ _tldr_cache: Dict[str, Optional[str]] = {}
 
 # Aliases and functions dictionaries
 _aliases: Dict[str, str] = {}
-_functions: set = set()
+_functions: Dict[str, str] = {}  # Changed to dict to store function bodies
 
 
 def parse_aliases_and_functions():
@@ -44,13 +44,20 @@ def parse_aliases_and_functions():
                         _aliases[alias_name] = alias_value
     
     # Parse functions from FZ_CMD_FUNCTIONS environment variable
-    # Format: function name, one per line
+    # Format: name=body, one per line
     functions_data = os.environ.get('FZ_CMD_FUNCTIONS', '')
     if functions_data:
         for line in functions_data.split('\n'):
-            func_name = line.strip()
-            if func_name:
-                _functions.add(func_name)
+            line = line.strip()
+            if not line:
+                continue
+            if '=' in line:
+                parts = line.split('=', 1)
+                if len(parts) == 2:
+                    func_name = parts[0].strip()
+                    func_body = parts[1].strip()
+                    if func_name and func_body:
+                        _functions[func_name] = func_body
 
 
 def get_alias_or_function_info(command: str) -> Optional[str]:
@@ -71,13 +78,13 @@ def get_alias_or_function_info(command: str) -> Optional[str]:
     if not base_cmd:
         return None
     
-    # Check if base command exactly matches an alias name
+    # Check aliases first (priority over functions)
     if base_cmd in _aliases:
         return _aliases[base_cmd]
     
     # Check if base command exactly matches a function name
     if base_cmd in _functions:
-        return f"Function: {base_cmd}"
+        return _functions[base_cmd]
     
     return None
 
