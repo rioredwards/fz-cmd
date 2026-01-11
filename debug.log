@@ -1,0 +1,36 @@
+[WRAPPER] fz-cmd function called
+[INIT] Starting fz-cmd-core
+[INIT] Script dir: /Users/rioredwards/.dotfiles/zsh/fz-cmd
+[INIT] Dedupe script: /Users/rioredwards/.dotfiles/zsh/fz-cmd/utils/deduplicate_with_tldr.py
+[INIT] Preview script: /Users/rioredwards/.dotfiles/zsh/fz-cmd/utils/preview_tldr.py
+[PHASE1] Fetching history from atuin...
+[PHASE1] Atuin returned 7658 commands (exit code: 0)
+[PHASE1] Data format: null-delimited strings
+[PHASE1] Data size: 226888 bytes
+[PHASE1] === Sample atuin output (first 5 commands) ===
+[PHASE1]   [1] FZ_CMD_DEBUG_LOG=1 fz-cmd
+[PHASE1]   [2] omz reload
+[PHASE1]   [3] FZ_CMD_DEBUG_LOG=/fz-cmd/debug.log fz-cmd
+[PHASE1]   [4] FZ_CMD_DEBUG_LOG=/tmp/fz-cmd-debug.log fz-cmd
+[PHASE1]   [5] bat /tmp/fz-cmd-debug.log
+[PHASE1] === End Sample atuin output (first 5 commands) ===
+[PHASE2] Processing through deduplicate_with_tldr.py...
+[PHASE2] Input format: null-delimited commands
+[PHASE2] Expected output format: null-delimited, tab-separated <command>	<tldr_content>
+[PHASE2] Deduplication returned 2776 entries (exit code: 0)
+[PHASE2] Data size: 1845121 bytes
+[PHASE2] Output format: null-delimited, tab-separated entries
+[PHASE2] === Sample dedupe output (first 3 entries) ===
+[PHASE2]   [1] FZ_CMD_DEBUG_LOG=1 fz-cmd	
+[PHASE2]   [2] omz reload	omz
+[PHASE2] === End Sample dedupe output (first 3 entries) ===
+[PHASE2] First entry structure:
+[PHASE2]   Command part: FZ_CMD_DEBUG_LOG=1 fz-cmd...
+[PHASE2]   TLDR part length: 0 chars
+[PHASE2]   TLDR part: (empty)
+[PHASE3] Launching fzf for user selection...
+[PHASE3] fzf config: delimiter=tab, with-nth=1 (show only command), preview=field 2 (tldr content)
+[PHASE3] Preview script: /Users/rioredwards/.dotfiles/zsh/fz-cmd/utils/preview_tldr.py
+[PHASE3] User cancelled (ESC pressed, exit code: 130)
+[PHASE4] No selection, exiting
+[WRAPPER] No command to insert (exit code: 1, cmd empty: yes)
