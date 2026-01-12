@@ -210,16 +210,10 @@ _fz-cmd-core() {
     local fzf_opts
     fzf_opts="$(_build_fzf_options "$history_file" "$preview_script")"
 
-    # Execute search pipeline with error handling
+    # Execute search pipeline
     local output exit_code
-
-    if output=$(eval "atuin search $ATUIN_OPTS" 2>/dev/null | perl -0ne "$format_script" 2>/dev/null | eval "fzf $fzf_opts" 2>/dev/null); then
-        exit_code=$?
-    else
-        exit_code=$?
-        echo "Error: Command execution failed with exit code $exit_code" >&2
-        return $exit_code
-    fi
+    output=$(eval "atuin search $ATUIN_OPTS" 2>/dev/null | perl -0ne "$format_script" 2>/dev/null | eval "fzf $fzf_opts" 2>/dev/null)
+    exit_code=$?
 
     # Parse output: first line is key pressed, rest is selection
     local key selected
@@ -365,7 +359,7 @@ fz-cmd-widget() {
     if [[ $exit_code -eq 0 ]] && [[ -n "$output" ]]; then
         local key cmd
         key="${output%%|*}"
-        cmd="${output#*|}"
+        cmd="${output#*|}"s
 
         if [[ -n "$cmd" ]]; then
             case "$key" in
