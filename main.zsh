@@ -41,7 +41,7 @@ _fz-cmd-core() {
 			# Use --expect to distinguish between tab and enter
 			--expect=enter,tab
 			# Keybindings: Ctrl+D reloads with current directory filter, Ctrl+R reloads without filter, change returns to top
-			"--bind=change:first,ctrl-d:reload(atuin search $atuin_opts -c $PWD | perl -0ne 'chomp; my (\$t, \$cmd) = split(/\\t/, \$_, 2); if (defined \$cmd) { my \$time_text = \$t; \$time_text =~ s/\\033\\[[0-9;]*m//g; my \$padded_text = sprintf(\"%-10s\", \$time_text); my \$orange = \"\\033[38;5;208m\"; my \$reset = \"\\033[0m\"; printf \"%s%s%s\\t%s\\0\", \$orange, \$padded_text, \$reset, \$cmd; } else { print \$_, \"\\0\"; }'),ctrl-r:reload(atuin search $atuin_opts | perl -0ne 'chomp; my (\$t, \$cmd) = split(/\\t/, \$_, 2); if (defined \$cmd) { my \$time_text = \$t; \$time_text =~ s/\\033\\[[0-9;]*m//g; my \$padded_text = sprintf(\"%-10s\", \$time_text); my \$orange = \"\\033[38;5;208m\"; my \$reset = \"\\033[0m\"; printf \"%s%s%s\\t%s\\0\", \$orange, \$padded_text, \$reset, \$cmd; } else { print \$_, \"\\0\"; }')"
+			"--bind=change:first,ctrl-d:reload(atuin search $atuin_opts -c $PWD | perl -0ne 'chomp; my (\$t, \$cmd) = split(/\\t/, \$_, 2); if (defined \$cmd) { my \$time_text = \$t; \$time_text =~ s/\\033\\[[0-9;]*m//g; my \$padded_text = sprintf(\"%-4s\", \$time_text); my \$orange = \"\\033[38;5;208m\"; my \$reset = \"\\033[0m\"; printf \"%s%s%s\\t%s\\0\", \$orange, \$padded_text, \$reset, \$cmd; } else { print \$_, \"\\0\"; }'),ctrl-r:reload(atuin search $atuin_opts | perl -0ne 'chomp; my (\$t, \$cmd) = split(/\\t/, \$_, 2); if (defined \$cmd) { my \$time_text = \$t; \$time_text =~ s/\\033\\[[0-9;]*m//g; my \$padded_text = sprintf(\"%-4s\", \$time_text); my \$orange = \"\\033[38;5;208m\"; my \$reset = \"\\033[0m\"; printf \"%s%s%s\\t%s\\0\", \$orange, \$padded_text, \$reset, \$cmd; } else { print \$_, \"\\0\"; }')"
 
 			--color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E \
 			--color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold \
@@ -69,8 +69,8 @@ _fz-cmd-core() {
 							my $time_text = $t;
 							$time_text =~ s/\033\[[0-9;]*m//g;  # Remove ANSI codes
 
-							# Pad the actual text (without ANSI codes) to 10 chars
-							my $padded_text = sprintf("%-10s", $time_text);
+							# Pad the actual text (without ANSI codes) to 4 chars
+							my $padded_text = sprintf("%-4s", $time_text);
 
 							# Add ANSI color codes around the padded text
 							my $orange = "\033[38;5;208m";
