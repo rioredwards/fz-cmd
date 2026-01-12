@@ -1756,21 +1756,6 @@
       }
     },
     {
-      "command": "omz_termsupport_cwd",
-      "description": "Function: omz_termsupport_cwd",
-      "tags": [
-        "function",
-        "omz_termsupport_cwd"
-      ],
-      "examples": [
-        "omz_termsupport_cwd"
-      ],
-      "source": "function",
-      "metadata": {
-        "function_name": "omz_termsupport_cwd"
-      }
-    },
-    {
       "command": "fzf-git-lreflogs-widget",
       "description": "Function: fzf-git-lreflogs-widget",
       "tags": [
@@ -1783,6 +1768,21 @@
       "source": "function",
       "metadata": {
         "function_name": "fzf-git-lreflogs-widget"
+      }
+    },
+    {
+      "command": "fz-cmd-down-widget",
+      "description": "Function: fz-cmd-down-widget",
+      "tags": [
+        "function",
+        "fz-cmd-down-widget"
+      ],
+      "examples": [
+        "fz-cmd-down-widget"
+      ],
+      "source": "function",
+      "metadata": {
+        "function_name": "fz-cmd-down-widget"
       }
     },
     {
@@ -2533,21 +2533,6 @@
       "source": "function",
       "metadata": {
         "function_name": "instant_prompt_example"
-      }
-    },
-    {
-      "command": "fz-cmd-status",
-      "description": "Function: fz-cmd-status",
-      "tags": [
-        "function",
-        "fz-cmd-status"
-      ],
-      "examples": [
-        "fz-cmd-status"
-      ],
-      "source": "function",
-      "metadata": {
-        "function_name": "fz-cmd-status"
       }
     },
     {
