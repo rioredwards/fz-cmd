@@ -9,8 +9,6 @@ _fz-cmd-core() {
 			--height=${FZF_TMUX_HEIGHT:-80%}
 			# Reverse order (newest first)
 			--tac
-			# Search from column 2 onwards (skip time column)
-			"-n2..,.."
 			# Break ties by original order
 			--tiebreak=index
 			# Enable fzf's history feature
