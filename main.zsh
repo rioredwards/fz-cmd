@@ -17,7 +17,7 @@ _fz-cmd-core() {
 			--with-nth='{1} - {2}' \
 			--accept-nth="2" \
 			--nth='1' \
-			--layout=reverse \
+			# --layout=reverse \
 			--delimiter=$'\t' \
 			--border=rounded \
 			--border-label=" Command History " \
@@ -27,7 +27,7 @@ _fz-cmd-core() {
 			--header=" Enter: Select │ Ctrl-/: Preview │ Ctrl-d: Directory Filter │ Ctrl-r: Reload │ Esc: Cancel " \
 			--header-border=bottom \
 			# Set fzf height (80% if FZF_TMUX_HEIGHT is unset)
-			--height=${FZF_TMUX_HEIGHT:-80%}
+			--height=${FZF_TMUX_HEIGHT:-40%}
 			# Reverse order (newest first)
 			--tac
 			# Break ties by original order
@@ -83,16 +83,10 @@ _fz-cmd-core() {
 	)
 	# Save fzf's exit code
 	local ret=$?
-	# If a command was selected, append it to the left buffer (inserts at cursor position)
-	if [ -n "$selected" ]; then
-			# the += lets it insert at current pos instead of replacing
-			LBUFFER+="${selected}"
-	fi
-
-	# Refresh the prompt display
-	# zle reset-prompt
-	# Return fzf's exit code
-	echo $selected
+	
+	# Return the selected command (caller will handle LBUFFER or printing)
+	echo "$selected"
+	return $ret
 }
 
 # Function version - can be called directly
@@ -115,3 +109,42 @@ fz-cmd() {
 		print -z -- "$cmd"
 	fi
 }
+
+# Zsh widget for up arrow key - triggers fz-cmd when appropriate
+fz-cmd-up-widget() {
+	# If command line is empty or we're at the start of history, trigger fz-cmd
+	if [[ -z "$BUFFER" ]] || [[ "$HISTNO" -eq 1 ]]; then
+		# Call fz-cmd as a widget
+		fz-cmd-widget
+	else
+		# Fall back to normal up arrow behavior
+		zle .up-line-or-history
+	fi
+}
+
+# Zsh widget wrapper for fz-cmd
+fz-cmd-widget() {
+	local cmd
+	# Temporarily disable nomatch to prevent glob expansion errors
+	setopt localoptions
+	setopt +o nomatch
+
+	cmd=$(_fz-cmd-core)
+	local exit_code=$?
+
+	if [ $exit_code -eq 0 ] && [ -n "$cmd" ]; then
+		# Insert the command into the buffer at cursor position
+		LBUFFER+="$cmd"
+		zle reset-prompt
+	fi
+	return $exit_code
+}
+
+# Register the widgets
+zle -N fz-cmd-widget
+zle -N fz-cmd-up-widget
+
+# Bind up arrow to the smart widget
+# This will trigger fz-cmd when the line is empty or at history start
+bindkey '^[[A' fz-cmd-up-widget
+bindkey '^[OA' fz-cmd-up-widget  # Also handle different terminal escape sequences
