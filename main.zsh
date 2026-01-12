@@ -2,8 +2,8 @@ _fz-cmd-core() {
 	# Set shell options: disable glob substitution, use zsh builtins, enable pipefail, disable aliases
 	setopt localoptions noglobsubst noposixbuiltins pipefail no_aliases 2>/dev/null
 
-	# gets the first word of the command and passes it to tldr
-	local preview_script="echo {} | awk '{print \$1}' | xargs tldr"
+	# gets the first word of the command and passes it to tldr with fancy formatting
+	local preview_script="cmd=\$(echo {} | awk '{print \$1}'); printf '\033[1;38;5;208m━━━ Command: %s ━━━\033[0m\n' \"\$cmd\"; tldr --color=always \"\$cmd\" 2>/dev/null || printf '\033[33m\nNo tldr page found for '\''%s'\''\033[0m\n' \"\$cmd\""
 
 	local atuin_opts="--cmd-only"
 	# Array of fzf options
@@ -40,7 +40,8 @@ _fz-cmd-core() {
 			--color=border:#504945,label:#E78A4E \
 			--color=preview-bg:#141617 \
 
-			--bind "?:preview:${preview_script}" \
+			# --bind "?:preview:${preview_script}" \
+			--preview="$preview_script" \
 			--preview-window="right,50%,wrap,border-rounded,<50(bottom,40%,wrap,border-rounded)" \
 	)
 
