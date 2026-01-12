@@ -1,6 +1,0 @@
-[TIMING] python_processing: 0.143758059s
-[TIMING] python.main_total: 0.077091000s
-[TIMING] python.dedupe_loop: 0.074308000s
-[TIMING] atuin_history: 0.067986012s
-[TIMING] total: 0.39370107650756836s
---------------------------------

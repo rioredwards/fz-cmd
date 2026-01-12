@@ -1,15 +1,11 @@
-DIM="\033[38;2;29;32;33m"  # RGB(29,32,33) = #1D2021 - matches fzf bg
-RESET="\033[0m"
-
 _fz-cmd-core() {
-	# Set shell options: disable glob substitution, use zsh builtins, enable pipefail, disable aliases
 	setopt localoptions noglobsubst noposixbuiltins pipefail no_aliases 2>/dev/null
 
 	# gets the first word of the command and passes it to tldr with fancy formatting
 	local preview_script="cmd=\$(echo {2} | awk '{print \$1}'); printf '\033[1;38;5;208m━━━ Command: %s ━━━\033[0m\n' \"\$cmd\"; tldr --color=always \"\$cmd\" 2>/dev/null || printf '\033[33m\nNo tldr page found for '\''%s'\''\033[0m\n' \"\$cmd\""
 
 	local atuin_opts="--print0 --format '{relativetime}\t{command}'"
-	# Array of fzf options
+
 	local fzf_opts=(
 			--ansi \
 			--read0 \
@@ -26,21 +22,13 @@ _fz-cmd-core() {
 			--prompt="❯ " \
 			--header=" Enter: Execute │ Tab: Select │ Ctrl-/: Preview │ Ctrl-d: Directory Filter │ Ctrl-r: Reload │ Esc: Cancel " \
 			--header-border=bottom \
-			# Set fzf height (80% if FZF_TMUX_HEIGHT is unset)
 			--height=${FZF_TMUX_HEIGHT:-80%}
-			# Reverse order (newest first)
 			--tac
-			# Break ties by original order
 			--tiebreak=index
-			# Enable fzf's history feature
 			--history="${HOME}/.dotfiles/.fz-cmd-recent"
-			# Pre-fill fzf with current command line buffer
 			"--query=${LBUFFER}"
-			# Disable multi-select
 			"+m"
-			# Use --expect to distinguish between tab and enter
 			--expect=enter,tab
-			# Keybindings: Ctrl+D reloads with current directory filter, Ctrl+R reloads without filter, change returns to top
 			"--bind=change:first,ctrl-d:reload(atuin search $atuin_opts -c $PWD | perl -0ne 'chomp; my (\$t, \$cmd) = split(/\\t/, \$_, 2); if (defined \$cmd) { my \$time_text = \$t; \$time_text =~ s/\\033\\[[0-9;]*m//g; my \$padded_text = sprintf(\"%-4s\", \$time_text); my \$orange = \"\\033[38;5;208m\"; my \$reset = \"\\033[0m\"; printf \"%s%s%s\\t%s\\0\", \$orange, \$padded_text, \$reset, \$cmd; } else { print \$_, \"\\0\"; }'),ctrl-r:reload(atuin search $atuin_opts | perl -0ne 'chomp; my (\$t, \$cmd) = split(/\\t/, \$_, 2); if (defined \$cmd) { my \$time_text = \$t; \$time_text =~ s/\\033\\[[0-9;]*m//g; my \$padded_text = sprintf(\"%-4s\", \$time_text); my \$orange = \"\\033[38;5;208m\"; my \$reset = \"\\033[0m\"; printf \"%s%s%s\\t%s\\0\", \$orange, \$padded_text, \$reset, \$cmd; } else { print \$_, \"\\0\"; }')"
 
 			--color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E \
@@ -49,10 +37,8 @@ _fz-cmd-core() {
 			--color=marker:#A9B665,spinner:#E78A4E,header:#928374 \
 			--color=border:#504945,label:#E78A4E \
 			--color=preview-bg:#141617 \
-			# toggle preview with ctrl-/
 			--bind="ctrl-/:toggle-preview" \
 
-			# --bind "?:preview:${preview_script}" \
 			--preview="$preview_script"	\
 			--preview-window="hidden,right,50%,wrap,border-rounded,<50(hidden,bottom,40%,wrap,border-rounded)" \
 	)
@@ -103,10 +89,6 @@ fz-cmd() {
 	local script_dir="${HOME}/.dotfiles/zsh/fz-cmd"
 
 	local output
-	# Temporarily disable nomatch to prevent glob expansion errors
-	# This prevents "no matches found" errors when commands contain square brackets
-	setopt localoptions
-	setopt +o nomatch
 
 	output=$(_fz-cmd-core)
 	local exit_code=$?
@@ -147,9 +129,6 @@ fz-cmd-down-widget() {
 # Zsh widget wrapper for fz-cmd
 fz-cmd-widget() {
 	local output
-	# Temporarily disable nomatch to prevent glob expansion errors
-	setopt localoptions
-	setopt +o nomatch
 
 	output=$(_fz-cmd-core)
 	local exit_code=$?
