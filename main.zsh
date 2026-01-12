@@ -5,6 +5,16 @@ _fz-cmd-core() {
 	local atuin_opts="--cmd-only"
 	# Array of fzf options
 	local fzf_opts=(
+			--ansi \
+			--no-hscroll \
+			--layout=reverse \
+			--border=rounded \
+			--border-label=" Command History " \
+			--info=inline-right \
+			--pointer="▸" \
+			--prompt="❯ " \
+			--header=" Enter: Select │ Ctrl-/: Preview │ Esc: Cancel " \
+			--header-border=bottom \
 			# Set fzf height (80% if FZF_TMUX_HEIGHT is unset)
 			--height=${FZF_TMUX_HEIGHT:-80%}
 			# Reverse order (newest first)
@@ -19,6 +29,13 @@ _fz-cmd-core() {
 			"+m"
 			# Keybindings: Ctrl+D reloads with current directory filter, Ctrl+R reloads without filter
 			"--bind=ctrl-d:reload(atuin search $atuin_opts -c $PWD),ctrl-r:reload(atuin search $atuin_opts)"
+			
+			--color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E \
+			--color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold \
+			--color=info:#928374,prompt:#E78A4E,pointer:#E78A4E \
+			--color=marker:#A9B665,spinner:#E78A4E,header:#928374 \
+			--color=border:#504945,label:#E78A4E \
+			--color=preview-bg:#141617 \
 	)
 
 	# Run Atuin search, pipe to fzf, store selected command
