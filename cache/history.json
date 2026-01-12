@@ -1,26 +1,6 @@
 {
   "commands": [
     {
-      "command": "omz_history",
-      "description": "History: omz_history",
-      "tags": [],
-      "examples": [
-        "omz_history"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "omz reload",
-      "description": "History: omz reload",
-      "tags": [],
-      "examples": [
-        "omz reload"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
       "command": "fz-cmd",
       "description": "History: fz-cmd",
       "tags": [],
@@ -31,41 +11,11 @@
       "metadata": {}
     },
     {
-      "command": "atuin history list --format \"{command}\" --reverse=false | fzf",
-      "description": "History: atuin history list --format \"{command}\" --reverse=",
+      "command": "omz reload",
+      "description": "History: omz reload",
       "tags": [],
       "examples": [
-        "atuin history list --format \"{command}\" --reverse=false | fzf"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "atuin history list -h",
-      "description": "History: atuin history list -h",
-      "tags": [],
-      "examples": [
-        "atuin history list -h"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "atuin history list --format \"{command}\" --reverse=false  --print0 | fzf",
-      "description": "History: atuin history list --format \"{command}\" --reverse=",
-      "tags": [],
-      "examples": [
-        "atuin history list --format \"{command}\" --reverse=false  --print0 | fzf"
-      ],
-      "source": "history",
-      "metadata": {}
-    },
-    {
-      "command": "atuin history list --format \"{command}\" --reverse=false --print0 | fzf --read0",
-      "description": "History: atuin history list --format \"{command}\" --reverse=",
-      "tags": [],
-      "examples": [
-        "atuin history list --format \"{command}\" --reverse=false --print0 | fzf --read0"
+        "omz reload"
       ],
       "source": "history",
       "metadata": {}
@@ -521,6 +471,16 @@
       "metadata": {}
     },
     {
+      "command": "atuin history list -h",
+      "description": "History: atuin history list -h",
+      "tags": [],
+      "examples": [
+        "atuin history list -h"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
       "command": "atuin history list --format \"{command}\"",
       "description": "History: atuin history list --format \"{command}\"",
       "tags": [],
@@ -566,6 +526,16 @@
       "tags": [],
       "examples": [
         "which history"
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "omz_history",
+      "description": "History: omz_history",
+      "tags": [],
+      "examples": [
+        "omz_history"
       ],
       "source": "history",
       "metadata": {}
@@ -1246,6 +1216,26 @@
       "tags": [],
       "examples": [
         "gaa && gcmsg \"add keybinding to trigger (down arrow when prompt is empty)\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "gaa && gcmsg \"setup tab to place in prmpt and enter to execute\"",
+      "description": "History: gaa && gcmsg \"setup tab to place in prmpt and ente",
+      "tags": [],
+      "examples": [
+        "gaa && gcmsg \"setup tab to place in prmpt and enter to execute\""
+      ],
+      "source": "history",
+      "metadata": {}
+    },
+    {
+      "command": "./bin/cycle",
+      "description": "History: ./bin/cycle",
+      "tags": [],
+      "examples": [
+        "./bin/cycle"
       ],
       "source": "history",
       "metadata": {}
