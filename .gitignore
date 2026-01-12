@@ -1,4 +1,5 @@
 cache/
+cache/tldr_cache.json
 tldr-commands.yaml
 __pycache__/
 *.pyc
