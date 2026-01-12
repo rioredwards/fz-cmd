@@ -17,7 +17,7 @@ _fz-cmd-core() {
 			--with-nth='{1} - {2}' \
 			--accept-nth="2" \
 			--nth='1' \
-			# --layout=reverse \
+			--layout=reverse \
 			--delimiter=$'\t' \
 			--border=rounded \
 			--border-label=" Command History " \
@@ -110,15 +110,15 @@ fz-cmd() {
 	fi
 }
 
-# Zsh widget for up arrow key - triggers fz-cmd when appropriate
-fz-cmd-up-widget() {
-	# If command line is empty or we're at the start of history, trigger fz-cmd
-	if [[ -z "$BUFFER" ]] || [[ "$HISTNO" -eq 1 ]]; then
+# Zsh widget for down arrow key - triggers fz-cmd when appropriate
+fz-cmd-down-widget() {
+	# If command line is empty or we're at the end of history, trigger fz-cmd
+	if [[ -z "$BUFFER" ]] || [[ "$HISTNO" -eq $HISTSIZE ]]; then
 		# Call fz-cmd as a widget
 		fz-cmd-widget
 	else
-		# Fall back to normal up arrow behavior
-		zle .up-line-or-history
+		# Fall back to normal down arrow behavior
+		zle .down-line-or-history
 	fi
 }
 
@@ -142,9 +142,9 @@ fz-cmd-widget() {
 
 # Register the widgets
 zle -N fz-cmd-widget
-zle -N fz-cmd-up-widget
+zle -N fz-cmd-down-widget
 
-# Bind up arrow to the smart widget
-# This will trigger fz-cmd when the line is empty or at history start
-bindkey '^[[A' fz-cmd-up-widget
-bindkey '^[OA' fz-cmd-up-widget  # Also handle different terminal escape sequences
+# Bind down arrow to the smart widget
+# This will trigger fz-cmd when the line is empty or at history end
+bindkey '^[[B' fz-cmd-down-widget
+bindkey '^[OB' fz-cmd-down-widget  # Also handle different terminal escape sequences
