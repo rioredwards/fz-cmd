@@ -2,6 +2,9 @@ _fz-cmd-core() {
 	# Set shell options: disable glob substitution, use zsh builtins, enable pipefail, disable aliases
 	setopt localoptions noglobsubst noposixbuiltins pipefail no_aliases 2>/dev/null
 
+	# gets the first word of the command and passes it to tldr
+	local preview_script="echo {} | awk '{print \$1}' | xargs tldr"
+
 	local atuin_opts="--cmd-only"
 	# Array of fzf options
 	local fzf_opts=(
@@ -22,7 +25,7 @@ _fz-cmd-core() {
 			# Break ties by original order
 			--tiebreak=index
 			# Enable fzf's history feature
-			"--history"
+			--history="${HOME}/.dotfiles/.fz-cmd-recent"
 			# Pre-fill fzf with current command line buffer
 			"--query=${LBUFFER}"
 			# Disable multi-select
@@ -36,6 +39,9 @@ _fz-cmd-core() {
 			--color=marker:#A9B665,spinner:#E78A4E,header:#928374 \
 			--color=border:#504945,label:#E78A4E \
 			--color=preview-bg:#141617 \
+
+			--bind "?:preview:${preview_script}" \
+			--preview-window="right,50%,wrap,border-rounded" \
 	)
 
 	# Run Atuin search, pipe to fzf, store selected command
