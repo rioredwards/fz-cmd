@@ -41,7 +41,7 @@ _fz-cmd-core() {
 			--color=preview-bg:#141617 \
 
 			--bind "?:preview:${preview_script}" \
-			--preview-window="right,50%,wrap,border-rounded" \
+			--preview-window="right,50%,wrap,border-rounded,<50(bottom,40%,wrap,border-rounded)" \
 	)
 
 	# Run Atuin search, pipe to fzf, store selected command
