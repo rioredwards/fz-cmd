@@ -39,13 +39,13 @@ def _load_tldr_cache():
     _tldr_cache_file = script_dir / 'cache' / 'tldr_cache.json'
     
     if not _tldr_cache_file.exists():
-        if _debug_log_path:
-            try:
-                with open(_debug_log_path, 'a') as f:
-                    f.write(f"[TIMING] python.load_cache: cache file not found, starting fresh\n")
-                    f.flush()
-            except Exception:
-                pass
+        # if _debug_log_path:
+        #     try:
+        #         with open(_debug_log_path, 'a') as f:
+        #             f.write(f"[TIMING] python.load_cache: cache file not found, starting fresh\n")
+        #             f.flush()
+        #     except Exception:
+        #         pass
         return
     
     load_start = time.time()
@@ -56,21 +56,21 @@ def _load_tldr_cache():
             # Convert None strings back to None
             _tldr_cache = {k: (None if v == '__None__' else v) for k, v in _tldr_cache.items()}
         _debug_timing("load_cache", load_start)
-        if _debug_log_path:
-            try:
-                with open(_debug_log_path, 'a') as f:
-                    f.write(f"[TIMING] python.load_cache.entries: {len(_tldr_cache)}\n")
-                    f.flush()
-            except Exception:
-                pass
+        # if _debug_log_path:
+        #     try:
+        #         with open(_debug_log_path, 'a') as f:
+        #             f.write(f"[TIMING] python.load_cache.entries: {len(_tldr_cache)}\n")
+        #             f.flush()
+        #     except Exception:
+        #         pass
     except Exception as e:
-        if _debug_log_path:
-            try:
-                with open(_debug_log_path, 'a') as f:
-                    f.write(f"[TIMING] python.load_cache.error: {str(e)}\n")
-                    f.flush()
-            except Exception:
-                pass
+        # if _debug_log_path:
+        #     try:
+        #         with open(_debug_log_path, 'a') as f:
+        #             f.write(f"[TIMING] python.load_cache.error: {str(e)}\n")
+        #             f.flush()
+        #     except Exception:
+        #         pass
         _tldr_cache = {}
 
 
@@ -94,13 +94,14 @@ def _save_tldr_cache():
             json.dump(data, f, ensure_ascii=False, indent=2)
         _debug_timing("save_cache", save_start)
     except Exception as e:
-        if _debug_log_path:
-            try:
-                with open(_debug_log_path, 'a') as f:
-                    f.write(f"[TIMING] python.save_cache.error: {str(e)}\n")
-                    f.flush()
-            except Exception:
-                pass
+        # if _debug_log_path:
+        #     try:
+        #         with open(_debug_log_path, 'a') as f:
+        #             f.write(f"[TIMING] python.save_cache.error: {str(e)}\n")
+        #             f.flush()
+        #     except Exception:
+        #         pass
+        pass  # Silently fail if cache save fails
 
 
 def _debug_timing(label: str, start_time: float, end_time: float = None):
@@ -212,7 +213,7 @@ def get_tldr_content(command: str) -> Optional[str]:
     
     # Check cache first (persistent cache loaded at startup)
     if base_cmd in _tldr_cache:
-        _debug_timing("get_tldr_content.cached", start_time)
+        # _debug_timing("get_tldr_content.cached", start_time)  # Removed: repeats hundreds of times
         return _tldr_cache[base_cmd]
     
     # Try to get tldr page (only if not in cache)
@@ -224,20 +225,20 @@ def get_tldr_content(command: str) -> Optional[str]:
             text=True,
             timeout=2
         )
-        _debug_timing("get_tldr_content.subprocess", subprocess_start)
+        # _debug_timing("get_tldr_content.subprocess", subprocess_start)  # Removed: repeats hundreds of times
         
         if result.returncode == 0 and result.stdout.strip():
             content = result.stdout.strip()
             _tldr_cache[base_cmd] = content
-            _debug_timing("get_tldr_content.total", start_time)
+            # _debug_timing("get_tldr_content.total", start_time)  # Removed: repeats hundreds of times
             return content
         else:
             _tldr_cache[base_cmd] = None
-            _debug_timing("get_tldr_content.total", start_time)
+            # _debug_timing("get_tldr_content.total", start_time)  # Removed: repeats hundreds of times
             return None
     except (subprocess.TimeoutExpired, FileNotFoundError, Exception):
         _tldr_cache[base_cmd] = None
-        _debug_timing("get_tldr_content.total", start_time)
+        # _debug_timing("get_tldr_content.total", start_time)  # Removed: repeats hundreds of times
         return None
 
 
@@ -245,13 +246,13 @@ def main():
     main_start = time.time()
     
     # Log that Python processing started (for debugging)
-    if _debug_log_path:
-        try:
-            with open(_debug_log_path, 'a') as f:
-                f.write(f"[TIMING] python.main: started\n")
-                f.flush()
-        except Exception:
-            pass
+    # if _debug_log_path:
+    #     try:
+    #         with open(_debug_log_path, 'a') as f:
+    #             f.write(f"[TIMING] python.main: started\n")
+    #             f.flush()
+    #     except Exception:
+    #         pass
     
     # Load persistent tldr cache
     _load_tldr_cache()
@@ -329,7 +330,7 @@ def main():
                 f.write(f"[TIMING] python.dedupe_loop.alias_func_total: {alias_func_time:.6f}s\n")
                 f.write(f"[TIMING] python.dedupe_loop.tldr_total: {tldr_time:.6f}s\n")
                 f.write(f"[TIMING] python.dedupe_loop.output_total: {output_time:.6f}s\n")
-                f.write(f"[TIMING] python.processed_commands: {processed_count}\n")
+                # f.write(f"[TIMING] python.processed_commands: {processed_count}\n")  # Commented: not performance-related
                 f.flush()
         except Exception:
             pass

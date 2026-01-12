@@ -10,32 +10,70 @@ _fz-cmd-core() {
 		debug_log="${script_dir}/debug.log"
 	fi
 	
-	# Timing helper
+	# Timing helper - just log directly
 	_fz-cmd-timing() {
 		local label="$1"
 		local start_time="$2"
-		local log_file="$3"
-		if [ -z "$log_file" ]; then
+		local debug_log="$3"
+		if [ -z "$debug_log" ]; then
 			echo "$(date +%s.%N)"
 			return
 		fi
 		local end_time=$(date +%s.%N)
-		echo "[TIMING] ${label}: start=${start_time} end=${end_time}" >> "$log_file"
 		local duration=$(python3 -c "print($end_time - $start_time)" 2>/dev/null)
 		if [ -n "$duration" ]; then
-			echo "[TIMING] ${label}: ${duration}s" >> "$log_file"
-		else
-			echo "[TIMING] ${label}: calculation failed (start=$start_time, end=$end_time)" >> "$log_file"
+			echo "[TIMING] ${label}: ${duration}s" >> "$debug_log"
 		fi
 		echo "$end_time"
 	}
 	
+	# Simple function to filter log to top 4 timings
+	_filter_top_timings() {
+		local debug_log="$1"
+		if [ -z "$debug_log" ] || [ ! -f "$debug_log" ]; then
+			return
+		fi
+		# Extract all timing lines, sort by duration, keep top 4, replace in file
+		python3 <<EOF
+import re
+
+try:
+    with open("$debug_log", "r") as f:
+        lines = f.readlines()
+    
+    timings = []
+    other_lines = []
+    
+    for line in lines:
+        match = re.match(r'\[TIMING\]\s+([^:]+):\s+([\d.]+)s', line)
+        if match:
+            label = match.group(1).strip()
+            duration = float(match.group(2))
+            timings.append((duration, label))
+        else:
+            other_lines.append(line)
+    
+    # Sort by duration descending, take top 4
+    timings.sort(reverse=True)
+    top_timings = timings[:4]
+    
+    # Rewrite file
+    with open("$debug_log", "w") as f:
+        for line in other_lines:
+            f.write(line)
+        for duration, label in top_timings:
+            f.write(f"[TIMING] {label}: {duration:.9f}s\n")
+except:
+    pass
+EOF
+	}
+	
 	local start_total=$(date +%s.%N)
 	
-	if [ -n "$debug_log" ]; then
-		echo "[TIMING] Starting performance measurement" >> "$debug_log"
-		echo "[TIMING] debug_log path: $debug_log" >> "$debug_log"
-	fi
+	# if [ -n "$debug_log" ]; then
+	# 	echo "[TIMING] Starting performance measurement" >> "$debug_log"
+	# 	echo "[TIMING] debug_log path: $debug_log" >> "$debug_log"
+	# fi
 	
 	local start_atuin=$(date +%s.%N)
 	local atuin_output
@@ -43,13 +81,13 @@ _fz-cmd-core() {
 	local atuin_exit=$?
 	local start_atuin_end=$(_fz-cmd-timing "atuin_history" "$start_atuin" "$debug_log")
 	
-	if [ -n "$debug_log" ]; then
-		echo "=== atuin_output (first 10 entries) ===" >> "$debug_log"
-		if [ -n "$atuin_output" ]; then
-			echo -n "$atuin_output" | python3 -c "import sys; data = sys.stdin.buffer.read(); entries = [x for x in data.split(b'\0') if x][:10]; [print(x.decode('utf-8', errors='replace')) for x in entries]" >> "$debug_log"
-		fi
-		echo "" >> "$debug_log"
-	fi
+	# if [ -n "$debug_log" ]; then
+	# 	echo "=== atuin_output (first 10 entries) ===" >> "$debug_log"
+	# 	if [ -n "$atuin_output" ]; then
+	# 		echo -n "$atuin_output" | python3 -c "import sys; data = sys.stdin.buffer.read(); entries = [x for x in data.split(b'\0') if x][:10]; [print(x.decode('utf-8', errors='replace')) for x in entries]" >> "$debug_log"
+	# 	fi
+	# 	echo "" >> "$debug_log"
+	# fi
 	
 	local start_aliases=$(date +%s.%N)
 	# TEMPORARILY DISABLED: Collect aliases: format as name=value, one per line
@@ -105,12 +143,21 @@ _fz-cmd-core() {
 	local dedupe_exit=$?
 	local start_python_end=$(_fz-cmd-timing "python_processing" "$start_python" "$debug_log")
 	
+	# if [ -n "$debug_log" ]; then
+	# 	echo "=== dedupe_output (first 10 entries) ===" >> "$debug_log"
+	# 	if [ -n "$dedupe_output" ]; then
+	# 		echo -n "$dedupe_output" | python3 -c "import sys; data = sys.stdin.buffer.read(); entries = [x for x in data.split(b'\0') if x][:10]; [print(x.decode('utf-8', errors='replace')) for x in entries]" >> "$debug_log"
+	# 	fi
+	# 	echo "" >> "$debug_log"
+	# fi
+
+	# Filter to top 4 timings before fzf (which is interactive)
+	_filter_top_timings "$debug_log"
+
+		# Log total time and separator
+	_fz-cmd-timing "total" "$start_total" "$debug_log" >/dev/null
 	if [ -n "$debug_log" ]; then
-		echo "=== dedupe_output (first 10 entries) ===" >> "$debug_log"
-		if [ -n "$dedupe_output" ]; then
-			echo -n "$dedupe_output" | python3 -c "import sys; data = sys.stdin.buffer.read(); entries = [x for x in data.split(b'\0') if x][:10]; [print(x.decode('utf-8', errors='replace')) for x in entries]" >> "$debug_log"
-		fi
-		echo "" >> "$debug_log"
+		echo "--------------------------------" >> "$debug_log"
 	fi
 	
 	local start_fzf=$(date +%s.%N)
@@ -141,8 +188,9 @@ _fz-cmd-core() {
 		--color=preview-bg:#141617 \
 		--read0)
 	local fzf_exit=$?
-	local start_fzf_end=$(_fz-cmd-timing "fzf_launch" "$start_fzf" "$debug_log")
+	# local start_fzf_end=$(_fz-cmd-timing "fzf_launch" "$start_fzf" "$debug_log")
 
+	
 	if [ -z "$cmd" ]; then
 		return 1
 	fi
@@ -155,8 +203,6 @@ _fz-cmd-core() {
 	fi
 
 	echo -n "$cmd" | pbcopy
-
-	_fz-cmd-timing "total" "$start_total" "$debug_log" >/dev/null
 
 	echo "$cmd"
 }
