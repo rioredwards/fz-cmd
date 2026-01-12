@@ -359,7 +359,7 @@ fz-cmd-widget() {
     if [[ $exit_code -eq 0 ]] && [[ -n "$output" ]]; then
         local key cmd
         key="${output%%|*}"
-        cmd="${output#*|}"s
+        cmd="${output#*|}"
 
         if [[ -n "$cmd" ]]; then
             case "$key" in
