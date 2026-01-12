@@ -226,8 +226,8 @@ _fz-cmd-core() {
     key=$(echo "$output" | head -n1)
     selected=$(echo "$output" | tail -n +2)
 
-    # Validate output
-    if [[ -z "$selected" ]]; then
+    # Validate output - allow empty selected when key is not a known key (means --expect failed)
+    if [[ -z "$selected" ]] && [[ "$key" == "enter" || "$key" == "tab" ]]; then
         return $exit_code
     fi
 
@@ -260,19 +260,33 @@ _validate_command() {
 _insert_command() {
     local cmd="$1"
     local execute="$2"
+    local context="$3"  # "function" or "widget"
 
     # Validate command
     _validate_command "$cmd" || return 1
 
-    # Insert command based on execution mode
+    # Insert command based on execution mode and context
     if [[ "$execute" == "true" ]]; then
         # Execute immediately
-        print -z -- "$cmd"
-        zle accept-line
+        if [[ "$context" == "function" ]]; then
+            # Function context: use print -z
+            print -z -- "$cmd"
+            zle accept-line
+        else
+            # Widget context: use LBUFFER
+            LBUFFER+="$cmd"
+            zle accept-line
+        fi
     else
         # Insert only
-        LBUFFER+="$cmd"
-        zle reset-prompt
+        if [[ "$context" == "function" ]]; then
+            # Function context: use print -z
+            print -z -- "$cmd"
+        else
+            # Widget context: use LBUFFER
+            LBUFFER+="$cmd"
+            zle reset-prompt
+        fi
     fi
 }
 
@@ -308,16 +322,20 @@ fz-cmd() {
         if [[ -n "$cmd" ]]; then
             case "$key" in
                 enter)
-                    _insert_command "$cmd" true  # Execute
+                    _insert_command "$cmd" true function  # Execute
                     ;;
                 tab)
-                    _insert_command "$cmd" false # Insert only
+                    _insert_command "$cmd" false function # Insert only
                     ;;
                 *)
                     echo "Warning: Unknown key action: $key" >&2
-                    return 1
+                    _insert_command "$cmd" false function # Insert only as fallback
                     ;;
             esac
+        elif [[ -n "$key" ]]; then
+            # If cmd is empty but key is not, it means --expect didn't work and key contains the command
+            # Assume Enter was pressed and execute
+            _insert_command "$key" true function  # Execute (key is actually the command)
         fi
     fi
 
@@ -352,15 +370,19 @@ fz-cmd-widget() {
         if [[ -n "$cmd" ]]; then
             case "$key" in
                 enter)
-                    _insert_command "$cmd" true  # Execute
+                    _insert_command "$cmd" true widget  # Execute
                     ;;
                 tab)
-                    _insert_command "$cmd" false # Insert only
+                    _insert_command "$cmd" false widget # Insert only
                     ;;
                 *)
                     # Unknown key - do nothing
                     ;;
             esac
+        elif [[ -n "$key" ]]; then
+            # If cmd is empty but key is not, it means --expect didn't work and key contains the command
+            # Assume Enter was pressed and execute
+            _insert_command "$key" true widget  # Execute (key is actually the command)
         fi
     fi
 
