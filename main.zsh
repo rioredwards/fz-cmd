@@ -8,10 +8,11 @@ _fz-cmd-core() {
 	# gets the first word of the command and passes it to tldr with fancy formatting
 	local preview_script="cmd=\$(echo {2} | awk '{print \$1}'); printf '\033[1;38;5;208m━━━ Command: %s ━━━\033[0m\n' \"\$cmd\"; tldr --color=always \"\$cmd\" 2>/dev/null || printf '\033[33m\nNo tldr page found for '\''%s'\''\033[0m\n' \"\$cmd\""
 
-	local atuin_opts="--format $'\033[38;5;208m{relativetime}\033[0m\t{command}'"
+	local atuin_opts="--print0 --format '{relativetime}\t{command}'"
 	# Array of fzf options
 	local fzf_opts=(
 			--ansi \
+			--read0 \
 			--no-hscroll \
 			--with-nth='{1} - {2}' \
 			--accept-nth="2" \
@@ -38,7 +39,7 @@ _fz-cmd-core() {
 			# Disable multi-select
 			"+m"
 			# Keybindings: Ctrl+D reloads with current directory filter, Ctrl+R reloads without filter
-			"--bind=ctrl-d:reload(atuin search $atuin_opts -c $PWD | awk -F'\t' '{match(\$1, /\\033\\[[0-9;]*m/); ansi_start = substr(\$1, 1, RLENGTH); text = substr(\$1, RLENGTH + 1); match(text, /\\033\\[0m/); if (RLENGTH > 0) {ansi_end = substr(text, RSTART, RLENGTH); text = substr(text, 1, RSTART - 1) substr(text, RSTART + RLENGTH)} else {ansi_end = \"\"}; printf \"%s%-10s%s\t%s\n\", ansi_start, text, ansi_end, \$2}'),ctrl-r:reload(atuin search $atuin_opts | awk -F'\t' '{match(\$1, /\\033\\[[0-9;]*m/); ansi_start = substr(\$1, 1, RLENGTH); text = substr(\$1, RLENGTH + 1); match(text, /\\033\\[0m/); if (RLENGTH > 0) {ansi_end = substr(text, RSTART, RLENGTH); text = substr(text, 1, RSTART - 1) substr(text, RSTART + RLENGTH)} else {ansi_end = \"\"}; printf \"%s%-10s%s\t%s\n\", ansi_start, text, ansi_end, \$2}')"
+			"--bind=ctrl-d:reload(atuin search $atuin_opts -c $PWD | perl -0ne 'chomp; my (\$t, \$cmd) = split(/\\t/, \$_, 2); if (defined \$cmd) { my \$time_text = \$t; \$time_text =~ s/\\033\\[[0-9;]*m//g; my \$padded_text = sprintf(\"%-10s\", \$time_text); my \$orange = \"\\033[38;5;208m\"; my \$reset = \"\\033[0m\"; printf \"%s%s%s\\t%s\\0\", \$orange, \$padded_text, \$reset, \$cmd; } else { print \$_, \"\\0\"; }'),ctrl-r:reload(atuin search $atuin_opts | perl -0ne 'chomp; my (\$t, \$cmd) = split(/\\t/, \$_, 2); if (defined \$cmd) { my \$time_text = \$t; \$time_text =~ s/\\033\\[[0-9;]*m//g; my \$padded_text = sprintf(\"%-10s\", \$time_text); my \$orange = \"\\033[38;5;208m\"; my \$reset = \"\\033[0m\"; printf \"%s%s%s\\t%s\\0\", \$orange, \$padded_text, \$reset, \$cmd; } else { print \$_, \"\\0\"; }')"
 			
 			--color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E \
 			--color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold \
@@ -57,21 +58,27 @@ _fz-cmd-core() {
 	# Run Atuin search, pipe to fzf, store selected command
 	selected=$(
 			eval "atuin search ${atuin_opts}" |
-					awk -F'\t' '{
-						# Extract ANSI codes and text from field 1
-						match($1, /\033\[[0-9;]*m/)
-						ansi_start = substr($1, 1, RLENGTH)
-						text = substr($1, RLENGTH + 1)
-						match(text, /\033\[0m/)
-						if (RLENGTH > 0) {
-							ansi_end = substr(text, RSTART, RLENGTH)
-							text = substr(text, 1, RSTART - 1) substr(text, RSTART + RLENGTH)
+					perl -0ne '
+						chomp;                           # remove trailing NUL for this record
+						my ($t, $cmd) = split(/\t/, $_, 2);
+
+						if (defined $cmd) {
+							# Strip ANSI codes from time field to get actual text length
+							my $time_text = $t;
+							$time_text =~ s/\033\[[0-9;]*m//g;  # Remove ANSI codes
+							
+							# Pad the actual text (without ANSI codes) to 10 chars
+							my $padded_text = sprintf("%-10s", $time_text);
+							
+							# Add ANSI color codes around the padded text
+							my $orange = "\033[38;5;208m";
+							my $reset = "\033[0m";
+							printf "%s%s%s\t%s\0", $orange, $padded_text, $reset, $cmd;
 						} else {
-							ansi_end = ""
+							# if no tab found, pass record through unchanged
+							print $_, "\0";
 						}
-						# Pad text to 10 characters, then reconstruct with ANSI codes
-						printf "%s%-10s%s\t%s\n", ansi_start, text, ansi_end, $2
-					}' |
+					' |
 					fzf "${fzf_opts[@]}"
 	)
 	# Save fzf's exit code
