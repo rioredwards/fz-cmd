@@ -1,7 +1,6 @@
-DEBUG: timing_data array has 0 entries
-[TIMING] python_processing: 0.091950178s
-[TIMING] python_processing: 0.079131842s
-[TIMING] python_processing: 0.076336145s
-[TIMING] atuin_history: 0.073179960s
-[TIMING] total: 0.3174479007720947s
+[TIMING] python_processing: 0.143758059s
+[TIMING] python.main_total: 0.077091000s
+[TIMING] python.dedupe_loop: 0.074308000s
+[TIMING] atuin_history: 0.067986012s
+[TIMING] total: 0.39370107650756836s
 --------------------------------
