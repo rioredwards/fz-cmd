@@ -383,8 +383,8 @@ fz-cmd-widget() {
     return $exit_code
 }
 
-# Smart down arrow widget - triggers fz-cmd when appropriate
-fz-cmd-down-widget() {
+# Smart up arrow widget - triggers fz-cmd when appropriate
+fz-cmd-up-widget() {
     # Check if we should trigger fz-cmd instead of normal history navigation
     if [[ -z "$BUFFER" ]] || [[ "$HISTNO" -eq "$HISTSIZE" ]]; then
         # Empty buffer or at history end - trigger fz-cmd
@@ -401,12 +401,12 @@ fz-cmd-down-widget() {
 
 # Register ZLE widgets
 zle -N fz-cmd-widget
-zle -N fz-cmd-down-widget
+zle -N fz-cmd-up-widget
 
-# Bind down arrow keys to smart widget
+# Bind up arrow keys to smart widget
 # This provides intelligent history navigation
-bindkey '^[[B'  fz-cmd-down-widget  # Standard escape sequence
-bindkey '^[OB'  fz-cmd-down-widget  # Alternative escape sequence
+bindkey '^[[A'  fz-cmd-up-widget  # Standard escape sequence
+bindkey '^[OA'  fz-cmd-up-widget  # Alternative escape sequence
 
 # -----------------------------------------------------------------------------
 # Version and Status Functions
@@ -443,6 +443,6 @@ fz-cmd-status() {
     echo ""
 
     echo "Key bindings:"
-    echo "  Down arrow: Smart history (fz-cmd when buffer empty)"
+    echo "  Up arrow: Smart history (fz-cmd when buffer empty)"
     echo "  Ctrl+R: Can be bound to fz-cmd-widget"
 }
