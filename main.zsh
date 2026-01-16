@@ -159,14 +159,15 @@ _build_fzf_options() {
     )
 
     # Color theme (Gruvbox-inspired dark theme)
-    opts+=(
-        --color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E
-        --color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold
-        --color=info:#928374,prompt:#E78A4E,pointer:#E78A4E
-        --color=marker:#A9B665,spinner:#E78A4E,header:#928374
-        --color=border:#504945,label:#E78A4E
-        --color=preview-bg:#141617
-    )
+    # (Just use the default fzf color theme)
+    # opts+=(
+    #     --color=fg:#DDC7A1,bg:#1D2021,hl:#E78A4E
+    #     --color=fg+:#DDC7A1,bg+:#3C3836,hl+:#E78A4E:bold
+    #     --color=info:#928374,prompt:#E78A4E,pointer:#E78A4E
+    #     --color=marker:#A9B665,spinner:#E78A4E,header:#928374
+    #     --color=border:#504945,label:#E78A4E
+    #     --color=preview-bg:#141617
+    # )
 
     # Bindings
     local format_script
