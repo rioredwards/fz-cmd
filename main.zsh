@@ -139,7 +139,7 @@ _build_fzf_options() {
         --with-nth='{1} - {2}'    # Display format: time - command
         --accept-nth=2            # Return command part when selected
         --nth=1                   # Search in time field by default
-        --layout=reverse          # Top-down layout
+        # --layout=reverse          # Top-down layout
         --delimiter=$'\t'         # Tab-separated fields
         --border=rounded          # Rounded border style
         --border-label=" Command History "
@@ -154,6 +154,7 @@ _build_fzf_options() {
         --history="$history_file" # Enable fzf history
         --query="$current_query"  # Pre-fill with current buffer
         +m                        # Disable multi-select
+        --print-query             # Print current query on exit
         --expect=enter,tab        # Expect these keys
     )
 
@@ -215,18 +216,19 @@ _fz-cmd-core() {
     output=$(eval "atuin search $ATUIN_OPTS" 2>/dev/null | perl -0ne "$format_script" 2>/dev/null | eval "fzf $fzf_opts" 2>/dev/null)
     exit_code=$?
 
-    # Parse output: first line is key pressed, rest is selection
-    local key selected
-    key=$(echo "$output" | head -n1)
-    selected=$(echo "$output" | tail -n +2)
+    # Parse output: first line is query, second is key pressed, rest is selection
+    local query key selected
+    query=$(echo "$output" | head -n1)
+    key=$(echo "$output" | head -n2 | tail -n1)
+    selected=$(echo "$output" | tail -n +3)
 
     # Validate output - allow empty selected when key is not a known key (means --expect failed)
     if [[ -z "$selected" ]] && [[ "$key" == "enter" || "$key" == "tab" ]]; then
         return $exit_code
     fi
 
-    # Return formatted result
-    echo "${key}|${selected}"
+    # Return formatted result with query
+    echo "${query}|${key}|${selected}"
     return $exit_code
 }
 
@@ -309,7 +311,9 @@ fz-cmd() {
 
     # Process successful results
     if [[ $exit_code -eq 0 ]] && [[ -n "$output" ]]; then
-        local key cmd
+        local query key cmd
+        query="${output%%|*}"
+        output="${output#*|}"
         key="${output%%|*}"
         cmd="${output#*|}"
 
@@ -330,6 +334,9 @@ fz-cmd() {
             # If cmd is empty but key is not, it means --expect didn't work and key contains the command
             # Assume Enter was pressed and execute
             _insert_command "$key" true function  # Execute (key is actually the command)
+        else
+            # No key or command - likely escape was pressed, restore query to buffer
+            print -z -- "$query"
         fi
     fi
 
@@ -345,54 +352,59 @@ fz-cmd-widget() {
         return 1
     fi
 
+    # Save original buffer to restore on escape
+    local original_lbuffer="$LBUFFER"
     local output exit_code
 
-    # Execute core search
-    if output=$(_fz-cmd-core); then
-        exit_code=$?
+    # Execute core search (don't return early - we need to handle escape)
+    output=$(_fz-cmd-core)
+    exit_code=$?
+
+    # Parse output regardless of exit code (--print-query always outputs query)
+    local query key cmd
+    query="${output%%|*}"
+    output="${output#*|}"
+    key="${output%%|*}"
+    cmd="${output#*|}"
+
+    # Handle based on what was returned
+    if [[ -n "$cmd" ]]; then
+        # Command was selected
+        case "$key" in
+            enter)
+                _insert_command "$cmd" true widget  # Execute
+                ;;
+            tab)
+                _insert_command "$cmd" false widget # Insert only
+                ;;
+            *)
+                # Unknown key - insert without executing
+                _insert_command "$cmd" false widget
+                ;;
+        esac
+    elif [[ -n "$key" ]] && [[ "$key" != "enter" ]] && [[ "$key" != "tab" ]]; then
+        # If cmd is empty but key is not enter/tab, key might contain the command
+        # (this happens when --expect doesn't capture the key)
+        _insert_command "$key" true widget
     else
-        exit_code=$?
-        return $exit_code
-    fi
-
-    # Process successful results
-    if [[ $exit_code -eq 0 ]] && [[ -n "$output" ]]; then
-        local key cmd
-        key="${output%%|*}"
-        cmd="${output#*|}"
-
-        if [[ -n "$cmd" ]]; then
-            case "$key" in
-                enter)
-                    _insert_command "$cmd" true widget  # Execute
-                    ;;
-                tab)
-                    _insert_command "$cmd" false widget # Insert only
-                    ;;
-                *)
-                    # Unknown key - do nothing
-                    ;;
-            esac
-        elif [[ -n "$key" ]]; then
-            # If cmd is empty but key is not, it means --expect didn't work and key contains the command
-            # Assume Enter was pressed and execute
-            _insert_command "$key" true widget  # Execute (key is actually the command)
+        # No command selected - escape was pressed or fzf was cancelled
+        # Restore the query (or original buffer if query is empty)
+        if [[ -n "$query" ]]; then
+            LBUFFER="$query"
+        else
+            LBUFFER="$original_lbuffer"
         fi
+        RBUFFER=""
+        zle redisplay
     fi
 
-    return $exit_code
+    return 0
 }
 
-# Smart up arrow widget - triggers fz-cmd when appropriate
+# Smart up arrow widget - triggers fz-cmd with current buffer as query
 fz-cmd-up-widget() {
-    # Check if we should trigger fz-cmd instead of normal history navigation
-    if [[ -z "$BUFFER" ]] || [[ "$HISTNO" -eq "$HISTSIZE" ]]; then
-        # Empty buffer or at history end - trigger fz-cmd
-        fz-cmd-widget
-    else
-        # Fall back to normal down arrow behavior
-        zle .down-line-or-history
-    fi
+    # Always trigger fz-cmd, passing current buffer as initial query
+    fz-cmd-widget
 }
 
 # -----------------------------------------------------------------------------
